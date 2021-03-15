@@ -1,0 +1,17 @@
+Package: ggplot2.utils
+Type: Package
+Title: ggplot2 utilities
+Version: 0.1.0
+Authors@R: c(
+  person("NEST", email = "nestcicd@roche.com", role = c("aut", "cre"))
+  )
+Description: Utilities, in particular geoms and stats, for use with ggplot2.
+License: file LICENSE
+Encoding: UTF-8
+LazyData: false
+RoxygenNote: 7.1.1
+Depends: 
+    R (>= 3.6)
+Imports:
+    ggplot2 (>= 3.3.0),
+    testthat (>= 2.0)

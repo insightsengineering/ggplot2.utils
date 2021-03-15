@@ -1,0 +1,16 @@
+url: https://go.roche.com/nest-docs/releases/latest/api-reference/ggplot2.utils
+
+template:
+  params:
+    bootswatch: cerulean
+
+navbar:
+  right:
+    - icon: fa-github
+      href: https://github.roche.com/NEST/ggplot2.utils
+
+reference:
+  - title: geoms
+    contents:
+      - 
+  
