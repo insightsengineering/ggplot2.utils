@@ -84,10 +84,6 @@ See the vignette \bold{Extending ggplot2} at
 \url{https://cran.r-project.org/package=ggplot2/vignettes/extending-ggplot2.html}
 for information on how to create a new stat.
 }
-\note{
-Note that this is cherrypicked from the package
-\url{https://cran.r-project.org/web/packages/EnvStats/index.html}.
-}
 \examples{
 
   # Example 1:

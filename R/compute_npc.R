@@ -6,12 +6,12 @@
 #' @param x,y numeric or character vector of coordinates.
 #' @param group integer ggplot's group id. Used to shift coordinates to avoid
 #'   overlaps.
-#' @param h.step,v.step numeric [0..1] The step size for shifting coordinates
+#' @param h.step,v.step (`proportion`)\cr The step size for shifting coordinates
 #'   in npc units.
-#' @param margin.npc numeric [0..1] The margin added towards the nearest
+#' @param margin.npc (`proportion`)\cr The margin added towards the nearest
 #'   plotting area edge when converting character coordinates into npc.
 #'
-#' @return A numeric vector with values in the range [0..1] representing
+#' @return A numeric vector with proportions representing
 #'   npc coordinates.
 #'
 #' @keywords internal

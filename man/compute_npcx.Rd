@@ -15,15 +15,15 @@ compute_npcy(y, group = 1L, v.step = 0.1, margin.npc = 0.05)
 \item{group}{integer ggplot's group id. Used to shift coordinates to avoid
 overlaps.}
 
-\item{h.step, v.step}{numeric [0..1] The step size for shifting coordinates
+\item{h.step, v.step}{(\code{proportion})\cr The step size for shifting coordinates
 in npc units.}
 
-\item{margin.npc}{numeric [0..1] The margin added towards the nearest
+\item{margin.npc}{(\code{proportion})\cr The margin added towards the nearest
 plotting area edge when converting character coordinates into npc.}
 }
 \value{
-A numeric vector with values in the range [0..1] representing
-  npc coordinates.
+A numeric vector with proportions representing
+npc coordinates.
 }
 \description{
 Convert character-encoded positions to npc units and shift postions to

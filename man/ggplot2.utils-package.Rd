@@ -4,9 +4,17 @@
 \name{ggplot2.utils-package}
 \alias{ggplot2.utils}
 \alias{ggplot2.utils-package}
-\title{ggplot2.utils Package}
+\title{\code{ggplot2.utils} Package}
 \description{
-ggplot2.utils contains utility functions to extend ggplot2.
+\code{ggplot2.utils} contains utility functions to extend \code{ggplot2}.
+}
+\details{
+Currently all of the functions are cherry picked from other extension packages:
+\itemize{
+\item \code{ggpmisc}: \code{\link[=geom_table]{geom_table()}} and associated functions (GPL >= 2).
+\item \code{EnvStats}: \code{\link[=stat_n_text]{stat_n_text()}} and associated functions (GPL >= 3).
+\item \code{ggally}: \code{\link[=stat_prop]{stat_prop()}} and associated functions (GPL >= 2).
+}
 }
 \author{
 \strong{Maintainer}: NEST \email{nestcicd@roche.com}

@@ -96,7 +96,6 @@
 #'   \code{table.theme}.
 #'
 #' @references 
-#'   This is originally from package [ggpmisc](https://github.com/aphalo/ggpmisc).
 #'   This geometry is inspired on answers to two questions in
 #'   Stackoverflow. In contrast to these earlier examples, the current geom
 #'   obeys the grammar of graphics, and attempts to be consistent with the
