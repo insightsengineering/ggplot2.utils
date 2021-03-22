@@ -15,8 +15,8 @@ Depends:
     ggplot2 (>= 3.3.0)
 Imports:
     gridExtra,
-    testthat (>= 2.0)
+    testthat (>= 2.0),
+    dplyr
 Suggests:
-    dplyr,
     tibble
 
