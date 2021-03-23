@@ -7,12 +7,13 @@ StatNText <- ggplot2::ggproto(
   "StatNText", 
   ggplot2::Stat,
   
-  required_aes = c("x", "y"), 
+  required_aes = c("x"), 
   
   setup_params = function(data, params) {
     if(!is.null(params$y.pos)) 
       return(params)
-    
+    if(is.null(data$y))
+      stop("Without y aesthetic y.pos needs to be provided")
     range.y <- range(data$y, na.rm = TRUE)
     pos <- range.y[1] - diff(range.y) * params$y.expand.factor
     params$y.pos <- pos
@@ -20,7 +21,17 @@ StatNText <- ggplot2::ggproto(
   },
   
   compute_panel = function(data, scales, y.pos, y.expand.factor) {
-    n.tibble <- dplyr::summarize(dplyr::group_by(data, x), N = sum(!is.na(y)))
+    n.tibble <- if(is.null(data$y)) {
+      dplyr::summarize(
+        dplyr::group_by(data, x), 
+        N = dplyr::n()
+      )
+    } else {
+      dplyr::summarize(
+        dplyr::group_by(data, x), 
+        N = sum(!is.na(y))
+      )
+    }
     
     n.vec <- unlist(n.tibble[, "N"])
     lab <- paste0("n=", n.vec)
@@ -84,92 +95,68 @@ StatNText <- ggplot2::ggproto(
 #' @export
 #' @examples
 #' 
-#'   # Example 1:
+#' # Using the built-in data frame mtcars, 
+#' # plot miles per gallon vs. number of cylinders
+#' # using different colors for each level of the number of cylinders.
 #' 
-#'   # Using the built-in data frame mtcars, 
-#'   # plot miles per gallon vs. number of cylinders
-#'   # using different colors for each level of the number of cylinders.
-#'   #------------------------------------------------------------------
+#' p <- ggplot(mtcars, aes(x = factor(cyl), y = mpg, color = factor(cyl))) + 
+#'   theme(legend.position = "none")
 #' 
-#'   p <- ggplot(mtcars, aes(x = factor(cyl), y = mpg, color = factor(cyl))) + 
-#'     theme(legend.position = "none")
-#' 
-#'   p + geom_point() + 
-#'     labs(x = "Number of Cylinders", y = "Miles per Gallon")
+#' p + geom_point() + 
+#'   labs(x = "Number of Cylinders", y = "Miles per Gallon")
 #' 
 #' 
-#'   # Now add the sample size for each level of cylinder.
-#'   #----------------------------------------------------
-#'   
-#'   p + geom_point() + 
-#'     stat_n_text() + 
-#'     labs(x = "Number of Cylinders", y = "Miles per Gallon")
-#'   
-#'   #==========
+#' # Now add the sample size for each level of cylinder.
 #' 
-#'   # Example 2:
+#' p + geom_point() + 
+#'   stat_n_text() + 
+#'   labs(x = "Number of Cylinders", y = "Miles per Gallon")
 #' 
-#'   # Repeat Example 1, but:
-#'   # 1) facet by transmission type, 
-#'   # 2) make the size of the text smaller.
-#'   #--------------------------------------
+#' # Repeat Example 1, but:
+#' # 1) facet by transmission type, 
+#' # 2) make the size of the text smaller.
 #' 
-#'   p + geom_point() + 
-#'     stat_n_text(size = 3) + 
-#'     facet_wrap(~ am, labeller = label_both) +  
-#'     labs(x = "Number of Cylinders", y = "Miles per Gallon")
+#' p + geom_point() + 
+#'   stat_n_text(size = 3) + 
+#'   facet_wrap(~ am, labeller = label_both) +  
+#'   labs(x = "Number of Cylinders", y = "Miles per Gallon")
 #'  
-#'   #==========
+#' # Repeat Example 1, but specify the y-position for the text.
 #' 
-#'   # Example 3:
-#' 
-#'   # Repeat Example 1, but specify the y-position for the text.
-#'   #-----------------------------------------------------------
-#' 
-#'   p + geom_point() + 
-#'     stat_n_text(y.pos = 5) + 
-#'     labs(x = "Number of Cylinders", y = "Miles per Gallon")
+#' p + geom_point() + 
+#'   stat_n_text(y.pos = 5) + 
+#'   labs(x = "Number of Cylinders", y = "Miles per Gallon")
 #'  
-#'   #==========
+#' # Repeat Example 1, but show the sample size in a text box.
 #' 
-#'   # Example 4:
-#' 
-#'   # Repeat Example 1, but show the sample size in a text box.
-#'   #----------------------------------------------------------
-#' 
-#'   p + geom_point() + 
-#'     stat_n_text(text.box = TRUE) + 
-#'     labs(x = "Number of Cylinders", y = "Miles per Gallon")
+#' p + geom_point() + 
+#'   stat_n_text(text.box = TRUE) + 
+#'   labs(x = "Number of Cylinders", y = "Miles per Gallon")
 #'  
-#'   #==========
+#' # Repeat Example 1, but use the color brown for the text.
 #' 
-#'   # Example 5:
+#' p + geom_point() + 
+#'   stat_n_text(color = "brown") + 
+#'   labs(x = "Number of Cylinders", y = "Miles per Gallon")
 #' 
-#'   # Repeat Example 1, but use the color brown for the text.
-#'   #--------------------------------------------------------
-#'   
-#'   p + geom_point() + 
-#'     stat_n_text(color = "brown") + 
-#'     labs(x = "Number of Cylinders", y = "Miles per Gallon")
+#' # Repeat Example 1, but:
+#' # 1) use the same colors for the text that are used for each group, 
+#' # 2) use the bold monospaced font.
 #' 
-#'   #==========
+#' mat <- ggplot_build(p)$data[[1]]
+#' group <- mat[, "group"]
+#' colors <- mat[match(1:max(group), group), "colour"]
 #' 
-#'   # Example 6:
+#' p + geom_point() + 
+#'   stat_n_text(color = colors, size = 5, 
+#'     family = "mono", fontface = "bold") + 
+#'   labs(x = "Number of Cylinders", y = "Miles per Gallon")
 #' 
-#'   # Repeat Example 1, but:
-#'   # 1) use the same colors for the text that are used for each group, 
-#'   # 2) use the bold monospaced font.
-#'   #------------------------------------------------------------------
-#'   
-#'   mat <- ggplot_build(p)$data[[1]]
-#'   group <- mat[, "group"]
-#'   colors <- mat[match(1:max(group), group), "colour"]
-#' 
-#'   p + geom_point() + 
-#'     stat_n_text(color = colors, size = 5, 
-#'       family = "mono", fontface = "bold") + 
-#'     labs(x = "Number of Cylinders", y = "Miles per Gallon")
-#' 
+#' # Use it for a barplot - this needs `y.pos` specification since there is no y aesthetic.
+#' p <- ggplot(mtcars, aes(x = factor(cyl), fill = factor(vs))) + 
+#'   geom_bar(position = "fill") +
+#'   stat_n_text(y.pos = -0.05, text.box = TRUE)
+#' p
 stat_n_text <- function (mapping = NULL, 
                          data = NULL, 
                          geom = ifelse(text.box, "label", "text"), 
