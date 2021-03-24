@@ -12,5 +12,20 @@ navbar:
 reference:
   - title: geoms
     contents:
-      - 
+      - geom_table
+      - geom_table_npc
+  - title: stats
+    contents:
+      - stat_n_text
+      - stat_prop
+  - title: table themes
+    contents:
+      - ttheme_gtbw
+      - ttheme_gtdark
+      - ttheme_gtdefault
+      - ttheme_gtlight
+      - ttheme_gtminimal
+      - ttheme_gtplain
+      - ttheme_gtsimple
+      - ttheme_gtstripes
   

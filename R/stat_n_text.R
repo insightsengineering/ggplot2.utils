@@ -85,8 +85,6 @@ StatNText <- ggplot2::ggproto(
 #' @param label.padding,label.r,label.size See the help file for
 #' \code{\link[ggplot2]{geom_text}}.
 #' @param \dots Other arguments passed on to \code{\link[ggplot2]{layer}}.
-#' @note Note that this is cherrypicked from the package
-#' \url{https://cran.r-project.org/web/packages/EnvStats/index.html}.
 #' @author Steven P. Millard (\email{EnvStats@@ProbStatInfo.com})
 #' @seealso \code{\link[ggplot2]{geom_text}}, \code{\link[ggplot2]{geom_label}}.
 #' @references Wickham, H. (2016).  \emph{ggplot2: Elegant Graphics for Data

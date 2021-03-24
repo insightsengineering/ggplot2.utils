@@ -88,66 +88,66 @@ and faceting works as usual.
 }
 \details{
 These geoms work only with tibbles as \code{data}, as they expects a
-  list of data frames or tibbles ("tb" objects) to be mapped to the
-  \code{label} aesthetic. Aesthetics mappings in the inset plot are
-  independent of those in the base plot.
+list of data frames or tibbles ("tb" objects) to be mapped to the
+\code{label} aesthetic. Aesthetics mappings in the inset plot are
+independent of those in the base plot.
 
-  In the case of \code{geom_table()}, \code{x} and \code{y} aesthetics
-  determine the position of the whole inset table, similarly to that of a
-  text label, justification is interpreted as indicating the position of the
-  table with respect to the $x$ and $y$ coordinates in the data, and
-  \code{angle} is used to rotate the table as a whole.
+In the case of \code{geom_table()}, \code{x} and \code{y} aesthetics
+determine the position of the whole inset table, similarly to that of a
+text label, justification is interpreted as indicating the position of the
+table with respect to the $x$ and $y$ coordinates in the data, and
+\code{angle} is used to rotate the table as a whole.
 
-  In the case of \code{geom_table_npc()}, \code{npcx} and \code{npcy}
-  aesthetics determine the position of the whole inset table, similarly to
-  that of a text label, justification is interpreted as indicating the
-  position of the table with respect to the $x$ and $y$ coordinates in "npc"
-  units, and \code{angle} is used to rotate the table as a whole.
+In the case of \code{geom_table_npc()}, \code{npcx} and \code{npcy}
+aesthetics determine the position of the whole inset table, similarly to
+that of a text label, justification is interpreted as indicating the
+position of the table with respect to the $x$ and $y$ coordinates in "npc"
+units, and \code{angle} is used to rotate the table as a whole.
 
-  The "width" and "height" of an inset as for a text element are
-  0, so stacking and dodging inset tables will not work by default, and axis
-  limits are not automatically expanded to include all inset tables.
-  Obviously, insets do have height and width, but they are physical units,
-  not data units. The amount of space they occupy on the main plot is not
-  constant in data units of the base plot: when you modify scale limits,
-  inset plots stay the same size relative to the physical size of the base
-  plot.
+The "width" and "height" of an inset as for a text element are
+0, so stacking and dodging inset tables will not work by default, and axis
+limits are not automatically expanded to include all inset tables.
+Obviously, insets do have height and width, but they are physical units,
+not data units. The amount of space they occupy on the main plot is not
+constant in data units of the base plot: when you modify scale limits,
+inset plots stay the same size relative to the physical size of the base
+plot.
 
-  If the argument passed to \code{table.theme} is a constructor function
-  (passing its name without parenthesis), the values mapped to \code{size},
-  \code{colour}, \code{fill}, \code{alpha}, and \code{family} aesthetics will
-  the passed to this theme constructor for each individual table. In
-  contrast, if a ready constructed ttheme as a list object is passed as
-  argument (e.g., by calling the constructor, using contructor name followed
-  by parenthesis), it will be used as is, i.e., mappings to aesthetics such
-  as \code{colour} are ignored if present.
+If the argument passed to \code{table.theme} is a constructor function
+(passing its name without parenthesis), the values mapped to \code{size},
+\code{colour}, \code{fill}, \code{alpha}, and \code{family} aesthetics will
+the passed to this theme constructor for each individual table. In
+contrast, if a ready constructed ttheme as a list object is passed as
+argument (e.g., by calling the constructor, using contructor name followed
+by parenthesis), it will be used as is, i.e., mappings to aesthetics such
+as \code{colour} are ignored if present.
 
-  By default the constructor \code{ttheme_gtdefault} is used and
-  \code{colour} and \code{fill}, are mapped to \code{NA}. Mapping these
-  aesthetics to \code{NA} triggers the use of the default base_colour of the
-  \code{ttheme}.
+By default the constructor \code{ttheme_gtdefault} is used and
+\code{colour} and \code{fill}, are mapped to \code{NA}. Mapping these
+aesthetics to \code{NA} triggers the use of the default base_colour of the
+\code{ttheme}.
 
-  As the table is built with function \code{gridExtra::gtable()}, for
-  formatting details, please, consult \code{\link[gridExtra]{tableGrob}}.
+As the table is built with function \code{gridExtra::gtable()}, for
+formatting details, please, consult \code{\link[gridExtra]{tableGrob}}.
 }
 \note{
 As all geometries, \code{geom_table()} and \code{geom_table_npc()} add
-  a layer to a plot, and behave as expected in the grammar of graphics. In general
-  ggplot themes do not affect how layers are rendered, and this is also the
-  case for \code{geom_table()}. As described abovem, the formatting of the
-  inset table is done according to the the argument passed to parameter
-  \code{table.theme}.
+a layer to a plot, and behave as expected in the grammar of graphics. In general
+ggplot themes do not affect how layers are rendered, and this is also the
+case for \code{geom_table()}. As described abovem, the formatting of the
+inset table is done according to the the argument passed to parameter
+\code{table.theme}.
 }
 \section{Alignment}{
  You can modify table alignment with the \code{vjust} and
-  \code{hjust} aesthetics. These can either be a number between 0
-  (right/bottom) and 1 (top/left) or a character ("left", "middle", "right",
-  "bottom", "center", "top").
+\code{hjust} aesthetics. These can either be a number between 0
+(right/bottom) and 1 (top/left) or a character ("left", "middle", "right",
+"bottom", "center", "top").
 }
 
 \section{Inset size}{
  You can modify inset table size with the \code{size}
-  aesthetics, which determines the size of text within the table.
+aesthetics, which determines the size of text within the table.
 }
 
 \examples{
@@ -206,16 +206,15 @@ ggplot(mtcars, aes(wt, mpg, colour = factor(cyl))) +
 
 }
 \references{
-This is originally from package [ggpmisc](https://github.com/aphalo/ggpmisc).
-  This geometry is inspired on answers to two questions in
-  Stackoverflow. In contrast to these earlier examples, the current geom
-  obeys the grammar of graphics, and attempts to be consistent with the
-  behaviour of 'ggplot2' geometries.
-  \url{https://stackoverflow.com/questions/12318120/adding-table-within-the-plotting-region-of-a-ggplot-in-r}
-  \url{https://stackoverflow.com/questions/25554548/adding-sub-tables-on-each-panel-of-a-facet-ggplot-in-r?}
+This geometry is inspired on answers to two questions in
+Stackoverflow. In contrast to these earlier examples, the current geom
+obeys the grammar of graphics, and attempts to be consistent with the
+behaviour of 'ggplot2' geometries.
+\url{https://stackoverflow.com/questions/12318120/adding-table-within-the-plotting-region-of-a-ggplot-in-r}
+\url{https://stackoverflow.com/questions/25554548/adding-sub-tables-on-each-panel-of-a-facet-ggplot-in-r?}
 }
 \seealso{
 function \code{\link[gridExtra]{tableGrob}} as it is used to
-  construct the table.
+construct the table.
 }
 \concept{geometries adding layers with insets}

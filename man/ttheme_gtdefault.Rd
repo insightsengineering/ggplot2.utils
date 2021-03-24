@@ -99,21 +99,21 @@ padding of text within each cell.}
 }
 \value{
 A \code{list} object that can be used as \code{ttheme} in the
-  construction of tables with functions from package 'gridExtra'.
+construction of tables with functions from package 'gridExtra'.
 }
 \description{
 Additional theme constructors for use with \code{\link{geom_table}}.
 }
 \details{
 Depending on the theme, the base_colour, which is
-  mapped to the \code{colour} aesthetic if present, is applied to only the
-  text elements, or to the text elements and rules. The difference is
-  exemplified below.
+mapped to the \code{colour} aesthetic if present, is applied to only the
+text elements, or to the text elements and rules. The difference is
+exemplified below.
 }
 \note{
 These theme constructors are wrappers on
-  \code{gridExtra::ttheme_default()} and \code{gridExtra::ttheme_minimal()}.
-  They can also be used with \code{\link[gridExtra]{grid.table}} if desired.
+\code{gridExtra::ttheme_default()} and \code{gridExtra::ttheme_minimal()}.
+They can also be used with \code{\link[gridExtra]{grid.table}} if desired.
 }
 \examples{
 library(dplyr)
