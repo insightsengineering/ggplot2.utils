@@ -10,7 +10,7 @@ stat_n_text(
   geom = ifelse(text.box, "label", "text"),
   position = "identity",
   na.rm = FALSE,
-  show.legend = NA,
+  show.legend = FALSE,
   inherit.aes = TRUE,
   y.pos = NULL,
   y.expand.factor = 0.1,
