@@ -1,7 +1,7 @@
 Package: ggplot2.utils
 Type: Package
 Title: ggplot2 utilities
-Version: 0.1.0
+Version: 0.1.9000
 Authors@R: c(
   person("NEST", email = "nestcicd@roche.com", role = c("aut", "cre"))
   )
