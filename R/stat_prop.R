@@ -94,6 +94,7 @@ stat_prop <- function(
 #' @usage NULL
 #' @export
 #' @importFrom utils.nest if_null
+#' @importFrom scales percent
 StatProp <- ggproto(
   "StatProp", 
   Stat,

@@ -19,7 +19,8 @@ Imports:
     gridExtra,
     testthat (>= 2.0),
     dplyr,
-    utils.nest (>= 0.2.8)
+    utils.nest (>= 0.2.8),
+    scales
 Suggests:
     tibble
 
