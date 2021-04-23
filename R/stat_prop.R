@@ -23,6 +23,8 @@
 #' @seealso [ggplot2::stat_count()]
 #'
 #' @import ggplot2
+#' @importFrom scales percent
+#' 
 #' @author Joseph Larmarange
 #' @export
 #' @examples
