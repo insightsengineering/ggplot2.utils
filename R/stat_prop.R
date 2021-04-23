@@ -23,8 +23,6 @@
 #' @seealso [ggplot2::stat_count()]
 #'
 #' @import ggplot2
-#' @importFrom scales percent
-#' 
 #' @author Joseph Larmarange
 #' @export
 #' @examples
@@ -96,6 +94,7 @@ stat_prop <- function(
 #' @usage NULL
 #' @export
 #' @importFrom utils.nest if_null
+#' @importFrom scales percent
 StatProp <- ggproto(
   "StatProp", 
   Stat,
