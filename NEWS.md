@@ -1,3 +1,6 @@
+# ggplot2.utils 0.1.1.9000
+.
+
 # ggplot2.utils 0.1.1
 
 * Added `stat_prop()` which is a variation of `stat_count` allowing to compute custom proportions according to the `by` aesthetic defining the denominator.
