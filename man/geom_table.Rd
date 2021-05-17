@@ -54,7 +54,7 @@ as a string.}
 can include aesthetics whose values you want to set, not map. See
 \code{\link[ggplot2]{layer}} for more details.}
 
-\item{table.theme}{NULL, list or function A gridExtra ttheme defintion, or
+\item{table.theme}{NULL, list or function A gridExtra ttheme definition, or
 a constructor for a ttheme or NULL for default.}
 
 \item{table.rownames, table.colnames}{logical flag to enable or disable
@@ -75,7 +75,7 @@ never includes, and \code{TRUE} always includes.}
 
 \item{inherit.aes}{If \code{FALSE}, overrides the default aesthetics, rather
 than combining with them. This is most useful for helper functions that
-define both data and aesthetics and shouldn't inherit behaviour from the
+define both data and aesthetics and shouldn't inherit behavior from the
 default plot specification, e.g. \code{\link[ggplot2]{borders}}.}
 }
 \description{
@@ -118,7 +118,7 @@ If the argument passed to \code{table.theme} is a constructor function
 \code{colour}, \code{fill}, \code{alpha}, and \code{family} aesthetics will
 the passed to this theme constructor for each individual table. In
 contrast, if a ready constructed ttheme as a list object is passed as
-argument (e.g., by calling the constructor, using contructor name followed
+argument (e.g., by calling the constructor, using constructor name followed
 by parenthesis), it will be used as is, i.e., mappings to aesthetics such
 as \code{colour} are ignored if present.
 
@@ -209,7 +209,7 @@ ggplot(mtcars, aes(wt, mpg, colour = factor(cyl))) +
 This geometry is inspired on answers to two questions in
 Stackoverflow. In contrast to these earlier examples, the current geom
 obeys the grammar of graphics, and attempts to be consistent with the
-behaviour of 'ggplot2' geometries.
+behavior of 'ggplot2' geometries.
 \url{https://stackoverflow.com/questions/12318120/adding-table-within-the-plotting-region-of-a-ggplot-in-r}
 \url{https://stackoverflow.com/questions/25554548/adding-sub-tables-on-each-panel-of-a-facet-ggplot-in-r?}
 }

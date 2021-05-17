@@ -40,9 +40,9 @@
 #'   aes(x = Class, fill = Survived, weight = Freq) +
 #'   geom_bar(position = "dodge") +
 #'   geom_text(
-#'     aes(by = Survived), 
+#'     aes(by = Survived),
 #'     stat = "prop",
-#'     position = position_dodge(0.9), 
+#'     position = position_dodge(0.9),
 #'     vjust = "bottom"
 #'   )
 #'
@@ -54,19 +54,18 @@
 #'     stat = "prop",
 #'     position = position_stack(.5)
 #'   )
-stat_prop <- function(
-  mapping = NULL,
-  data = NULL,
-  geom = "bar",
-  position = "fill",
-  ...,
-  width = NULL,
-  na.rm = FALSE,
-  orientation = NA,
-  show.legend = NA,
-  inherit.aes = TRUE
-) {
-  
+stat_prop <- function(mapping = NULL,
+                      data = NULL,
+                      geom = "bar",
+                      position = "fill",
+                      ...,
+                      width = NULL,
+                      na.rm = FALSE, # nolint
+                      orientation = NA,
+                      show.legend = NA, # nolint
+                      inherit.aes = TRUE # nolint
+                      ) {
+
   params <- list(
     na.rm = na.rm,
     orientation = orientation,
@@ -76,7 +75,7 @@ stat_prop <- function(
   if (!is.null(params$y)) {
     stop("stat_prop() must not be used with a y aesthetic.", call. = FALSE)
   }
-  
+
   layer(
     data = data,
     mapping = mapping,
@@ -95,18 +94,18 @@ stat_prop <- function(
 #' @export
 #' @importFrom utils.nest if_null
 #' @importFrom scales percent
-StatProp <- ggproto(
-  "StatProp", 
+StatProp <- ggproto( # nolint
+  "StatProp",
   Stat,
   required_aes = c("x|y", "by"),
   default_aes = aes(
     x = after_stat(count), y = after_stat(count), weight = 1,
     label = scales::percent(after_stat(prop), accuracy = .1)
   ),
-  
+
   setup_params = function(data, params) {
     params$flipped_aes <- has_flipped_aes(data, params, main_is_orthogonal = FALSE)
-    
+
     has_x <- !(is.null(data$x) && is.null(params$x))
     has_y <- !(is.null(data$y) && is.null(params$y))
     if (!has_x && !has_y) {
@@ -121,27 +120,27 @@ StatProp <- ggproto(
     }
     params
   },
-  
+
   extra_params = c("na.rm"),
-  
+
   compute_panel = function(self, data, scales, width = NULL, flipped_aes = FALSE) {
     data <- flip_data(data, flipped_aes)
     data$weight <- utils.nest::if_null(data$weight, rep(1, nrow(data)))
     width <- utils.nest::if_null(width, ggplot2::resolution(data$x) * 0.9)
-    
+
     # sum weights for each combination of by and aesthetics
     # the use of . allows to consider all aesthetics defined in data
     panel <- aggregate(weight ~ ., data = data, sum, na.rm = TRUE)
-    
+
     names(panel)[which(names(panel) == "weight")] <- "count"
     panel$count[is.na(panel$count)] <- 0
-    
+
     # compute proportions by by
-    sum_abs <- function(x) {sum(abs(x))}
+    sum_abs <- function(x) sum(abs(x))
     panel$prop <- panel$count / ave(panel$count, panel$by, FUN = sum_abs)
     panel$width <- width
     panel$flipped_aes <- flipped_aes
-    
+
     flip_data(panel, flipped_aes)
   }
 )

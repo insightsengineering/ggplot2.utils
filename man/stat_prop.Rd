@@ -110,9 +110,9 @@ ggplot(d) +
   aes(x = Class, fill = Survived, weight = Freq) +
   geom_bar(position = "dodge") +
   geom_text(
-    aes(by = Survived), 
+    aes(by = Survived),
     stat = "prop",
-    position = position_dodge(0.9), 
+    position = position_dodge(0.9),
     vjust = "bottom"
   )
 

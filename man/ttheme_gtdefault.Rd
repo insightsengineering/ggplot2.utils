@@ -90,7 +90,7 @@ ttheme_gtstripes(
 
 \item{base_family}{default font family.}
 
-\item{parse}{logical, default behaviour for parsing text as plotmath.}
+\item{parse}{logical, default behavior for parsing text as plotmath.}
 
 \item{padding}{length-2 unit vector specifying the horizontal and vertical
 padding of text within each cell.}

@@ -7,7 +7,7 @@
 ttheme_set(table.theme = NULL)
 }
 \arguments{
-\item{table.theme}{NULL, list or function A gridExtra ttheme defintion, or
+\item{table.theme}{NULL, list or function A gridExtra ttheme definition, or
 a constructor for a ttheme or NULL for default.}
 }
 \value{

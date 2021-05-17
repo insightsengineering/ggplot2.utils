@@ -3,57 +3,55 @@
 #' @usage NULL
 #' @export
 #' @importFrom dplyr summarize group_by
-StatNText <- ggplot2::ggproto(
-  "StatNText", 
+StatNText <- ggplot2::ggproto( # nolint
+  "StatNText",
   ggplot2::Stat,
-  
-  required_aes = c("x"), 
-  
+
+  required_aes = c("x"),
+
   setup_params = function(data, params) {
-    if(!is.null(params$y.pos)) 
-      return(params)
-    if(is.null(data$y))
-      stop("Without y aesthetic y.pos needs to be provided")
+    if (!is.null(params$y.pos)) return(params)
+    if (is.null(data$y)) stop("Without y aesthetic y.pos needs to be provided")
     range.y <- range(data$y, na.rm = TRUE)
     pos <- range.y[1] - diff(range.y) * params$y.expand.factor
-    params$y.pos <- pos
+    params$y.pos <- pos # nolint
     params
   },
-  
-  compute_panel = function(data, scales, y.pos, y.expand.factor) {
-    n.tibble <- if(is.null(data$y)) {
+
+  compute_panel = function(data, scales, y.pos, y.expand.factor) { # nolint
+    n.tibble <- if(is.null(data$y)) { # nolint
       dplyr::summarize(
-        dplyr::group_by(data, x), 
+        dplyr::group_by(data, x),
         N = dplyr::n()
       )
     } else {
       dplyr::summarize(
-        dplyr::group_by(data, x), 
+        dplyr::group_by(data, x),
         N = sum(!is.na(y))
       )
     }
-    
-    n.vec <- unlist(n.tibble[, "N"])
+
+    n.vec <- unlist(n.tibble[, "N"]) # nolint
     lab <- paste0("n=", n.vec)
-    
+
     data.frame(x = unlist(n.tibble[, "x"]), y = y.pos, label = lab)
   }
 )
 
 #' Add Text Indicating the Sample Size to a ggplot2 Plot
-#' 
+#'
 #' For a strip plot or scatterplot produced using the package
 #' \link[ggplot2]{ggplot2} (e.g., with \code{\link[ggplot2]{geom_point}}), for
 #' each value on the \eqn{x}-axis, add text indicating the number of
 #' \eqn{y}-values for that particular \eqn{x}-value.
-#' 
+#'
 #' See the help file for \code{\link[ggplot2]{geom_text}} for details about how
 #' \code{\link[ggplot2]{geom_text}} and \code{\link[ggplot2]{geom_label}} work.
-#' 
+#'
 #' See the vignette \bold{Extending ggplot2} at
 #' \url{https://cran.r-project.org/package=ggplot2/vignettes/extending-ggplot2.html}
 #' for information on how to create a new stat.
-#' 
+#'
 #' @param mapping,data,position,na.rm,show.legend,inherit.aes See the help file
 #' for \code{\link[ggplot2]{geom_text}}.
 #' @param geom Character string indicating which \code{geom} to use to display
@@ -92,106 +90,109 @@ StatNText <- ggplot2::ggproto(
 #' @keywords aplot
 #' @export
 #' @examples
-#' 
-#' # Using the built-in data frame mtcars, 
+#'
+#' # Using the built-in data frame mtcars,
 #' # plot miles per gallon vs. number of cylinders
 #' # using different colors for each level of the number of cylinders.
-#' 
-#' p <- ggplot(mtcars, aes(x = factor(cyl), y = mpg, color = factor(cyl))) + 
+#'
+#' p <- ggplot(mtcars, aes(x = factor(cyl), y = mpg, color = factor(cyl))) +
 #'   theme(legend.position = "none")
-#' 
-#' p + geom_point() + 
+#'
+#' p + geom_point() +
 #'   labs(x = "Number of Cylinders", y = "Miles per Gallon")
-#' 
-#' 
+#'
+#'
 #' # Now add the sample size for each level of cylinder.
-#' 
-#' p + geom_point() + 
-#'   stat_n_text() + 
+#'
+#' p + geom_point() +
+#'   stat_n_text() +
 #'   labs(x = "Number of Cylinders", y = "Miles per Gallon")
-#' 
+#'
 #' # Repeat Example 1, but:
-#' # 1) facet by transmission type, 
+#' # 1) facet by transmission type,
 #' # 2) make the size of the text smaller.
-#' 
-#' p + geom_point() + 
-#'   stat_n_text(size = 3) + 
-#'   facet_wrap(~ am, labeller = label_both) +  
+#'
+#' p + geom_point() +
+#'   stat_n_text(size = 3) +
+#'   facet_wrap(~ am, labeller = label_both) +
 #'   labs(x = "Number of Cylinders", y = "Miles per Gallon")
-#'  
+#'
 #' # Repeat Example 1, but specify the y-position for the text.
-#' 
-#' p + geom_point() + 
-#'   stat_n_text(y.pos = 5) + 
+#'
+#' p + geom_point() +
+#'   stat_n_text(y.pos = 5) +
 #'   labs(x = "Number of Cylinders", y = "Miles per Gallon")
-#'  
+#'
 #' # Repeat Example 1, but show the sample size in a text box.
-#' 
-#' p + geom_point() + 
-#'   stat_n_text(text.box = TRUE) + 
+#'
+#' p + geom_point() +
+#'   stat_n_text(text.box = TRUE) +
 #'   labs(x = "Number of Cylinders", y = "Miles per Gallon")
-#'  
+#'
 #' # Repeat Example 1, but use the color brown for the text.
-#' 
-#' p + geom_point() + 
-#'   stat_n_text(color = "brown") + 
+#'
+#' p + geom_point() +
+#'   stat_n_text(color = "brown") +
 #'   labs(x = "Number of Cylinders", y = "Miles per Gallon")
-#' 
+#'
 #' # Repeat Example 1, but:
-#' # 1) use the same colors for the text that are used for each group, 
+#' # 1) use the same colors for the text that are used for each group,
 #' # 2) use the bold monospaced font.
-#' 
+#'
 #' mat <- ggplot_build(p)$data[[1]]
 #' group <- mat[, "group"]
 #' colors <- mat[match(1:max(group), group), "colour"]
-#' 
-#' p + geom_point() + 
-#'   stat_n_text(color = colors, size = 5, 
-#'     family = "mono", fontface = "bold") + 
+#'
+#' p + geom_point() +
+#'   stat_n_text(color = colors, size = 5,
+#'     family = "mono", fontface = "bold") +
 #'   labs(x = "Number of Cylinders", y = "Miles per Gallon")
-#' 
+#'
 #' # Use it for a barplot - this needs `y.pos` specification since there is no y aesthetic.
-#' p <- ggplot(mtcars, aes(x = factor(cyl), fill = factor(vs))) + 
+#' p <- ggplot(mtcars, aes(x = factor(cyl), fill = factor(vs))) +
 #'   geom_bar(position = "fill") +
 #'   stat_n_text(y.pos = -0.05, text.box = TRUE)
 #' p
-stat_n_text <- function (mapping = NULL, 
-                         data = NULL, 
-                         geom = ifelse(text.box, "label", "text"), 
-                         position = "identity", 
-                         na.rm = FALSE, 
-                         show.legend = FALSE, 
-                         inherit.aes = TRUE, 
-                         y.pos = NULL, 
-                         y.expand.factor = 0.1, 
-                         text.box = FALSE, 
-                         alpha = 1, 
-                         angle = 0, 
-                         color = "black", 
-                         family = "", 
-                         fontface = "plain", 
-                         hjust = 0.5, 
-                         label.padding = ggplot2::unit(0.25, "lines"), 
-                         label.r = ggplot2::unit(0.15, "lines"), 
-                         label.size = 0.25, 
-                         lineheight = 1.2, 
-                         size = 4, 
-                         vjust = 0.5, 
-                         ...) {
+stat_n_text <- function(mapping = NULL,
+                        data = NULL,
+                        geom = ifelse(text.box, "label", "text"),
+                        position = "identity",
+                        na.rm = FALSE, # nolint
+                        show.legend = FALSE, # nolint
+                        inherit.aes = TRUE, # nolint
+                        y.pos = NULL, # nolint
+                        y.expand.factor = 0.1, # nolint
+                        text.box = FALSE, # nolint
+                        alpha = 1,
+                        angle = 0,
+                        color = "black",
+                        family = "",
+                        fontface = "plain",
+                        hjust = 0.5,
+                        label.padding = ggplot2::unit(0.25, "lines"), # nolint
+                        label.r = ggplot2::unit(0.15, "lines"), # nolint
+                        label.size = 0.25, # nolint
+                        lineheight = 1.2,
+                        size = 4,
+                        vjust = 0.5,
+                        ...) {
   geom <- match.arg(geom, c("label", "text"))
-  params <- list(y.pos = y.pos, y.expand.factor = y.expand.factor, 
-                 alpha = alpha, angle = angle, color = color, family = family, 
-                 fontface = fontface, hjust = hjust, lineheight = lineheight, 
-                 size = size, vjust = vjust)
+  params <- list(
+    y.pos = y.pos, y.expand.factor = y.expand.factor,
+    alpha = alpha, angle = angle, color = color, family = family,
+    fontface = fontface, hjust = hjust, lineheight = lineheight,
+    size = size, vjust = vjust
+  )
   if (geom == "label") {
-    params <- c(params, list(label.padding = label.padding, 
-                             label.r = label.r, label.size = label.size, na.rm = na.rm, 
-                             ...))
+    params <- c(
+      params, list(label.padding = label.padding, label.r = label.r, label.size = label.size, na.rm = na.rm, ...)
+    )
   }
   else {
     params <- c(params, na.rm = na.rm, ...)
   }
-  ggplot2::layer(stat = StatNText, data = data, mapping = mapping, 
-                 geom = geom, position = position, show.legend = show.legend, 
-                 inherit.aes = inherit.aes, params = params)
+  ggplot2::layer(
+    stat = StatNText, data = data, mapping = mapping,
+    geom = geom, position = position, show.legend = show.legend,
+    inherit.aes = inherit.aes, params = params)
 }
