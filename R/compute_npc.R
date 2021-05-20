@@ -6,9 +6,9 @@
 #' @param x,y numeric or character vector of coordinates.
 #' @param group integer ggplot's group id. Used to shift coordinates to avoid
 #'   overlaps.
-#' @param h.step,v.step (`proportion`)\cr The step size for shifting coordinates
+#' @param h_step,v_step (`proportion`)\cr The step size for shifting coordinates
 #'   in npc units.
-#' @param margin.npc (`proportion`)\cr The margin added towards the nearest
+#' @param margin_npc (`proportion`)\cr The margin added towards the nearest
 #'   plotting area edge when converting character coordinates into npc.
 #'
 #' @return A numeric vector with proportions representing
@@ -18,7 +18,7 @@
 #'
 #' @export
 #'
-compute_npcx <- function(x, group = 1L, h.step = 0.1, margin.npc = 0.05) { # nolint
+compute_npcx <- function(x, group = 1L, h_step = 0.1, margin_npc = 0.05) {
   group <- abs(group)
   if (is.factor(x)) {
     x <- as.character(x)
@@ -26,16 +26,16 @@ compute_npcx <- function(x, group = 1L, h.step = 0.1, margin.npc = 0.05) { # nol
   if (is.character(x)) {
     # we must handle character vectors with length > 1
     map <- c(
-      right = 1 - margin.npc,
-      left = 0 + margin.npc,
+      right = 1 - margin_npc,
+      left = 0 + margin_npc,
       centre = 0.5,
       center = 0.5,
       middle = 0.5,
       NA_real_)
     x <- unname(map[x])
   }
-  if (any(group > 1L) && h.step != 0) {
-    x <- x + (group - 1L) * h.step * ifelse(x < 0.5, 1, -1)
+  if (any(group > 1L) && h_step != 0) {
+    x <- x + (group - 1L) * h_step * ifelse(x < 0.5, 1, -1)
   }
   x <- ifelse(x > 1, 1, x)
   x <- ifelse(x < 0, 0, x)
@@ -46,7 +46,7 @@ compute_npcx <- function(x, group = 1L, h.step = 0.1, margin.npc = 0.05) { # nol
 #'
 #' @export
 #'
-compute_npcy <- function(y, group = 1L, v.step = 0.1, margin.npc = 0.05) { # nolint
+compute_npcy <- function(y, group = 1L, v_step = 0.1, margin_npc = 0.05) {
   group <- abs(group)
   if (is.factor(y)) {
     y <- as.character(y)
@@ -54,8 +54,8 @@ compute_npcy <- function(y, group = 1L, v.step = 0.1, margin.npc = 0.05) { # nol
   if (is.character(y)) {
     # we must handle character vectors with length > 1
     map <- c(
-      top = 1 - margin.npc,
-      bottom = 0 + margin.npc,
+      top = 1 - margin_npc,
+      bottom = 0 + margin_npc,
       centre = 0.5,
       center = 0.5,
       middle = 0.5,
@@ -63,8 +63,8 @@ compute_npcy <- function(y, group = 1L, v.step = 0.1, margin.npc = 0.05) { # nol
     )
     y <- unname(map[y])
   }
-  if (any(group > 1L) && v.step != 0) {
-    y <- y + (group - 1L) * v.step * ifelse(y < 0.5, 1, -1)
+  if (any(group > 1L) && v_step != 0) {
+    y <- y + (group - 1L) * v_step * ifelse(y < 0.5, 1, -1)
   }
   y <- ifelse(y > 1, 1, y)
   y <- ifelse(y < 0, 0, y)

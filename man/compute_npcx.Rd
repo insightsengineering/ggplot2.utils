@@ -5,9 +5,9 @@
 \alias{compute_npcy}
 \title{Compute npc coordinates}
 \usage{
-compute_npcx(x, group = 1L, h.step = 0.1, margin.npc = 0.05)
+compute_npcx(x, group = 1L, h_step = 0.1, margin_npc = 0.05)
 
-compute_npcy(y, group = 1L, v.step = 0.1, margin.npc = 0.05)
+compute_npcy(y, group = 1L, v_step = 0.1, margin_npc = 0.05)
 }
 \arguments{
 \item{x, y}{numeric or character vector of coordinates.}
@@ -15,10 +15,10 @@ compute_npcy(y, group = 1L, v.step = 0.1, margin.npc = 0.05)
 \item{group}{integer ggplot's group id. Used to shift coordinates to avoid
 overlaps.}
 
-\item{h.step, v.step}{(\code{proportion})\cr The step size for shifting coordinates
+\item{h_step, v_step}{(\code{proportion})\cr The step size for shifting coordinates
 in npc units.}
 
-\item{margin.npc}{(\code{proportion})\cr The margin added towards the nearest
+\item{margin_npc}{(\code{proportion})\cr The margin added towards the nearest
 plotting area edge when converting character coordinates into npc.}
 }
 \value{
