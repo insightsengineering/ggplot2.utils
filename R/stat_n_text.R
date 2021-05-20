@@ -2,23 +2,23 @@
 #' @format NULL
 #' @usage NULL
 #' @export
-StatNText <- ggplot2::ggproto( # nolint
-  "StatNText",
+stat_n_text_proto <- ggplot2::ggproto(
+  "stat_n_text_proto",
   ggplot2::Stat,
 
   required_aes = c("x"),
 
   setup_params = function(data, params) {
-    if (!is.null(params$y.pos)) return(params)
-    if (is.null(data$y)) stop("Without y aesthetic y.pos needs to be provided")
-    range.y <- range(data$y, na.rm = TRUE)
-    pos <- range.y[1] - diff(range.y) * params$y.expand.factor
-    params$y.pos <- pos # nolint
+    if (!is.null(params$y_pos)) return(params)
+    if (is.null(data$y)) stop("Without y aesthetic y_pos needs to be provided")
+    range_y <- range(data$y, na.rm = TRUE)
+    pos <- range_y[1] - diff(range_y) * params$y_expand_factor
+    params$y_pos <- pos
     params
   },
 
-  compute_panel = function(data, scales, y.pos, y.expand.factor) { # nolint
-    n.tibble <- if(is.null(data$y)) { # nolint
+  compute_panel = function(data, scales, y_pos, y_expand_factor) {
+    n_tibble <- if (is.null(data$y)) {
       dplyr::summarize(
         dplyr::group_by(data, x),
         N = dplyr::n()
@@ -30,10 +30,10 @@ StatNText <- ggplot2::ggproto( # nolint
       )
     }
 
-    n.vec <- unlist(n.tibble[, "N"]) # nolint
-    lab <- paste0("n=", n.vec)
+    n_vec <- unlist(n_tibble[, "N"]) # nolint
+    lab <- paste0("n=", n_vec)
 
-    data.frame(x = unlist(n.tibble[, "x"]), y = y.pos, label = lab)
+    data.frame(x = unlist(n_tibble[, "x"]), y = y_pos, label = lab)
   }
 )
 
@@ -51,27 +51,28 @@ StatNText <- ggplot2::ggproto( # nolint
 #' \url{https://cran.r-project.org/package=ggplot2/vignettes/extending-ggplot2.html}
 #' for information on how to create a new stat.
 #'
-#' @param mapping,data,position,na.rm,show.legend,inherit.aes See the help file
-#' for \code{\link[ggplot2]{geom_text}}.
+#' @param mapping,data,position,na_rm,show_legend,inherit_aes See the help file
+#' for \code{\link[ggplot2]{geom_text}}. There the equivalent parameter name will have a dot \code{.} instead of
+#' an underscore \code{_}.
 #' @param geom Character string indicating which \code{geom} to use to display
 #' the text.  Setting \code{geom="text"} will use
 #' \code{\link[ggplot2]{geom_text}} to display the text, and setting
 #' \code{geom="label"} will use \code{\link[ggplot2]{geom_label}} to display
 #' the text.  The default value is \code{geom="text"} unless the user sets
-#' \code{text.box=TRUE}.
-#' @param y.pos Numeric scalar indicating the \eqn{y}-position of the text
+#' \code{text_box=TRUE}.
+#' @param y_pos Numeric scalar indicating the \eqn{y}-position of the text
 #' (i.e., the value of the argument \code{y} that will be used in the call to
 #' \code{\link[ggplot2]{geom_text}} or \code{\link[ggplot2]{geom_label}}).  The
-#' default value is \code{y.pos=NULL}, in which case \code{y.pos} is set to the
+#' default value is \code{y_pos=NULL}, in which case \code{y_pos} is set to the
 #' minimum value of all \eqn{y}-values minus a proportion of the range of all
 #' \eqn{y}-values, where the proportion is determined by the argument
-#' \code{y.expand.factor} (see below).
-#' @param y.expand.factor For the case when \code{y.pos=NULL}, a numeric scalar
+#' \code{y_expand_factor} (see below).
+#' @param y_expand_factor For the case when \code{y_pos=NULL}, a numeric scalar
 #' indicating the proportion by which the range of all \eqn{y}-values should be
 #' multiplied by before subtracting this value from the minimum value of all
-#' \eqn{y}-values in order to compute the value of the argument \code{y.pos}
-#' (see above).  The default value is \code{y.expand.factor=0.1}.
-#' @param text.box Logical scalar indicating whether to surround the text with
+#' \eqn{y}-values in order to compute the value of the argument \code{y_pos}
+#' (see above).  The default value is \code{y_expand_factor=0.1}.
+#' @param text_box Logical scalar indicating whether to surround the text with
 #' a text box (i.e., whether to use \code{\link[ggplot2]{geom_label}} instead
 #' of \code{\link[ggplot2]{geom_text}}).  This argument can be overridden by
 #' simply specifying the argument \code{geom}.
@@ -79,7 +80,7 @@ StatNText <- ggplot2::ggproto( # nolint
 #' help file for \code{\link[ggplot2]{geom_text}} and the vignette
 #' \bold{Aesthetic specifications} at
 #' \url{https://cran.r-project.org/package=ggplot2/vignettes/ggplot2-specs.html}.
-#' @param label.padding,label.r,label.size See the help file for
+#' @param label_padding,label_r,label_size See the help file for
 #' \code{\link[ggplot2]{geom_text}}.
 #' @param \dots Other arguments passed on to \code{\link[ggplot2]{layer}}.
 #' @author Steven P. Millard (\email{EnvStats@@ProbStatInfo.com})
@@ -119,13 +120,13 @@ StatNText <- ggplot2::ggproto( # nolint
 #' # Repeat Example 1, but specify the y-position for the text.
 #'
 #' p + geom_point() +
-#'   stat_n_text(y.pos = 5) +
+#'   stat_n_text(y_pos = 5) +
 #'   labs(x = "Number of Cylinders", y = "Miles per Gallon")
 #'
 #' # Repeat Example 1, but show the sample size in a text box.
 #'
 #' p + geom_point() +
-#'   stat_n_text(text.box = TRUE) +
+#'   stat_n_text(text_box = TRUE) +
 #'   labs(x = "Number of Cylinders", y = "Miles per Gallon")
 #'
 #' # Repeat Example 1, but use the color brown for the text.
@@ -147,51 +148,48 @@ StatNText <- ggplot2::ggproto( # nolint
 #'     family = "mono", fontface = "bold") +
 #'   labs(x = "Number of Cylinders", y = "Miles per Gallon")
 #'
-#' # Use it for a barplot - this needs `y.pos` specification since there is no y aesthetic.
+#' # Use it for a barplot - this needs `y_pos` specification since there is no y aesthetic.
 #' p <- ggplot(mtcars, aes(x = factor(cyl), fill = factor(vs))) +
 #'   geom_bar(position = "fill") +
-#'   stat_n_text(y.pos = -0.05, text.box = TRUE)
+#'   stat_n_text(y_pos = -0.05, text_box = TRUE)
 #' p
 stat_n_text <- function(mapping = NULL,
                         data = NULL,
-                        geom = ifelse(text.box, "label", "text"),
+                        geom = ifelse(text_box, "label", "text"),
                         position = "identity",
-                        na.rm = FALSE, # nolint
-                        show.legend = FALSE, # nolint
-                        inherit.aes = TRUE, # nolint
-                        y.pos = NULL, # nolint
-                        y.expand.factor = 0.1, # nolint
-                        text.box = FALSE, # nolint
+                        na_rm = FALSE,
+                        show_legend = FALSE,
+                        inherit_aes = TRUE,
+                        y_pos = NULL,
+                        y_expand_factor = 0.1,
+                        text_box = FALSE,
                         alpha = 1,
                         angle = 0,
                         color = "black",
                         family = "",
                         fontface = "plain",
                         hjust = 0.5,
-                        label.padding = ggplot2::unit(0.25, "lines"), # nolint
-                        label.r = ggplot2::unit(0.15, "lines"), # nolint
-                        label.size = 0.25, # nolint
+                        label_padding = ggplot2::unit(0.25, "lines"),
+                        label_r = ggplot2::unit(0.15, "lines"),
+                        label_size = 0.25,
                         lineheight = 1.2,
                         size = 4,
                         vjust = 0.5,
                         ...) {
   geom <- match.arg(geom, c("label", "text"))
   params <- list(
-    y.pos = y.pos, y.expand.factor = y.expand.factor,
+    y_pos = y_pos, y_expand_factor = y_expand_factor,
     alpha = alpha, angle = angle, color = color, family = family,
     fontface = fontface, hjust = hjust, lineheight = lineheight,
     size = size, vjust = vjust
   )
-  if (geom == "label") {
-    params <- c(
-      params, list(label.padding = label.padding, label.r = label.r, label.size = label.size, na.rm = na.rm, ...)
-    )
-  }
-  else {
-    params <- c(params, na.rm = na.rm, ...)
+  params <- if (geom == "label") {
+    c(params, list(label.padding = label_padding, label.r = label_r, label.size = label_size, na.rm = na_rm, ...))
+  } else {
+    c(params, na.rm = na_rm, ...)
   }
   ggplot2::layer(
-    stat = StatNText, data = data, mapping = mapping,
-    geom = geom, position = position, show.legend = show.legend,
-    inherit.aes = inherit.aes, params = params)
+    stat = stat_n_text_proto, data = data, mapping = mapping,
+    geom = geom, position = position, show.legend = show_legend,
+    inherit.aes = inherit_aes, params = params)
 }

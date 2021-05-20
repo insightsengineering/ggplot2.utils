@@ -6,7 +6,7 @@
 \alias{geom_table_proto}
 \alias{gtbnpc_draw_panel_fun}
 \alias{geom_table_npc_proto}
-\alias{StatNText}
+\alias{stat_n_text_proto}
 \alias{StatProp}
 \title{Defined here to avoid a note in check --as-cran as the imports from 'broom'
 are not seen when the function is defined in-line in the ggproto object.

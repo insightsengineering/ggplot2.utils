@@ -7,23 +7,23 @@
 stat_n_text(
   mapping = NULL,
   data = NULL,
-  geom = ifelse(text.box, "label", "text"),
+  geom = ifelse(text_box, "label", "text"),
   position = "identity",
-  na.rm = FALSE,
-  show.legend = FALSE,
-  inherit.aes = TRUE,
-  y.pos = NULL,
-  y.expand.factor = 0.1,
-  text.box = FALSE,
+  na_rm = FALSE,
+  show_legend = FALSE,
+  inherit_aes = TRUE,
+  y_pos = NULL,
+  y_expand_factor = 0.1,
+  text_box = FALSE,
   alpha = 1,
   angle = 0,
   color = "black",
   family = "",
   fontface = "plain",
   hjust = 0.5,
-  label.padding = ggplot2::unit(0.25, "lines"),
-  label.r = ggplot2::unit(0.15, "lines"),
-  label.size = 0.25,
+  label_padding = ggplot2::unit(0.25, "lines"),
+  label_r = ggplot2::unit(0.15, "lines"),
+  label_size = 0.25,
   lineheight = 1.2,
   size = 4,
   vjust = 0.5,
@@ -31,31 +31,32 @@ stat_n_text(
 )
 }
 \arguments{
-\item{mapping, data, position, na.rm, show.legend, inherit.aes}{See the help file
-for \code{\link[ggplot2]{geom_text}}.}
+\item{mapping, data, position, na_rm, show_legend, inherit_aes}{See the help file
+for \code{\link[ggplot2]{geom_text}}. There the equivalent parameter name will have a dot \code{.} instead of
+an underscore \code{_}.}
 
 \item{geom}{Character string indicating which \code{geom} to use to display
 the text.  Setting \code{geom="text"} will use
 \code{\link[ggplot2]{geom_text}} to display the text, and setting
 \code{geom="label"} will use \code{\link[ggplot2]{geom_label}} to display
 the text.  The default value is \code{geom="text"} unless the user sets
-\code{text.box=TRUE}.}
+\code{text_box=TRUE}.}
 
-\item{y.pos}{Numeric scalar indicating the \eqn{y}-position of the text
+\item{y_pos}{Numeric scalar indicating the \eqn{y}-position of the text
 (i.e., the value of the argument \code{y} that will be used in the call to
 \code{\link[ggplot2]{geom_text}} or \code{\link[ggplot2]{geom_label}}).  The
-default value is \code{y.pos=NULL}, in which case \code{y.pos} is set to the
+default value is \code{y_pos=NULL}, in which case \code{y_pos} is set to the
 minimum value of all \eqn{y}-values minus a proportion of the range of all
 \eqn{y}-values, where the proportion is determined by the argument
-\code{y.expand.factor} (see below).}
+\code{y_expand_factor} (see below).}
 
-\item{y.expand.factor}{For the case when \code{y.pos=NULL}, a numeric scalar
+\item{y_expand_factor}{For the case when \code{y_pos=NULL}, a numeric scalar
 indicating the proportion by which the range of all \eqn{y}-values should be
 multiplied by before subtracting this value from the minimum value of all
-\eqn{y}-values in order to compute the value of the argument \code{y.pos}
-(see above).  The default value is \code{y.expand.factor=0.1}.}
+\eqn{y}-values in order to compute the value of the argument \code{y_pos}
+(see above).  The default value is \code{y_expand_factor=0.1}.}
 
-\item{text.box}{Logical scalar indicating whether to surround the text with
+\item{text_box}{Logical scalar indicating whether to surround the text with
 a text box (i.e., whether to use \code{\link[ggplot2]{geom_label}} instead
 of \code{\link[ggplot2]{geom_text}}).  This argument can be overridden by
 simply specifying the argument \code{geom}.}
@@ -65,7 +66,7 @@ help file for \code{\link[ggplot2]{geom_text}} and the vignette
 \bold{Aesthetic specifications} at
 \url{https://cran.r-project.org/package=ggplot2/vignettes/ggplot2-specs.html}.}
 
-\item{label.padding, label.r, label.size}{See the help file for
+\item{label_padding, label_r, label_size}{See the help file for
 \code{\link[ggplot2]{geom_text}}.}
 
 \item{\dots}{Other arguments passed on to \code{\link[ggplot2]{layer}}.}
@@ -115,13 +116,13 @@ p + geom_point() +
 # Repeat Example 1, but specify the y-position for the text.
 
 p + geom_point() +
-  stat_n_text(y.pos = 5) +
+  stat_n_text(y_pos = 5) +
   labs(x = "Number of Cylinders", y = "Miles per Gallon")
 
 # Repeat Example 1, but show the sample size in a text box.
 
 p + geom_point() +
-  stat_n_text(text.box = TRUE) +
+  stat_n_text(text_box = TRUE) +
   labs(x = "Number of Cylinders", y = "Miles per Gallon")
 
 # Repeat Example 1, but use the color brown for the text.
@@ -143,10 +144,10 @@ p + geom_point() +
     family = "mono", fontface = "bold") +
   labs(x = "Number of Cylinders", y = "Miles per Gallon")
 
-# Use it for a barplot - this needs `y.pos` specification since there is no y aesthetic.
+# Use it for a barplot - this needs `y_pos` specification since there is no y aesthetic.
 p <- ggplot(mtcars, aes(x = factor(cyl), fill = factor(vs))) +
   geom_bar(position = "fill") +
-  stat_n_text(y.pos = -0.05, text.box = TRUE)
+  stat_n_text(y_pos = -0.05, text_box = TRUE)
 p
 }
 \references{
