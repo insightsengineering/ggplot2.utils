@@ -92,8 +92,6 @@ stat_prop <- function(mapping = NULL,
 #' @format NULL
 #' @usage NULL
 #' @export
-#' @importFrom utils.nest if_null
-#' @importFrom scales percent
 StatProp <- ggproto( # nolint
   "StatProp",
   Stat,

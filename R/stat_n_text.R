@@ -2,7 +2,6 @@
 #' @format NULL
 #' @usage NULL
 #' @export
-#' @importFrom dplyr summarize group_by
 StatNText <- ggplot2::ggproto( # nolint
   "StatNText",
   ggplot2::Stat,

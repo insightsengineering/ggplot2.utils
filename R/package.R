@@ -10,5 +10,4 @@
 "_PACKAGE"
 
 #' @import ggplot2
-#' @import testthat
 NULL

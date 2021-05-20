@@ -510,7 +510,6 @@ geom_table_npc_proto <- ggproto(
 #' @return A \code{list} object that can be used as \code{ttheme} in the
 #'   construction of tables with functions from package 'gridExtra'.
 #'
-#' @importFrom gridExtra ttheme_default ttheme_minimal tableGrob
 #' @export
 #'
 #' @family geometries for adding insets to ggplots
