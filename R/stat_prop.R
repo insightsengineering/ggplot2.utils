@@ -8,6 +8,9 @@
 #' @inheritParams ggplot2::stat_count
 #' @param geom Override the default connection between [ggplot2::geom_bar()]
 #'   and [stat_prop()].
+#' @param na_rm,show_legend,inherit_aes See the help file
+#' for \code{\link[ggplot2]{geom_text}}. There the equivalent parameter name will have a dot \code{.} instead of
+#' an underscore \code{_}.
 #' @section Aesthetics:
 #' [stat_prop()] understands the following aesthetics:
 #'
@@ -60,14 +63,14 @@ stat_prop <- function(mapping = NULL,
                       position = "fill",
                       ...,
                       width = NULL,
-                      na.rm = FALSE, # nolint
+                      na_rm = FALSE,
                       orientation = NA,
-                      show.legend = NA, # nolint
-                      inherit.aes = TRUE # nolint
+                      show_legend = NA,
+                      inherit_aes = TRUE
                       ) {
 
   params <- list(
-    na.rm = na.rm,
+    na.rm = na_rm,
     orientation = orientation,
     width = width,
     ...
@@ -82,8 +85,8 @@ stat_prop <- function(mapping = NULL,
     stat = StatProp,
     geom = geom,
     position = position,
-    show.legend = show.legend,
-    inherit.aes = inherit.aes,
+    show.legend = show_legend,
+    inherit.aes = inherit_aes,
     params = params
   )
 }
@@ -92,9 +95,9 @@ stat_prop <- function(mapping = NULL,
 #' @format NULL
 #' @usage NULL
 #' @export
-StatProp <- ggproto( # nolint
+StatProp <- ggplot2::ggproto( # nolint
   "StatProp",
-  Stat,
+  ggplot2::Stat,
   required_aes = c("x|y", "by"),
   default_aes = aes(
     x = after_stat(count), y = after_stat(count), weight = 1,
@@ -128,7 +131,7 @@ StatProp <- ggproto( # nolint
 
     # sum weights for each combination of by and aesthetics
     # the use of . allows to consider all aesthetics defined in data
-    panel <- aggregate(weight ~ ., data = data, sum, na.rm = TRUE)
+    panel <- stats::aggregate(weight ~ ., data = data, sum, na.rm = TRUE)
 
     names(panel)[which(names(panel) == "weight")] <- "count"
     panel$count[is.na(panel$count)] <- 0
