@@ -4,10 +4,10 @@
 \alias{ttheme_set}
 \title{Set default table theme}
 \usage{
-ttheme_set(table.theme = NULL)
+ttheme_set(table_theme = NULL)
 }
 \arguments{
-\item{table.theme}{NULL, list or function A gridExtra ttheme definition, or
+\item{table_theme}{NULL, list or function A gridExtra ttheme definition, or
 a constructor for a ttheme or NULL for default.}
 }
 \value{

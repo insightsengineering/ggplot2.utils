@@ -3,9 +3,9 @@
 \docType{data}
 \name{gtb_draw_panel_fun}
 \alias{gtb_draw_panel_fun}
-\alias{GeomTable}
+\alias{geom_table_proto}
 \alias{gtbnpc_draw_panel_fun}
-\alias{GeomTableNpc}
+\alias{geom_table_npc_proto}
 \alias{StatNText}
 \alias{StatProp}
 \title{Defined here to avoid a note in check --as-cran as the imports from 'broom'
