@@ -190,7 +190,7 @@ geom_table <- function(mapping = NULL,
     data = data,
     mapping = mapping,
     stat = stat,
-    geom = geom_table_proto,
+    geom = GeomTable,
     position = position,
     show.legend = show_legend,
     inherit.aes = inherit_aes,
@@ -307,8 +307,8 @@ gtb_draw_panel_fun <- function(data,
 #' @format NULL
 #' @usage NULL
 #' @export
-geom_table_proto <- ggproto(
-  "geom_table_proto",
+GeomTable <- ggproto( # nolint
+  "GeomTable",
   Geom,
   required_aes = c("x", "y", "label"),
   default_aes = aes(
@@ -353,7 +353,7 @@ geom_table_npc <- function(mapping = NULL,
     data = data,
     mapping = mapping,
     stat = stat,
-    geom = geom_table_npc_proto,
+    geom = GeomTableNpc,
     position = position,
     show.legend = show_legend,
     inherit.aes = inherit_aes,
@@ -470,8 +470,8 @@ gtbnpc_draw_panel_fun <- function(data,
 #' @format NULL
 #' @usage NULL
 #' @export
-geom_table_npc_proto <- ggproto(
-  "geom_table_npc_proto",
+GeomTableNpc <- ggproto( # nolint
+  "GeomTableNpc",
   Geom,
   required_aes = c("npcx", "npcy", "label"),
   default_aes = aes(

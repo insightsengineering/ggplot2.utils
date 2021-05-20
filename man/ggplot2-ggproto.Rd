@@ -3,10 +3,10 @@
 \docType{data}
 \name{gtb_draw_panel_fun}
 \alias{gtb_draw_panel_fun}
-\alias{geom_table_proto}
+\alias{GeomTable}
 \alias{gtbnpc_draw_panel_fun}
-\alias{geom_table_npc_proto}
-\alias{stat_n_text_proto}
+\alias{GeomTableNpc}
+\alias{StatNText}
 \alias{StatProp}
 \title{Defined here to avoid a note in check --as-cran as the imports from 'broom'
 are not seen when the function is defined in-line in the ggproto object.

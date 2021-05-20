@@ -2,8 +2,8 @@
 #' @format NULL
 #' @usage NULL
 #' @export
-stat_n_text_proto <- ggplot2::ggproto(
-  "stat_n_text_proto",
+StatNText <- ggplot2::ggproto( # nolint
+  "StatNText",
   ggplot2::Stat,
 
   required_aes = c("x"),
@@ -189,7 +189,7 @@ stat_n_text <- function(mapping = NULL,
     c(params, na.rm = na_rm, ...)
   }
   ggplot2::layer(
-    stat = stat_n_text_proto, data = data, mapping = mapping,
+    stat = StatNText, data = data, mapping = mapping,
     geom = geom, position = position, show.legend = show_legend,
     inherit.aes = inherit_aes, params = params)
 }
