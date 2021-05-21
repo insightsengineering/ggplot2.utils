@@ -268,7 +268,7 @@ gtb_draw_panel_fun <- function(data,
         # use colour from data$colour
         this_table_theme <- table_theme(
           base_size = data$size[row_idx] * .pt,
-          base_colour = ggplot2::alpha(data$colour[row_idx], data$alpha[row_idx]),
+          base_colour = alpha(data$colour[row_idx], data$alpha[row_idx]),
           base_family = data$family[[row_idx]],
           parse = parse,
           rowhead = list(fg_params = list(hjust = 1, x = 0.9)),
@@ -431,7 +431,7 @@ gtbnpc_draw_panel_fun <- function(data,
         # use colour from data$colour
         this_table_theme <- table_theme(
           base_size = data$size[row_idx] * .pt,
-          base_colour = ggplot2::alpha(data$colour[row_idx], data$alpha[row_idx]),
+          base_colour = alpha(data$colour[row_idx], data$alpha[row_idx]),
           base_family = data$family[[row_idx]],
           parse = parse,
           rowhead = list(fg_params = list(hjust = 1, x = 0.9)),

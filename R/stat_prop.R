@@ -95,9 +95,9 @@ stat_prop <- function(mapping = NULL,
 #' @format NULL
 #' @usage NULL
 #' @export
-StatProp <- ggplot2::ggproto( # nolint
+StatProp <- ggproto( # nolint
   "StatProp",
-  ggplot2::Stat,
+  Stat,
   required_aes = c("x|y", "by"),
   default_aes = aes(
     x = after_stat(count), y = after_stat(count), weight = 1,
@@ -127,7 +127,7 @@ StatProp <- ggplot2::ggproto( # nolint
   compute_panel = function(self, data, scales, width = NULL, flipped_aes = FALSE) {
     data <- flip_data(data, flipped_aes)
     data$weight <- utils.nest::if_null(data$weight, rep(1, nrow(data)))
-    width <- utils.nest::if_null(width, ggplot2::resolution(data$x) * 0.9)
+    width <- utils.nest::if_null(width, resolution(data$x) * 0.9)
 
     # sum weights for each combination of by and aesthetics
     # the use of . allows to consider all aesthetics defined in data

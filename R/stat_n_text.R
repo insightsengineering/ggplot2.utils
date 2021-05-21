@@ -2,9 +2,9 @@
 #' @format NULL
 #' @usage NULL
 #' @export
-StatNText <- ggplot2::ggproto( # nolint
+StatNText <- ggproto( # nolint
   "StatNText",
-  ggplot2::Stat,
+  Stat,
 
   required_aes = c("x"),
 
@@ -169,8 +169,8 @@ stat_n_text <- function(mapping = NULL,
                         family = "",
                         fontface = "plain",
                         hjust = 0.5,
-                        label_padding = ggplot2::unit(0.25, "lines"),
-                        label_r = ggplot2::unit(0.15, "lines"),
+                        label_padding = unit(0.25, "lines"),
+                        label_r = unit(0.15, "lines"),
                         label_size = 0.25,
                         lineheight = 1.2,
                         size = 4,
@@ -188,7 +188,7 @@ stat_n_text <- function(mapping = NULL,
   } else {
     c(params, na.rm = na_rm, ...)
   }
-  ggplot2::layer(
+  layer(
     stat = StatNText, data = data, mapping = mapping,
     geom = geom, position = position, show.legend = show_legend,
     inherit.aes = inherit_aes, params = params)
