@@ -11,14 +11,14 @@ geom_table(
   stat = "identity",
   position = "identity",
   ...,
-  table.theme = NULL,
-  table.rownames = FALSE,
-  table.colnames = TRUE,
-  table.hjust = 0.5,
+  table_theme = NULL,
+  table_rownames = FALSE,
+  table_colnames = TRUE,
+  table_hjust = 0.5,
   parse = FALSE,
-  na.rm = FALSE,
-  show.legend = FALSE,
-  inherit.aes = FALSE
+  na_rm = FALSE,
+  show_legend = FALSE,
+  inherit_aes = FALSE
 )
 
 geom_table_npc(
@@ -27,14 +27,14 @@ geom_table_npc(
   stat = "identity",
   position = "identity",
   ...,
-  table.theme = NULL,
-  table.rownames = FALSE,
-  table.colnames = TRUE,
-  table.hjust = 0.5,
+  table_theme = NULL,
+  table_rownames = FALSE,
+  table_colnames = TRUE,
+  table_hjust = 0.5,
   parse = FALSE,
-  na.rm = FALSE,
-  show.legend = FALSE,
-  inherit.aes = FALSE
+  na_rm = FALSE,
+  show_legend = FALSE,
+  inherit_aes = FALSE
 )
 }
 \arguments{
@@ -54,28 +54,28 @@ as a string.}
 can include aesthetics whose values you want to set, not map. See
 \code{\link[ggplot2]{layer}} for more details.}
 
-\item{table.theme}{NULL, list or function A gridExtra ttheme defintion, or
+\item{table_theme}{NULL, list or function A gridExtra ttheme definition, or
 a constructor for a ttheme or NULL for default.}
 
-\item{table.rownames, table.colnames}{logical flag to enable or disable
+\item{table_rownames, table_colnames}{logical flag to enable or disable
 printing of row names and column names.}
 
-\item{table.hjust}{numeric Horizontal justification for the core and column
+\item{table_hjust}{numeric Horizontal justification for the core and column
 headings of the table.}
 
 \item{parse}{If TRUE, the labels will be parsed into expressions and
 displayed as described in \code{?plotmath}.}
 
-\item{na.rm}{If \code{FALSE} (the default), removes missing values with a
+\item{na_rm}{If \code{FALSE} (the default), removes missing values with a
 warning.  If \code{TRUE} silently removes missing values.}
 
-\item{show.legend}{logical. Should this layer be included in the legends?
+\item{show_legend}{logical. Should this layer be included in the legends?
 \code{NA}, the default, includes if any aesthetics are mapped. \code{FALSE}
 never includes, and \code{TRUE} always includes.}
 
-\item{inherit.aes}{If \code{FALSE}, overrides the default aesthetics, rather
+\item{inherit_aes}{If \code{FALSE}, overrides the default aesthetics, rather
 than combining with them. This is most useful for helper functions that
-define both data and aesthetics and shouldn't inherit behaviour from the
+define both data and aesthetics and shouldn't inherit behavior from the
 default plot specification, e.g. \code{\link[ggplot2]{borders}}.}
 }
 \description{
@@ -113,12 +113,12 @@ constant in data units of the base plot: when you modify scale limits,
 inset plots stay the same size relative to the physical size of the base
 plot.
 
-If the argument passed to \code{table.theme} is a constructor function
+If the argument passed to \code{table_theme} is a constructor function
 (passing its name without parenthesis), the values mapped to \code{size},
 \code{colour}, \code{fill}, \code{alpha}, and \code{family} aesthetics will
 the passed to this theme constructor for each individual table. In
 contrast, if a ready constructed ttheme as a list object is passed as
-argument (e.g., by calling the constructor, using contructor name followed
+argument (e.g., by calling the constructor, using constructor name followed
 by parenthesis), it will be used as is, i.e., mappings to aesthetics such
 as \code{colour} are ignored if present.
 
@@ -136,7 +136,7 @@ a layer to a plot, and behave as expected in the grammar of graphics. In general
 ggplot themes do not affect how layers are rendered, and this is also the
 case for \code{geom_table()}. As described abovem, the formatting of the
 inset table is done according to the the argument passed to parameter
-\code{table.theme}.
+\code{table_theme}.
 }
 \section{Alignment}{
  You can modify table alignment with the \code{vjust} and
@@ -171,7 +171,7 @@ ggplot(mtcars, aes(wt, mpg, colour = factor(cyl))) +
 ggplot(mtcars, aes(wt, mpg, colour = factor(cyl))) +
   geom_point() +
   geom_table(data = df, aes(x = x, y = y, label = tb),
-             table.rownames = TRUE, table.theme = ttheme_gtstripes)
+             table_rownames = TRUE, table_theme = ttheme_gtstripes)
 
 # settings aesthetics to constants
 ggplot(mtcars, aes(wt, mpg, colour = factor(cyl))) +
@@ -184,7 +184,7 @@ ggplot(mtcars, aes(wt, mpg, colour = factor(cyl))) +
 ggplot(mtcars, aes(wt, mpg, colour = factor(cyl))) +
   geom_point() +
   geom_table(data = df, aes(x = x, y = y, label = tb),
-             table.theme = ttheme_gtminimal) +
+             table_theme = ttheme_gtminimal) +
   theme_classic()
 
 df2 <- tibble(x = 5.45, y = c(34, 29, 24), cyl = c(4, 6, 8),
@@ -194,7 +194,7 @@ df2 <- tibble(x = 5.45, y = c(34, 29, 24), cyl = c(4, 6, 8),
 ggplot(data = mtcars, mapping = aes(wt, mpg, color = factor(cyl))) +
   geom_point() +
   geom_table(data = df2,
-             inherit.aes = TRUE,
+             inherit_aes = TRUE,
              mapping = aes(x = x, y = y, label = tb))
 
 # Using native plot coordinates instead of data coordinates
@@ -209,7 +209,7 @@ ggplot(mtcars, aes(wt, mpg, colour = factor(cyl))) +
 This geometry is inspired on answers to two questions in
 Stackoverflow. In contrast to these earlier examples, the current geom
 obeys the grammar of graphics, and attempts to be consistent with the
-behaviour of 'ggplot2' geometries.
+behavior of 'ggplot2' geometries.
 \url{https://stackoverflow.com/questions/12318120/adding-table-within-the-plotting-region-of-a-ggplot-in-r}
 \url{https://stackoverflow.com/questions/25554548/adding-sub-tables-on-each-panel-of-a-facet-ggplot-in-r?}
 }

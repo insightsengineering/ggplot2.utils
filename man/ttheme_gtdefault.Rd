@@ -90,7 +90,7 @@ ttheme_gtstripes(
 
 \item{base_family}{default font family.}
 
-\item{parse}{logical, default behaviour for parsing text as plotmath.}
+\item{parse}{logical, default behavior for parsing text as plotmath.}
 
 \item{padding}{length-2 unit vector specifying the horizontal and vertical
 padding of text within each cell.}
@@ -132,67 +132,67 @@ df <- tibble(x = 5.45, y = 34, tb = list(tb))
 ggplot(mtcars, aes(wt, mpg, colour = factor(cyl))) +
   geom_point() +
   geom_table(data = df, aes(x = x, y = y, label = tb),
-             table.theme = ttheme_gtdefault) +
+             table_theme = ttheme_gtdefault) +
   theme_classic()
 
 # Minimal theme constructor
 ggplot(mtcars, aes(wt, mpg, colour = factor(cyl))) +
   geom_point() +
   geom_table(data = df, aes(x = x, y = y, label = tb),
-             table.theme = ttheme_gtminimal) +
+             table_theme = ttheme_gtminimal) +
   theme_classic()
 
 # A theme with white background
 ggplot(mtcars, aes(wt, mpg, colour = factor(cyl))) +
   geom_point() +
   geom_table(data = df, aes(x = x, y = y, label = tb),
-             table.theme = ttheme_gtbw) +
+             table_theme = ttheme_gtbw) +
   theme_bw()
 
 # Default colour of theme superceded by aesthetic constant
 ggplot(mtcars, aes(wt, mpg, colour = factor(cyl))) +
   geom_point() +
   geom_table(data = df, aes(x = x, y = y, label = tb),
-             table.theme = ttheme_gtbw, colour = "darkblue") +
+             table_theme = ttheme_gtbw, colour = "darkblue") +
   theme_bw()
 
 # A theme with dark background
 ggplot(mtcars, aes(wt, mpg, colour = factor(cyl))) +
   geom_point() +
   geom_table(data = df, aes(x = x, y = y, label = tb),
-             table.theme = ttheme_gtdark) +
+             table_theme = ttheme_gtdark) +
   theme_dark()
 
 # Default colour of theme superceded by aesthetic constant
 ggplot(mtcars, aes(wt, mpg, colour = factor(cyl))) +
   geom_point() +
   geom_table(data = df, aes(x = x, y = y, label = tb),
-             table.theme = ttheme_gtdark, colour = "yellow") +
+             table_theme = ttheme_gtdark, colour = "yellow") +
   theme_dark()
 
 # A theme with light background
 ggplot(mtcars, aes(wt, mpg, colour = factor(cyl))) +
   geom_point() +
   geom_table(data = df, aes(x = x, y = y, label = tb),
-             table.theme = ttheme_gtlight)
+             table_theme = ttheme_gtlight)
 
 # Default colour of theme superceded by aesthetic constant
 ggplot(mtcars, aes(wt, mpg, colour = factor(cyl))) +
   geom_point() +
   geom_table(data = df, aes(x = x, y = y, label = tb),
-             table.theme = ttheme_gtlight, colour = "darkred")
+             table_theme = ttheme_gtlight, colour = "darkred")
 
 # Default colour of theme superceded by aesthetic constant
 ggplot(mtcars, aes(wt, mpg, colour = factor(cyl))) +
   geom_point() +
   geom_table(data = df, aes(x = x, y = y, label = tb),
-             table.theme = ttheme_gtsimple)
+             table_theme = ttheme_gtsimple)
 
 # Default colour of theme superceded by aesthetic constant
 ggplot(mtcars, aes(wt, mpg, colour = factor(cyl))) +
   geom_point() +
   geom_table(data = df, aes(x = x, y = y, label = tb),
-             table.theme = ttheme_gtstripes) +
+             table_theme = ttheme_gtstripes) +
   theme_dark()
 
 }

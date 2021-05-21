@@ -11,10 +11,10 @@ stat_prop(
   position = "fill",
   ...,
   width = NULL,
-  na.rm = FALSE,
+  na_rm = FALSE,
   orientation = NA,
-  show.legend = NA,
-  inherit.aes = TRUE
+  show_legend = NA,
+  inherit_aes = TRUE
 )
 }
 \arguments{
@@ -51,24 +51,14 @@ to the paired geom/stat.}
 
 \item{width}{Bar width. By default, set to 90\% of the resolution of the data.}
 
-\item{na.rm}{If \code{FALSE}, the default, missing values are removed with
-a warning. If \code{TRUE}, missing values are silently removed.}
+\item{na_rm, show_legend, inherit_aes}{See the help file
+for \code{\link[ggplot2]{geom_text}}. There the equivalent parameter name will have a dot \code{.} instead of
+an underscore \code{_}.}
 
 \item{orientation}{The orientation of the layer. The default (\code{NA})
 automatically determines the orientation from the aesthetic mapping. In the
 rare event that this fails it can be given explicitly by setting \code{orientation}
 to either \code{"x"} or \code{"y"}. See the \emph{Orientation} section for more detail.}
-
-\item{show.legend}{logical. Should this layer be included in the legends?
-\code{NA}, the default, includes if any aesthetics are mapped.
-\code{FALSE} never includes, and \code{TRUE} always includes.
-It can also be a named logical vector to finely select the aesthetics to
-display.}
-
-\item{inherit.aes}{If \code{FALSE}, overrides the default aesthetics,
-rather than combining with them. This is most useful for helper functions
-that define both data and aesthetics and shouldn't inherit behaviour from
-the default plot specification, e.g. \code{\link[ggplot2:borders]{borders()}}.}
 }
 \description{
 \code{\link[=stat_prop]{stat_prop()}} is a variation of \code{\link[ggplot2:geom_bar]{ggplot2::stat_count()}} allowing to compute custom
@@ -110,9 +100,9 @@ ggplot(d) +
   aes(x = Class, fill = Survived, weight = Freq) +
   geom_bar(position = "dodge") +
   geom_text(
-    aes(by = Survived), 
+    aes(by = Survived),
     stat = "prop",
-    position = position_dodge(0.9), 
+    position = position_dodge(0.9),
     vjust = "bottom"
   )
 

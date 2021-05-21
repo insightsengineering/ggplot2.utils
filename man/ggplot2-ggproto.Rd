@@ -8,8 +8,12 @@
 \alias{GeomTableNpc}
 \alias{StatNText}
 \alias{StatProp}
-\title{Additional ggproto helper functions}
+\title{Defined here to avoid a note in check --as-cran as the imports from 'broom'
+are not seen when the function is defined in-line in the ggproto object.
+Additional ggproto helper functions}
 \description{
+Defined here to avoid a note in check --as-cran as the imports from 'broom'
+are not seen when the function is defined in-line in the ggproto object.
 Additional ggproto helper functions
 }
 \keyword{datasets}

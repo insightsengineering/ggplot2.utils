@@ -16,11 +16,11 @@ Depends:
     R (>= 3.6),
     ggplot2 (>= 3.3.0)
 Imports:
-    gridExtra,
-    testthat (>= 2.0),
     dplyr,
-    utils.nest (>= 0.2.8),
-    scales
+    gridExtra,
+    scales,
+    utils.nest (>= 0.2.8)
 Suggests:
+    testthat (>= 2.0),
     tibble
 
