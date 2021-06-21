@@ -1,4 +1,4 @@
-# ggplot2.utils 0.1.1.9000
+# ggplot2.utils 0.1.2
 .
 
 # ggplot2.utils 0.1.1
