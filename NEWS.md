@@ -1,5 +1,6 @@
 # ggplot2.utils 0.1.2
-.
+
+* Improved internal code style and removed unnecessary functions imports. 
 
 # ggplot2.utils 0.1.1
 
