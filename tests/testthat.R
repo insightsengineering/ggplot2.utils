@@ -2,6 +2,6 @@ if (requireNamespace("testthat", quietly = TRUE)) {
 
   library(testthat)
 
-  test_results <- test_package("ggplot2.utils")
+  test_results <- test_check("ggplot2.utils", wrap = FALSE)
   saveRDS(test_results, "unit_testing_results.rds")
 }
