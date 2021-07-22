@@ -22,5 +22,6 @@ Imports:
     utils.nest (>= 0.2.9)
 Suggests:
     testthat (>= 2.0),
+    test.nest,
     tibble
 
