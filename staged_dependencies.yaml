@@ -1,0 +1,13 @@
+
+---
+upstream_repos:
+- repo: insightsengineering/utils.nest
+  host: https://github.com
+
+downstream_repos:
+- repo: insightsengineering/random.cdisc.data
+  host: https://github.com
+
+current_repo:
+  repo: insightsengineering/ggplot2.utils
+  host: https://github.com
