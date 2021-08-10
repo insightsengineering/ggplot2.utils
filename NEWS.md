@@ -1,5 +1,7 @@
 # ggplot2.utils 0.1.2.9000
 
+* Removed mentions of Roche internal services from the README file.
+
 
 # ggplot2.utils 0.1.2
 
