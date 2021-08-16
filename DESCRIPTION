@@ -20,5 +20,7 @@ Imports:
     GGally,
     ggpp
 Suggests:
+    dplyr,
     testthat (>= 2.0),
-    test.nest
+    test.nest,
+    tibble
