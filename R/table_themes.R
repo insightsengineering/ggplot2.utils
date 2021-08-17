@@ -6,7 +6,7 @@
 #'
 #' @name ttheme_gtdefault
 #' @rdname ttheme_gtdefault
-#' @aliases 
+#' @aliases
 #'   ttheme_gtbw
 #'   ttheme_gtdark
 #'   ttheme_gtlight
@@ -14,8 +14,8 @@
 #'   ttheme_gtplain
 #'   ttheme_gtsimple
 #'   ttheme_gtstripes
-#' 
-#' @importFrom ggpp 
+#'
+#' @importFrom ggpp
 #'   ttheme_gtbw
 #'   ttheme_gtdark
 #'   ttheme_gtdefault
@@ -24,6 +24,6 @@
 #'   ttheme_gtplain
 #'   ttheme_gtsimple
 #'   ttheme_gtstripes
-#'   
+#'
 #' @exportPattern ttheme_*
 NULL

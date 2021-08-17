@@ -6,7 +6,7 @@
 #'
 #' @name stat_n_text
 #' @rdname stat_n_text
-#' 
+#'
 #' @importFrom EnvStats stat_n_text
 #' @export
 NULL

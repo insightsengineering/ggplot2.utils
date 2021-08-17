@@ -6,8 +6,10 @@ get_tb <- function() {
     group_by(cyl) %>%
     summarize(wt = mean(wt), mpg = mean(mpg)) %>%
     ungroup() %>%
-    mutate(wt = sprintf("%.2f", wt),
-           mpg = sprintf("%.1f", mpg))
+    mutate(
+      wt = sprintf("%.2f", wt),
+      mpg = sprintf("%.1f", mpg)
+    )
 }
 
 test_that("ttheme_set works as expected but is not baked into objects", {
