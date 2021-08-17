@@ -8,3 +8,9 @@
 
 See \code{\link[ggpp:ttheme_set]{ggpp::ttheme_set()}} for details.
 }
+\note{
+When testing this function, we found that in contrast to the original
+documentation, the theme is not fixed when the plot object is constructed.
+Instead, the option setting affects the rendering of ready built plot
+objects.
+}
