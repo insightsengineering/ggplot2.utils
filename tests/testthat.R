@@ -1,5 +1,4 @@
 if (requireNamespace("testthat", quietly = TRUE)) {
-
   library(testthat)
 
   test_results <- test_check("ggplot2.utils", wrap = FALSE)

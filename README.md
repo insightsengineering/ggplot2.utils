@@ -1,6 +1,6 @@
 # ggplot2.utils
 
-The `ggplot2.utils` package contains utility functions to add functionality to [ggplot2](https://ggplot2.tidyverse.org/). It started by collecting functions from other packages around.
+The `ggplot2.utils` package simplifies access to utility functions adding functionality to [ggplot2](https://ggplot2.tidyverse.org/). The package imports functions across multiple extensions packages and then exports them, so that the user only needs to load this package instead of multiple others.
 
 # Installation
 
