@@ -6,14 +6,15 @@
 \alias{ggplot2.utils-package}
 \title{\code{ggplot2.utils} Package}
 \description{
-\code{ggplot2.utils} contains utility functions to extend \code{ggplot2}.
+\code{ggplot2.utils} provides simple access to utility functions
+extending \code{ggplot2}.
 }
 \details{
-Currently all of the functions are cherry picked from other extension packages:
+Currently all of the functions are imported from other extension packages:
 \itemize{
-\item \code{ggpmisc}: \code{\link[=geom_table]{geom_table()}} and associated functions (GPL >= 2).
-\item \code{EnvStats}: \code{\link[=stat_n_text]{stat_n_text()}} and associated functions (GPL >= 3).
-\item \code{ggally}: \code{\link[=stat_prop]{stat_prop()}} and associated functions (GPL >= 2).
+\item \code{ggpp}: \code{\link[=geom_table]{geom_table()}} and associated functions.
+\item \code{EnvStats}: \code{\link[=stat_n_text]{stat_n_text()}} and associated functions.
+\item \code{ggally}: \code{\link[=stat_prop]{stat_prop()}} and associated functions.
 }
 }
 \author{

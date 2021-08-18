@@ -1,11 +1,12 @@
 #' `ggplot2.utils` Package
 #'
-#' `ggplot2.utils` contains utility functions to extend `ggplot2`.
+#' `ggplot2.utils` provides simple access to utility functions
+#'  extending `ggplot2`.
 #'
-#' Currently all of the functions are cherry picked from other extension packages:
-#' - `ggpmisc`: [geom_table()] and associated functions (GPL >= 2).
-#' - `EnvStats`: [stat_n_text()] and associated functions (GPL >= 3).
-#' - `ggally`: [stat_prop()] and associated functions (GPL >= 2).
+#' Currently all of the functions are imported from other extension packages:
+#' - `ggpp`: [geom_table()] and associated functions.
+#' - `EnvStats`: [stat_n_text()] and associated functions.
+#' - `ggally`: [stat_prop()] and associated functions.
 #'
 "_PACKAGE"
 
