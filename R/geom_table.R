@@ -9,5 +9,5 @@
 #' @aliases geom_table_npc
 #'
 #' @importFrom ggpp geom_table geom_table_npc
-#' @exportPattern geom_table*
+#' @export geom_table geom_table_npc
 NULL
