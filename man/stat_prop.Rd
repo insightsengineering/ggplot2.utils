@@ -2,6 +2,7 @@
 % Please edit documentation in R/stat_prop.R
 \name{stat_prop}
 \alias{stat_prop}
+\alias{StatProp}
 \title{Compute Proportions According to Custom Denominator}
 \description{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}

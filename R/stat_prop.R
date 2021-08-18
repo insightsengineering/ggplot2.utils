@@ -6,6 +6,7 @@
 #'
 #' @name stat_prop
 #' @rdname stat_prop
+#' @aliases stat_prop StatProp
 #'
 #' @importFrom GGally stat_prop StatProp
 #' @export stat_prop StatProp
