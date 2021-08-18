@@ -7,6 +7,6 @@
 #' @name stat_prop
 #' @rdname stat_prop
 #'
-#' @importFrom GGally stat_prop
-#' @export
+#' @importFrom GGally stat_prop StatProp
+#' @export stat_prop StatProp
 NULL
