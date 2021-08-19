@@ -13,6 +13,8 @@ get_tb <- function() {
 }
 
 test_that("ttheme_set works as expected but is not baked into objects", {
+  test.nest::skip_if_too_deep(depth = 0)
+
   tb <- get_tb()
   df <- tibble(x = 5.45, y = 34, tb = list(tb))
   ttheme_set()

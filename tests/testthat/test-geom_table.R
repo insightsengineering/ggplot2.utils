@@ -13,6 +13,8 @@ get_tb <- function() {
 }
 
 test_that("geom_table works as expected", {
+  test.nest::skip_if_too_deep(depth = 0)
+
   p <- ggplot(mtcars, aes(wt, mpg, colour = factor(cyl))) +
     geom_point()
   tb <- get_tb()
@@ -24,6 +26,8 @@ test_that("geom_table works as expected", {
 })
 
 test_that("geom_table_npc works as expected", {
+  test.nest::skip_if_too_deep(depth = 0)
+
   p <- ggplot(mtcars, aes(wt, mpg, colour = factor(cyl))) +
     geom_point()
   tb <- get_tb()

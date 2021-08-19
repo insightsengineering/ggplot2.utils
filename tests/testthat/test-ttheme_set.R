@@ -13,6 +13,8 @@ get_tb <- function() {
 }
 
 test_that("table themes can be used and work", {
+  test.nest::skip_if_too_deep(depth = 0)
+
   tb <- get_tb()
   df <- tibble(x = 5.45, y = 34, tb = list(tb))
   p <- ggplot(mtcars, aes(wt, mpg, colour = factor(cyl))) +

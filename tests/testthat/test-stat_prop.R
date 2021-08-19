@@ -1,4 +1,6 @@
 test_that("stat_prop works as expected", {
+  test.nest::skip_if_too_deep(depth = 0)
+
   df <- as.data.frame(Titanic)
   p <- ggplot(df) +
     aes(x = Class, fill = Survived, weight = Freq, by = Class) +
