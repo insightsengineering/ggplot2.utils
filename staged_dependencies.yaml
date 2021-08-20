@@ -6,6 +6,3 @@ upstream_repos:
     repo: insightsengineering/test.nest
     host: https://github.com
 downstream_repos:
-  insightsengineering/hermes:
-    repo: insightsengineering/hermes
-    host: https://github.com
