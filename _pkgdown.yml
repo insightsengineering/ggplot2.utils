@@ -1,4 +1,4 @@
-url: https://go.roche.com/nest-docs/releases/latest/api-reference/ggplot2.utils
+url: https://insightsengineering.github.io/ggplot2.utils
 
 template:
   params:
@@ -7,7 +7,7 @@ template:
 navbar:
   right:
     - icon: fa-github
-      href: https://github.roche.com/NEST/ggplot2.utils
+      href: https://github.com/insightsengineering/ggplot2.utils
 
 reference:
   - title: geoms
