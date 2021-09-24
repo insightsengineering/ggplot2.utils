@@ -3,6 +3,7 @@ url: https://insightsengineering.github.io/ggplot2.utils
 template:
   params:
     bootswatch: cerulean
+    ganalytics: "UA-125641273-1"
 
 navbar:
   right:
@@ -10,6 +11,9 @@ navbar:
       href: https://github.com/insightsengineering/ggplot2.utils
 
 reference:
+  - title: package info
+    contents:
+      - ggplot2.utils-package
   - title: geoms
     contents:
       - geom_table
@@ -28,4 +32,4 @@ reference:
       - ttheme_gtplain
       - ttheme_gtsimple
       - ttheme_gtstripes
-  
+      - ttheme_set
