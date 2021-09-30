@@ -1,6 +1,6 @@
 # ggplot2.utils 0.1.3
 
-* Removed mentions of Roche internal services from the README file.
+* Updated `LICENCE` and `README` with new package reference.
 * Remove cherry-picked code and instead just import and export the relevant functions.
 
 # ggplot2.utils 0.1.2
