@@ -1,6 +1,6 @@
 # ggplot2.utils 0.1.3
 
-* Updated `LICENCE` and `README` with new package reference.
+* Updated `LICENCE` and `README` with new package references.
 * Remove cherry-picked code and instead just import and export the relevant functions.
 
 # ggplot2.utils 0.1.2
