@@ -159,7 +159,6 @@ jobs:
 
       - name: Set env
         if: steps.check_coverage_reports.outputs.files_exists == 'true'
-
         run: echo "OVERALL_COVERAGE=$(cat coverage.txt)" >> $GITHUB_ENV
 
       - name: Badge for coverage
