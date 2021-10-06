@@ -11,18 +11,18 @@ navbar:
       href: https://github.com/insightsengineering/ggplot2.utils
 
 reference:
-  - title: package info
+  - title: Package Info
     contents:
       - ggplot2.utils-package
-  - title: geoms
+  - title: Geoms
     contents:
       - geom_table
       - geom_table_npc
-  - title: stats
+  - title: Stats
     contents:
       - stat_n_text
       - stat_prop
-  - title: table themes
+  - title: Table Themes
     contents:
       - ttheme_gtbw
       - ttheme_gtdark
