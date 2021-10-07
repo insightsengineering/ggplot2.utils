@@ -14,3 +14,4 @@ TODO\.md
 ^staged_dependencies\.yaml$
 ^LICENSE\.md$
 ^\.gitlab-ci\.yml$
+coverage.*
