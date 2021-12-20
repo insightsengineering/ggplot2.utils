@@ -18,6 +18,6 @@ Currently all of the functions are imported from other extension packages:
 }
 }
 \author{
-\strong{Maintainer}: NEST \email{nestcicd@roche.com}
+\strong{Maintainer}: NEST \email{basel.nestcicd@roche.com}
 
 }
