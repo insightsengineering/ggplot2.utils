@@ -1,5 +1,7 @@
 # ggplot2.utils 0.1.3.9008
 
+* Removed dependency on deprecated package `test.nest`.
+
 # ggplot2.utils 0.1.3
 
 * Updated `LICENCE` and `README` with new package references.
