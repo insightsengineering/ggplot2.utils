@@ -40,7 +40,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">ggplot2.utils</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.4</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.4.9001</span>
       </span>
     </div>
 
@@ -52,15 +52,6 @@
 <li>
   <a href="news/index.html">Changelog</a>
 </li>
-<!-- start_releases -->
-<li class="dropdown">
-	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-Other releases
-<span class="caret"></span></a><ul class="dropdown-menu" role="menu">
-   <li><a href="index.html">latest</a></li>
-   <li><a href="/index.html"></a></li>
-</ul></li>
-<!-- end_releases -->
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
@@ -81,49 +72,27 @@ Other releases
 
       </header><div class="row">
   <div class="contents col-md-9">
-
 <div class="section level1">
 <div class="page-header"><h1 id="ggplot2utils">ggplot2.utils<a class="anchor" aria-label="anchor" href="#ggplot2utils"></a>
 </h1></div>
-<p>The <code>ggplot2.utils</code> package simplifies access to utility functions adding functionality to <a href="https://ggplot2.tidyverse.org/" class="external-link">ggplot2</a>. The package imports functions across multiple extensions packages and then exports them, so that the user only needs to load this package instead of multiple others.</p>
-</div>
-<div class="section level1">
-<h1 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
-</h1>
+<p>The <code>ggplot2.utils</code> package simplifies access to utility
+functions adding functionality to <a href="https://ggplot2.tidyverse.org/" class="external-link">ggplot2</a>. The package imports
+functions across multiple extensions packages and then exports them, so
+that the user only needs to load this package instead of multiple
+others.</p>
 <div class="section level2">
-<h2 id="clone-and-install-manually">Clone and install manually<a class="anchor" aria-label="anchor" href="#clone-and-install-manually"></a>
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<ol style="list-style-type: decimal">
-<li>
-<p>Clone the repository</p>
-<p>The repository can be downloaded directly from the <code>github.com</code> site as an archive (see <a href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository" class="external-link">Github tutorial on cloning to learn more</a>). Alternatively, Git command line tools offer the same functionality, without the need for manual downloading and unpacking the archive, but require to authenticate to Github. You can authenticate using a key pair or a Personal Access Token (PAT). Please refer to excellent Github tutorials on <a href="https://docs.github.com/en/github/authenticating-to-github" class="external-link">connecting to Github using SSH</a> or <a href="https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token" class="external-link">creating and using PAT</a>.</p>
-<ol style="list-style-type: decimal">
-<li>
-<p>Using PAT. Input in the Git Bash console, PowerShell or any Linux shell:</p>
-<pre><code>$ git clone https://github.com/insightsengineering/ggplot2.utils.git
-Username: your_username_goes_here
-Password: your_token_goes_here</code></pre>
-</li>
-<li>
-<p>Using SSH. If set up properly, the repository is ready to be cloned executing:</p>
-<pre><code>$ git clone https://github.com/insightsengineering/ggplot2.utils.git</code></pre>
-<p>This creates a sub-directory <code>ggplot2.utils</code> containing the cloned repository.</p>
-</li>
-</ol>
-</li>
-<li>
-<p>Build and install</p>
-<p>The native R tools provide a quick way to install a package. Run in PowerShell or any Linux shell:</p>
-<pre><code>$ R CMD build ggplot2.utils</code></pre>
-<p>This command builds the package and creates an archive. The name of the archive is output by the command at then of building. Then input in the shell:</p>
-<pre><code>$ Rscript -e 'install.packages("name_of_the_archive")</code></pre>
-<p>Here is an example of a real command (with name_of_the_archive substituted by the output of the build command):</p>
-<pre><code>$ Rscript -e 'install.packages("ggplot2.utils_0.1.2.9000.tar.gz")'</code></pre>
-</li>
-</ol>
+<p>This repository requires a personal access token to install see here
+<a href="https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token" class="external-link">creating
+and using PAT</a>. Once this is set up, to install the latest released
+version of the package run:</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Sys.setenv.html" class="external-link">Sys.setenv</a></span><span class="op">(</span>GITHUB_PAT <span class="op">=</span> <span class="st">"your_access_token_here"</span><span class="op">)</span>
+<span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="st"><a href="https://devtools.r-lib.org/" class="external-link">"devtools"</a></span><span class="op">)</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"insightsengineering/ggplot2.utils@*release"</span><span class="op">)</span></code></pre></div>
 </div>
 </div>
-
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -163,7 +132,8 @@ Password: your_token_goes_here</code></pre>
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a>
+2.0.2.</p>
 </div>
 
       </footer>
