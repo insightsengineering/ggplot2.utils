@@ -1,4 +1,4 @@
-# ggplot2.utils 0.1.4.9001
+# ggplot2.utils 0.1.4.9002
 
 * Removed dependency on deprecated package `test.nest`.
 
