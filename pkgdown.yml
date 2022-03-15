@@ -2,7 +2,7 @@ pandoc: 2.17.1.1
 pkgdown: 2.0.2
 pkgdown_sha: ~
 articles: {}
-last_built: 2022-02-23T16:29Z
+last_built: 2022-03-15T15:29Z
 urls:
   reference: https://insightsengineering.github.io/ggplot2.utils/reference
   article: https://insightsengineering.github.io/ggplot2.utils/articles
