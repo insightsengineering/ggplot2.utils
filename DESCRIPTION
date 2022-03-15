@@ -17,6 +17,7 @@ Imports:
     ggpp
 Suggests:
     dplyr,
+    lifecycle,
     testthat (>= 2.0),
     tibble
 Encoding: UTF-8
