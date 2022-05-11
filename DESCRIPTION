@@ -4,7 +4,8 @@ Title: ggplot2 utilities
 Version: 0.1.4.9003
 Date: 2022-01-27
 Authors@R:
-    person("NEST", , , "basel.nestcicd@roche.com", role = c("aut", "cre"))
+    person("Daniel", "Sabanés Bové", , "daniel.sabanes_bove@roche.com", role = c("aut", "cre")),
+    person("F. Hoffmann-La Roche AG", role = c("cph", "fnd"))
 Description: Utilities, in particular geoms and stats, for use with
     ggplot2.
 License: Apache License 2.0 | file LICENSE
