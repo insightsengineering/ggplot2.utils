@@ -12,8 +12,4 @@ if (!require("devtools")) install.packages("devtools")
 devtools::install_github("insightsengineering/ggplot2.utils@*release")
 ```
 
-[![Forkers repo roster for @insightsengineering/ggplot2.utils](https://reporoster.com/forks/insightsengineering/ggplot2.utils)](https://github.com/insightsengineering/ggplot2.utils/network/members)
 
-## Stargazers over time
-
-[![Stargazers over time](https://starchart.cc/insightsengineering/ggplot2.utils.svg)](https://starchart.cc/insightsengineering/ggplot2.utils)
