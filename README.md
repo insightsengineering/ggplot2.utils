@@ -11,5 +11,3 @@ Sys.setenv(GITHUB_PAT = "your_access_token_here")
 if (!require("devtools")) install.packages("devtools")
 devtools::install_github("insightsengineering/ggplot2.utils@*release")
 ```
-
-
