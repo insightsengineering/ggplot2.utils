@@ -1,8 +1,8 @@
-pandoc: '2.18'
+pandoc: 2.19.2
 pkgdown: 2.0.6
 pkgdown_sha: ~
 articles: {}
-last_built: 2022-09-01T14:08Z
+last_built: 2022-10-14T01:10Z
 urls:
   reference: https://insightsengineering.github.io/ggplot2.utils/main/reference
   article: https://insightsengineering.github.io/ggplot2.utils/main/articles
