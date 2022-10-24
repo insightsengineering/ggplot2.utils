@@ -1,7 +1,7 @@
 Type: Package
 Package: ggplot2.utils
 Title: ggplot2 utilities
-Version: 0.1.5
+Version: 0.1.5.9000
 Date: 2022-10-14
 Authors@R: c(
     person("Daniel", "Sabanés Bové", , "daniel.sabanes_bove@roche.com", role = c("aut", "cre")),
