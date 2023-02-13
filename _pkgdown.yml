@@ -1,6 +1,7 @@
 url: https://insightsengineering.github.io/ggplot2.utils
 
 template:
+  package: nesttemplate
   params:
     bootswatch: cerulean
     ganalytics: "UA-125641273-1"
