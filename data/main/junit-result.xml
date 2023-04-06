@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="geom_table" timestamp="2023-04-06T09:08:38Z" hostname="2d3b8e6a9fe6" tests="4" skipped="0" failures="0" errors="0" time="0.127">
-    <testcase time="0.076" classname="geom_table" name="geom_table_works_as_expected"/>
-    <testcase time="0.0189999999999999" classname="geom_table" name="geom_table_works_as_expected"/>
-    <testcase time="0.0310000000000001" classname="geom_table" name="geom_table_npc_works_as_expected"/>
-    <testcase time="0.00099999999999989" classname="geom_table" name="geom_table_npc_works_as_expected"/>
+  <testsuite name="geom_table" timestamp="2023-04-06T09:11:57Z" hostname="d422d3059ed2" tests="4" skipped="0" failures="0" errors="0" time="0.111">
+    <testcase time="0.0659999999999999" classname="geom_table" name="geom_table_works_as_expected"/>
+    <testcase time="0.017" classname="geom_table" name="geom_table_works_as_expected"/>
+    <testcase time="0.027" classname="geom_table" name="geom_table_npc_works_as_expected"/>
+    <testcase time="0.001" classname="geom_table" name="geom_table_npc_works_as_expected"/>
   </testsuite>
-  <testsuite name="stat_n_text" timestamp="2023-04-06T09:08:38Z" hostname="2d3b8e6a9fe6" tests="2" skipped="0" failures="0" errors="0" time="0.02">
-    <testcase time="0.0190000000000001" classname="stat_n_text" name="stat_n_text_works_as_expected"/>
+  <testsuite name="stat_n_text" timestamp="2023-04-06T09:11:57Z" hostname="d422d3059ed2" tests="2" skipped="0" failures="0" errors="0" time="0.019">
+    <testcase time="0.018" classname="stat_n_text" name="stat_n_text_works_as_expected"/>
     <testcase time="0.00099999999999989" classname="stat_n_text" name="stat_n_text_works_as_expected"/>
   </testsuite>
-  <testsuite name="stat_prop" timestamp="2023-04-06T09:08:38Z" hostname="2d3b8e6a9fe6" tests="2" skipped="0" failures="0" errors="0" time="0.031">
-    <testcase time="0.03" classname="stat_prop" name="stat_prop_works_as_expected"/>
-    <testcase time="0.00100000000000011" classname="stat_prop" name="stat_prop_works_as_expected"/>
+  <testsuite name="stat_prop" timestamp="2023-04-06T09:11:58Z" hostname="d422d3059ed2" tests="2" skipped="0" failures="0" errors="0" time="0.027">
+    <testcase time="0.026" classname="stat_prop" name="stat_prop_works_as_expected"/>
+    <testcase time="0.001" classname="stat_prop" name="stat_prop_works_as_expected"/>
   </testsuite>
-  <testsuite name="table_themes" timestamp="2023-04-06T09:08:38Z" hostname="2d3b8e6a9fe6" tests="1" skipped="0" failures="0" errors="0" time="0.067">
-    <testcase time="0.0669999999999999" classname="table_themes" name="ttheme_set_works_as_expected_but_is_not_baked_into_objects"/>
+  <testsuite name="table_themes" timestamp="2023-04-06T09:11:58Z" hostname="d422d3059ed2" tests="1" skipped="0" failures="0" errors="0" time="0.06">
+    <testcase time="0.0599999999999999" classname="table_themes" name="ttheme_set_works_as_expected_but_is_not_baked_into_objects"/>
   </testsuite>
-  <testsuite name="ttheme_set" timestamp="2023-04-06T09:08:38Z" hostname="2d3b8e6a9fe6" tests="1" skipped="1" failures="0" errors="0" time="1.76">
-    <testcase time="1.76" classname="ttheme_set" name="table_themes_can_be_used_and_work">
+  <testsuite name="ttheme_set" timestamp="2023-04-06T09:11:58Z" hostname="d422d3059ed2" tests="1" skipped="1" failures="0" errors="0" time="1.518">
+    <testcase time="1.518" classname="ttheme_set" name="table_themes_can_be_used_and_work">
       <skipped message="Reason: empty test ('test-ttheme_set.R:15:1')"/>
     </testcase>
   </testsuite>
-  <testsuite name="test" timestamp="2023-04-06T09:08:40Z" hostname="2d3b8e6a9fe6" tests="1" skipped="0" failures="0" errors="0" time="0.032">
-    <testcase time="0.032" classname="test" name="loading_ggplot2.utils_works"/>
+  <testsuite name="test" timestamp="2023-04-06T09:11:59Z" hostname="d422d3059ed2" tests="1" skipped="0" failures="0" errors="0" time="0.029">
+    <testcase time="0.0289999999999999" classname="test" name="loading_ggplot2.utils_works"/>
   </testsuite>
 </testsuites>
