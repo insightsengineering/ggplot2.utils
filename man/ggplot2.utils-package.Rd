@@ -17,6 +17,14 @@ Currently all of the functions are imported from other extension packages:
 \item \code{ggally}: \code{\link[=stat_prop]{stat_prop()}} and associated functions.
 }
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://insightsengineering.github.io/ggplot2.utils/}
+  \item Report bugs at \url{https://github.com/insightsengineering/ggplot2.utils/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Daniel Sabanés Bové \email{daniel.sabanes_bove@roche.com}
 
