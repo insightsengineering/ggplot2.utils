@@ -1,17 +1,17 @@
 Type: Package
 Package: ggplot2.utils
 Title: Selected Utilities Extending 'ggplot2'
-Version: 0.2.0
-Date: 2023-05-04
+Version: 0.2.0.9000
+Date: 2023-05-05
 Authors@R: c(
     person("Daniel", "Sabanés Bové", , "daniel.sabanes_bove@roche.com", role = c("aut", "cre")),
     person("F. Hoffmann-La Roche AG", role = c("cph", "fnd"))
   )
-Description: Selected utilities, in particular 'geoms' and 'stats' functions, 
-    extending the 'ggplot2' package. Note that this package does not define 
-    the functions itself, but instead imports them from a collection of other 
-    packages and then exports them. These functions are tested as well to make 
-    sure that they work reliably.
+Description: Selected utilities, in particular 'geoms' and 'stats'
+    functions, extending the 'ggplot2' package. Note that this package
+    does not define the functions itself, but instead imports them from a
+    collection of other packages and then exports them. These functions
+    are tested as well to make sure that they work reliably.
 License: Apache License 2.0
 URL: https://insightsengineering.github.io/ggplot2.utils/
 BugReports: https://github.com/insightsengineering/ggplot2.utils/issues
