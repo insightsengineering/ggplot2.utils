@@ -4,6 +4,8 @@
 #'
 #' See [ggpp::geom_table()] for details.
 #'
+#' @inherit ggpp::geom_table return
+#'
 #' @name geom_table
 #' @rdname geom_table
 #' @aliases geom_table_npc

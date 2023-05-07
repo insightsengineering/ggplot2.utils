@@ -3,6 +3,9 @@
 \name{stat_n_text}
 \alias{stat_n_text}
 \title{Add Text Indicating the Sample Size to a ggplot2 Plot}
+\value{
+A plot layer including the sample size text.
+}
 \description{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
 

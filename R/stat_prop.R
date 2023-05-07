@@ -4,6 +4,8 @@
 #'
 #' See [GGally::stat_prop()] for details.
 #'
+#' @returns A plot layer containing the custom proportions.
+#'
 #' @name stat_prop
 #' @rdname stat_prop
 #' @aliases stat_prop StatProp

@@ -4,6 +4,9 @@
 \alias{stat_prop}
 \alias{StatProp}
 \title{Compute Proportions According to Custom Denominator}
+\value{
+A plot layer containing the custom proportions.
+}
 \description{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
 

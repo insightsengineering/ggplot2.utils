@@ -4,6 +4,8 @@
 #'
 #' See [EnvStats::stat_n_text()] for details.
 #'
+#' @returns A plot layer including the sample size text.
+#'
 #' @name stat_n_text
 #' @rdname stat_n_text
 #'

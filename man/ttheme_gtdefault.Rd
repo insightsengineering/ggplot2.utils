@@ -10,6 +10,10 @@
 \alias{ttheme_gtsimple}
 \alias{ttheme_gtstripes}
 \title{Table themes}
+\value{
+A \code{list} object that can be used as \code{ttheme} in the
+  construction of tables with functions from package 'gridExtra'.
+}
 \description{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
 

@@ -4,6 +4,8 @@
 #'
 #' See [ggpp::ttheme_gtdefault()] for details.
 #'
+#' @inherit ggpp::ttheme_gtdefault return
+#'
 #' @name ttheme_gtdefault
 #' @rdname ttheme_gtdefault
 #' @aliases
