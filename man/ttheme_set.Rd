@@ -3,6 +3,9 @@
 \name{ttheme_set}
 \alias{ttheme_set}
 \title{Set default table theme}
+\value{
+A named list with the previous value of the option.
+}
 \description{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
 

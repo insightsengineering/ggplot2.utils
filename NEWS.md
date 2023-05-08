@@ -1,4 +1,4 @@
-# ggplot2.utils 0.2.0.9000
+# ggplot2.utils 0.2.1
 
 * First publication and CRAN release.
 
