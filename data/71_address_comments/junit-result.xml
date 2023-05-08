@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="geom_table" timestamp="2023-05-08T11:56:41Z" hostname="ad6aa461132e" tests="4" skipped="0" failures="0" errors="0" time="0.137">
-    <testcase time="0.0800000000000001" classname="geom_table" name="geom_table_works_as_expected"/>
-    <testcase time="0.022" classname="geom_table" name="geom_table_works_as_expected"/>
-    <testcase time="0.034" classname="geom_table" name="geom_table_npc_works_as_expected"/>
+  <testsuite name="geom_table" timestamp="2023-05-08T12:24:43Z" hostname="b21383424166" tests="4" skipped="0" failures="0" errors="0" time="0.117">
+    <testcase time="0.069" classname="geom_table" name="geom_table_works_as_expected"/>
+    <testcase time="0.0189999999999999" classname="geom_table" name="geom_table_works_as_expected"/>
+    <testcase time="0.028" classname="geom_table" name="geom_table_npc_works_as_expected"/>
     <testcase time="0.00099999999999989" classname="geom_table" name="geom_table_npc_works_as_expected"/>
   </testsuite>
-  <testsuite name="stat_n_text" timestamp="2023-05-08T11:56:41Z" hostname="ad6aa461132e" tests="2" skipped="0" failures="0" errors="0" time="0.024">
-    <testcase time="0.0230000000000001" classname="stat_n_text" name="stat_n_text_works_as_expected"/>
+  <testsuite name="stat_n_text" timestamp="2023-05-08T12:24:43Z" hostname="b21383424166" tests="2" skipped="0" failures="0" errors="0" time="0.02">
+    <testcase time="0.0190000000000001" classname="stat_n_text" name="stat_n_text_works_as_expected"/>
     <testcase time="0.00099999999999989" classname="stat_n_text" name="stat_n_text_works_as_expected"/>
   </testsuite>
-  <testsuite name="stat_prop" timestamp="2023-05-08T11:56:41Z" hostname="ad6aa461132e" tests="2" skipped="0" failures="0" errors="0" time="0.037">
-    <testcase time="0.036" classname="stat_prop" name="stat_prop_works_as_expected"/>
+  <testsuite name="stat_prop" timestamp="2023-05-08T12:24:43Z" hostname="b21383424166" tests="2" skipped="0" failures="0" errors="0" time="0.031">
+    <testcase time="0.03" classname="stat_prop" name="stat_prop_works_as_expected"/>
     <testcase time="0.00100000000000011" classname="stat_prop" name="stat_prop_works_as_expected"/>
   </testsuite>
-  <testsuite name="table_themes" timestamp="2023-05-08T11:56:41Z" hostname="ad6aa461132e" tests="1" skipped="0" failures="0" errors="0" time="0.075">
-    <testcase time="0.075" classname="table_themes" name="ttheme_set_works_as_expected_but_is_not_baked_into_objects"/>
+  <testsuite name="table_themes" timestamp="2023-05-08T12:24:43Z" hostname="b21383424166" tests="1" skipped="0" failures="0" errors="0" time="0.063">
+    <testcase time="0.0629999999999999" classname="table_themes" name="ttheme_set_works_as_expected_but_is_not_baked_into_objects"/>
   </testsuite>
-  <testsuite name="ttheme_set" timestamp="2023-05-08T11:56:41Z" hostname="ad6aa461132e" tests="1" skipped="1" failures="0" errors="0" time="2.039">
-    <testcase time="2.039" classname="ttheme_set" name="table_themes_can_be_used_and_work">
+  <testsuite name="ttheme_set" timestamp="2023-05-08T12:24:43Z" hostname="b21383424166" tests="1" skipped="1" failures="0" errors="0" time="1.799">
+    <testcase time="1.799" classname="ttheme_set" name="table_themes_can_be_used_and_work">
       <skipped message="Reason: empty test ('test-ttheme_set.R:15:1')"/>
     </testcase>
   </testsuite>
