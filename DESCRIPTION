@@ -13,7 +13,7 @@ Description: Selected utilities, in particular 'geoms' and 'stats'
     collection of other packages and then exports them. These functions
     are tested as well to make sure that they work reliably. Currently,
     the selected functions are from 'EnvStats' <doi:10.1007/978-1-4614-8456-1>,
-    'GGAlly' <doi:10.5281/zenodo.5009047> and 
+    'GGally' <doi:10.5281/zenodo.5009047> and 
     'ggpp' <https://CRAN.R-project.org/package=ggpp>.
 License: Apache License 2.0
 URL: https://insightsengineering.github.io/ggplot2.utils/
