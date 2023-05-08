@@ -27,6 +27,6 @@
 #'   ttheme_gtsimple
 #'   ttheme_gtstripes
 #'
-#' @export ttheme_gtbw ttheme_gtdark ttheme_gtdefault ttheme_gtlight ttheme_gtminimal
-#' @export ttheme_gtplain ttheme_gtsimple ttheme_gtstripes
+#' @export ttheme_gtbw ttheme_gtdark ttheme_gtdefault ttheme_gtlight
+#' @export ttheme_gtminimal ttheme_gtplain ttheme_gtsimple ttheme_gtstripes
 NULL
