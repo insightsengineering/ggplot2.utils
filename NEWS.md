@@ -1,5 +1,9 @@
 # ggplot2.utils 0.2.1.9001
 
+* Added `geom_km` and `geom_km_ticks` for Kaplan-Meier lines and ticks additions to plots.
+
+# ggplot2.utils 0.2.1
+
 * First publication and CRAN release.
 
 # ggplot2.utils 0.1.5

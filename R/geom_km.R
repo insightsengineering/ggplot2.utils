@@ -19,7 +19,7 @@
 #'   there for more options to control the underlying statistical
 #'   transformation.
 #'
-#' @author Samer Mouksassi
+#' @author Michael Sachs (in `ggkm`), Samer Mouksassi (in `ggquickeda`).
 #' @export
 #' @examples
 #' library(ggplot2)
@@ -50,11 +50,9 @@ geom_km <- function(mapping = NULL,
   )
 }
 
-#' @rdname ggplot2.utils-ggproto
-#' @format NULL
-#' @usage NULL
-#' @author Samer Mouksassi
-#' @keywords internal
+# GeomKm ----
+
+#' @rdname ggproto
 #' @export
 GeomKm <- ggplot2::ggproto(
   "GeomKm",
@@ -65,11 +63,11 @@ GeomKm <- ggplot2::ggproto(
   },
   required_aes = c("x", "y"),
   default_aes = ggplot2::aes(
-    colour="black",
-    fill="grey60",
-    linewidth=.75,
-    linetype=1,
-    weight=1,
+    colour = "black",
+    fill = "grey60",
+    linewidth = 0.75,
+    linetype = 1,
+    weight = 1,
     alpha = 1
   ),
   draw_key = ggplot2::draw_key_path

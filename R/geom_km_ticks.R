@@ -6,11 +6,23 @@
 #'
 #' @inheritParams ggplot2::geom_point
 #'
+#' @section Aesthetics:
+#' `geom_km_ticks()` understands the following aesthetics (required aesthetics in bold):
+#'
+#' - **`x`**: the survival/censoring times, automatically mapped by [stat_km()].
+#' - **`y`**: the survival probability estimates, automatically mapped by [stat_km()].
+#' - `alpha`
+#' - `color`
+#' - `shape`
+#' - `size`
+#' - `stroke`
+#' - `fill`
+#'
 #' @seealso The default `stat` for this `geom` is [stat_km_ticks()], see
 #'   there for more options to control the underlying statistical
 #'   transformation.
 #'
-#' @author Samer Mouksassi
+#' @author Michael Sachs (in `ggkm`), Samer Mouksassi (in `ggquickeda`).
 #' @export
 #' @examples
 #' library(ggplot2)
@@ -45,10 +57,7 @@ geom_km_ticks <- function(mapping = NULL,
 
 # GeomKmTicks ----
 
-#' @rdname ggplot2.utils-ggproto
-#' @format NULL
-#' @usage NULL
-#' @keywords internal
+#' @rdname ggproto
 #' @export
 GeomKmTicks <- ggplot2::ggproto(
   "GeomKmTicks",
