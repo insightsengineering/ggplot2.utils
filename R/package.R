@@ -10,5 +10,6 @@
 #'
 "_PACKAGE"
 
+#' @import checkmate
 #' @import ggplot2
 NULL

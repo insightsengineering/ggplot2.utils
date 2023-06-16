@@ -9,8 +9,8 @@
 #' @section Aesthetics:
 #' `geom_km_ticks()` understands the following aesthetics (required aesthetics in bold):
 #'
-#' - **`x`**: the survival/censoring times, automatically mapped by [stat_km()].
-#' - **`y`**: the survival probability estimates, automatically mapped by [stat_km()].
+#' - **`x`**: the survival/censoring times, automatically mapped by [stat_km_ticks()].
+#' - **`y`**: the survival probability estimates, automatically mapped by [stat_km_ticks()].
 #' - `alpha`
 #' - `color`
 #' - `shape`

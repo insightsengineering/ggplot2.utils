@@ -25,6 +25,7 @@ Depends:
     ggplot2 (>= 3.3.0),
     R (>= 3.6)
 Imports:
+    checkmate,
     EnvStats,
     GGally,
     ggpp
