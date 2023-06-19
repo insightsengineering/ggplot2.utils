@@ -55,5 +55,6 @@ StatKm <- ggplot2::ggproto(
   ggplot2::Stat,
   compute_group = stat_km_compute,
   default_aes = ggplot2::aes(y = ..survival.., x = ..time..),
-  required_aes = c("time", "status")
+  required_aes = c("time", "status"),
+  dropped_aes = "status"
 )

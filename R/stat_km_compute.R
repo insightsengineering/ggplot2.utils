@@ -1,11 +1,11 @@
 #' Helper for Common Kaplan-Meier Computations
 #'
 #' @param data (`data.frame`)\cr with `time` and `status` numeric columns.
-#' @returns A list with the [survival::survfit()] result in `surv_fit`, and
-#'   `x` and `y` coordinates of the Kaplan-Meier estimate.
+#' @returns The [survival::survfit()] result as basis of
+#'   the Kaplan-Meier estimate.
 #'
 #' @keywords internal
-h_stat_km <- function(data) {
+h_surv_fit <- function(data) {
   assert_data_frame(data)
   assert_subset(c("time", "status"), names(data))
   assert_numeric(data$status)
@@ -18,16 +18,7 @@ h_stat_km <- function(data) {
     ctype = 1
   )
   assert_numeric(surv_fit$surv)
-
-  first <- c(0, 1)
-  x <- c(first[1], surv_fit$time)
-  y <- c(first[2], surv_fit$surv)
-
-  list(
-    surv_fit = surv_fit,
-    x = x,
-    y = y
-  )
+  surv_fit
 }
 
 #' Helper for `stat_km_compute`
@@ -70,14 +61,20 @@ h_step <- function(x, y) {
 
 #' Helper for `stat_km`
 #'
-#' @inheritParams h_stat_km
+#' @inheritParams h_surv_fit
 #' @param scales not used.
 #' @returns A `data.frame` with `time` and `survival` columns.
 #'
 #' @keywords internal
 stat_km_compute <- function(data, scales) {
-  tmp <- h_stat_km(data)
-  step <- h_step(tmp$x, tmp$y)
+  surv_fit <- h_surv_fit(data)
+
+  first <- c(0, 1)
+  x <- c(first[1], surv_fit$time)
+  y <- c(first[2], surv_fit$surv)
+
+  step <- h_step(x, y)
+
   data.frame(
     time = step$x,
     survival = step$y
@@ -92,12 +89,12 @@ stat_km_compute <- function(data, scales) {
 #'
 #' @keywords internal
 stat_km_ticks_compute <- function(data, scales) {
-  tmp <- h_stat_km(data)
+  surv_fit <- h_surv_fit(data)
   data.frame(
-    time = tmp$x,
-    survival = tmp$y,
-    n.risk = tmp$surv_fit$n.risk,
-    n.censor = tmp$surv_fit$n.censor,
-    n.event = tmp$surv_fit$n.event
+    time = surv_fit$x,
+    survival = surv_fit$y,
+    n.risk = surv_fit$surv_fit$n.risk,
+    n.censor = surv_fit$surv_fit$n.censor,
+    n.event = surv_fit$surv_fit$n.event
   )
 }

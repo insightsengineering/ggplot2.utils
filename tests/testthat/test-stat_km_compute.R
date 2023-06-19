@@ -1,24 +1,23 @@
-# h_stat_km ----
+# h_surv_fit ----
 
-test_that("h_stat_km works as expected", {
-  result <- expect_silent(h_stat_km(surv_df))
+test_that("h_surv_fit works as expected", {
+  result <- expect_silent(h_surv_fit(surv_df))
   expect_list(result)
-  expect_s3_class(result$surv_fit, "survfit")
-  expect_numeric(result$x)
-  expect_numeric(result$y)
-  expect_identical(result$x, c(0, sort(unique(surv_df$time))))
-  expect_identical(result$y[1], 1)
-  expect_snapshot_value(result$y)
+  expect_s3_class(result, "survfit")
+  expect_numeric(result$time)
+  expect_numeric(result$surv)
+  expect_identical(result$time, sort(unique(surv_df$time)))
+  expect_snapshot_value(result$surv)
 })
 
-test_that("h_stat_km also works when there is only a single observation", {
+test_that("h_surv_fit also works when there is only a single observation", {
   df <- data.frame(
     time = 1,
     status = 0
   )
-  result <- expect_silent(h_stat_km(df))
-  expect_identical(result$x, c(0, 1))
-  expect_identical(result$y, c(1, 1))
+  result <- expect_silent(h_surv_fit(df))
+  expect_identical(result$time, 1)
+  expect_identical(result$surv, 1)
 })
 
 # h_step ----
@@ -66,4 +65,3 @@ test_that("h_step works discards NA and Inf as expected", {
   )
   expect_identical(result, expected)
 })
-
