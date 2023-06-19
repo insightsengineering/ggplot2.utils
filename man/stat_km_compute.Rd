@@ -4,7 +4,15 @@
 \alias{stat_km_compute}
 \title{Helper for \code{stat_km}}
 \usage{
-stat_km_compute(data)
+stat_km_compute(data, scales)
+}
+\arguments{
+\item{data}{(\code{data.frame})\cr with \code{time} and \code{status} numeric columns.}
+
+\item{scales}{not used.}
+}
+\value{
+A \code{data.frame} with \code{time} and \code{survival} columns.
 }
 \description{
 Helper for \code{stat_km}

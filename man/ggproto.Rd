@@ -34,8 +34,10 @@ Additional \code{\link[ggplot2:ggproto]{ggplot2::ggproto}} objects used by the c
 \code{stat} functions.
 }
 \author{
-\code{GeomKm}, \code{StatKm}, \code{GeomKmTicks} and \code{StatKmTicks}
-originally by Michael Sachs (in \code{ggkm}), Samer Mouksassi (in \code{ggquickeda}).
+\code{GeomKm}, \code{StatKm}, \code{GeomKmTicks} and \code{StatKmTicks} were modified
+(in particular certain functionality was removed) from code
+originally written by Michael Sachs (in \code{ggkm}) and
+Samer Mouksassi (in \code{ggquickeda}).
 }
 \keyword{datasets}
 \keyword{internal}

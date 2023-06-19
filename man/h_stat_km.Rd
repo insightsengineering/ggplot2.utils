@@ -6,6 +6,13 @@
 \usage{
 h_stat_km(data)
 }
+\arguments{
+\item{data}{(\code{data.frame})\cr with \code{time} and \code{status} numeric columns.}
+}
+\value{
+A list with the \code{\link[survival:survfit]{survival::survfit()}} result in \code{surv_fit}, and
+\code{x} and \code{y} coordinates of the Kaplan-Meier estimate.
+}
 \description{
 Helper for Common Kaplan-Meier Computations
 }

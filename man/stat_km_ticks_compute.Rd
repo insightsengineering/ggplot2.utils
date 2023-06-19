@@ -4,7 +4,16 @@
 \alias{stat_km_ticks_compute}
 \title{Helper for \code{stat_km_ticks}}
 \usage{
-stat_km_ticks_compute(data)
+stat_km_ticks_compute(data, scales)
+}
+\arguments{
+\item{data}{(\code{data.frame})\cr with \code{time} and \code{status} numeric columns.}
+
+\item{scales}{not used.}
+}
+\value{
+A \code{data.frame} with \code{time}, \code{survival}, \code{n.risk}, \code{n.censor} and \code{n.event}
+columns.
 }
 \description{
 Helper for \code{stat_km_ticks}
