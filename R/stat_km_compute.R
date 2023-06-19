@@ -91,10 +91,10 @@ stat_km_compute <- function(data, scales) {
 stat_km_ticks_compute <- function(data, scales) {
   surv_fit <- h_surv_fit(data)
   data.frame(
-    time = surv_fit$x,
-    survival = surv_fit$y,
-    n.risk = surv_fit$surv_fit$n.risk,
-    n.censor = surv_fit$surv_fit$n.censor,
-    n.event = surv_fit$surv_fit$n.event
+    time = surv_fit$time,
+    survival = surv_fit$surv,
+    n.risk = surv_fit$n.risk,
+    n.censor = surv_fit$n.censor,
+    n.event = surv_fit$n.event
   )
 }

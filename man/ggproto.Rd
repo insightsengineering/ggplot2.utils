@@ -16,7 +16,7 @@ An object of class \code{GeomKmTicks} (inherits from \code{Geom}, \code{ggproto}
 
 An object of class \code{StatKm} (inherits from \code{Stat}, \code{ggproto}, \code{gg}) of length 5.
 
-An object of class \code{StatKmTicks} (inherits from \code{Stat}, \code{ggproto}, \code{gg}) of length 4.
+An object of class \code{StatKmTicks} (inherits from \code{Stat}, \code{ggproto}, \code{gg}) of length 5.
 }
 \usage{
 GeomKm
