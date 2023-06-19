@@ -34,18 +34,12 @@ NULL
 #' )
 #' ggplot(df, aes(time = time, status = status, color = factor(sex))) +
 #'  stat_km() + stat_km_ticks()
-#'
-#' p1 <- ggplot(df, aes(time = time, status = status))
-#' p1 + stat_km() + stat_km_ticks()
-#' p1 + stat_km(trans = "cumhaz") + stat_km_ticks(trans = "cumhaz")
-#' p1 + stat_km(trans = "cloglog") + stat_km_ticks(trans = "cloglog") + scale_x_log10()
 stat_km_ticks <- function(mapping = NULL,
                           data = NULL,
                           geom = "km_ticks",
                           position = "identity",
                           show.legend = NA,
                           inherit.aes = TRUE,
-                          trans = scales::identity_trans(),
                           ...) {
   ggplot2::layer(
     stat = StatKmTicks,
@@ -55,10 +49,7 @@ stat_km_ticks <- function(mapping = NULL,
     position = position,
     show.legend = show.legend,
     inherit.aes = inherit.aes,
-    params = list(
-      trans = trans,
-      ...
-    )
+    params = list(...)
   )
 }
 

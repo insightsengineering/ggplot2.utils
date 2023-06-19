@@ -11,7 +11,6 @@ stat_km_ticks(
   position = "identity",
   show.legend = NA,
   inherit.aes = TRUE,
-  trans = scales::identity_trans(),
   ...
 )
 }
@@ -56,9 +55,6 @@ rather than combining with them. This is most useful for helper functions
 that define both data and aesthetics and shouldn't inherit behaviour from
 the default plot specification, e.g. \code{\link[ggplot2:borders]{borders()}}.}
 
-\item{trans}{(\code{function})\cr transformation to apply to the survival
-probabilities, see \code{\link{scales}} for more options.}
-
 \item{...}{Other arguments passed on to \code{\link[ggplot2:layer]{layer()}}. These are
 often aesthetics, used to set an aesthetic to a fixed value, like
 \code{colour = "red"} or \code{size = 3}. They may also be parameters
@@ -95,11 +91,6 @@ df <- data.frame(
 )
 ggplot(df, aes(time = time, status = status, color = factor(sex))) +
  stat_km() + stat_km_ticks()
-
-p1 <- ggplot(df, aes(time = time, status = status))
-p1 + stat_km() + stat_km_ticks()
-p1 + stat_km(trans = "cumhaz") + stat_km_ticks(trans = "cumhaz")
-p1 + stat_km(trans = "cloglog") + stat_km_ticks(trans = "cloglog") + scale_x_log10()
 }
 \author{
 Michael Sachs (in \code{ggkm}), Samer Mouksassi (in \code{ggquickeda}).

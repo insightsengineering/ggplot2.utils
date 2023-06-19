@@ -98,9 +98,7 @@ ggplot(df, aes(time = time, status = status, color = factor(sex), group = factor
  geom_kmticks(col = "black")
 }
 \seealso{
-The default \code{stat} for this \code{geom} is \code{\link[=stat_km_ticks]{stat_km_ticks()}}, see
-there for more options to control the underlying statistical
-transformation.
+The default \code{stat} for this \code{geom} is \code{\link[=stat_km_ticks]{stat_km_ticks()}}.
 }
 \author{
 Michael Sachs (in \code{ggkm}), Samer Mouksassi (in \code{ggquickeda}).

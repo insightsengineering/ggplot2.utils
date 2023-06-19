@@ -18,9 +18,7 @@
 #' - `stroke`
 #' - `fill`
 #'
-#' @seealso The default `stat` for this `geom` is [stat_km_ticks()], see
-#'   there for more options to control the underlying statistical
-#'   transformation.
+#' @seealso The default `stat` for this `geom` is [stat_km_ticks()].
 #'
 #' @author Michael Sachs (in `ggkm`), Samer Mouksassi (in `ggquickeda`).
 #' @export

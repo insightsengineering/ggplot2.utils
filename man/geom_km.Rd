@@ -93,9 +93,7 @@ df <- data.frame(
 ggplot(df, aes(time = time, status = status, color = factor(sex))) + geom_km()
 }
 \seealso{
-The default \code{stat} for this \code{geom} is \code{\link[=stat_km]{stat_km()}}, see
-there for more options to control the underlying statistical
-transformation.
+The default \code{stat} for this \code{geom} is \code{\link[=stat_km]{stat_km()}}.
 }
 \author{
 Michael Sachs (in \code{ggkm}), Samer Mouksassi (in \code{ggquickeda}).

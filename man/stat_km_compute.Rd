@@ -4,7 +4,7 @@
 \alias{stat_km_compute}
 \title{Helper for \code{stat_km}}
 \usage{
-stat_km_compute(data, scales, trans)
+stat_km_compute(data)
 }
 \description{
 Helper for \code{stat_km}

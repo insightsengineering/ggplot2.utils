@@ -12,8 +12,6 @@ NULL
 #' @note Logical `status` is not supported.
 #'
 #' @inheritParams ggplot2::stat_identity
-#' @param trans (`function`)\cr transformation to apply to the survival
-#'   probabilities, see [`scales`] for more options.
 #'
 #' @returns A `data.frame` with columns:
 #'   - `time`: `time` in `data`.
@@ -31,18 +29,12 @@ NULL
 #' )
 #' ggplot(df, aes(time = time, status = status, color = factor(sex))) +
 #'  stat_km()
-#'
-#' p1 <- ggplot(df, aes(time = time, status = status))
-#' p1 + stat_km()
-#' p1 + stat_km(trans = "cumhaz")
-#' p1 + stat_km(trans = "cloglog") + scale_x_log10()
 stat_km <- function(mapping = NULL,
                     data = NULL,
                     geom = "km",
                     position = "identity",
                     show.legend = NA,
                     inherit.aes = TRUE,
-                    trans = scales::identity_trans(),
                     ...) {
   ggplot2::layer(
     stat = StatKm,
@@ -52,10 +44,7 @@ stat_km <- function(mapping = NULL,
     position = position,
     show.legend = show.legend,
     inherit.aes = inherit.aes,
-    params = list(
-      trans = trans,
-      ...
-    )
+    params = list(...)
   )
 }
 

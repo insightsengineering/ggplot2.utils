@@ -1,26 +1,20 @@
 #' Helper for Common Kaplan-Meier Computations
 #'
 #' @keywords internal
-h_stat_km <- function(data,
-                      scales,
-                      trans = scales::identity_trans()) {
-  assert_function(trans)
-
+h_stat_km <- function(data) {
   surv_fit <- survival::survfit(
     survival::Surv(data$time, data$status) ~ 1,
     se.fit = FALSE,
     stype = 1,
     ctype = 1
   )
-  transloc <- scales::as.trans(trans)$trans
-
   if(is.null(surv_fit$surv)) {
     x <- rep(surv_fit$time, 2)
     surv_fit$surv <- rep(1, length(x))
   }
   first <- c(0, 1)
   x <- c(first[1], surv_fit$time)
-  y <- transloc(c(first[2], surv_fit$surv))
+  y <- c(first[2], surv_fit$surv)
   y[y == -Inf] <- min(y[is.finite(y)])
   y[y == Inf] <- max(y[is.finite(y)])
 
@@ -34,10 +28,8 @@ h_stat_km <- function(data,
 #' Helper for `stat_km`
 #'
 #' @keywords internal
-stat_km_compute <- function(data,
-                            scales,
-                            trans) {
-  tmp <- h_stat_km(data, scales, trans)
+stat_km_compute <- function(data) {
+  tmp <- h_stat_km(data)
   step <- dostep(tmp$x, tmp$y)
   data.frame(
     time = step$x,
@@ -48,10 +40,8 @@ stat_km_compute <- function(data,
 #' Helper for `stat_km_ticks`
 #'
 #' @keywords internal
-stat_km_ticks_compute <- function(data,
-                                  scales,
-                                  trans) {
-  tmp <- h_stat_km(data, scales, trans)
+stat_km_ticks_compute <- function(data) {
+  tmp <- h_stat_km(data)
   data.frame(
     time = tmp$x,
     survival = tmp$y,

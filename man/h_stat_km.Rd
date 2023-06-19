@@ -4,7 +4,7 @@
 \alias{h_stat_km}
 \title{Helper for Common Kaplan-Meier Computations}
 \usage{
-h_stat_km(data, scales, trans = scales::identity_trans())
+h_stat_km(data)
 }
 \description{
 Helper for Common Kaplan-Meier Computations

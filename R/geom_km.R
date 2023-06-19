@@ -15,9 +15,7 @@
 #' - `linetype`
 #' - `linewidth`
 #'
-#' @seealso The default `stat` for this `geom` is [stat_km()], see
-#'   there for more options to control the underlying statistical
-#'   transformation.
+#' @seealso The default `stat` for this `geom` is [stat_km()].
 #'
 #' @author Michael Sachs (in `ggkm`), Samer Mouksassi (in `ggquickeda`).
 #' @export

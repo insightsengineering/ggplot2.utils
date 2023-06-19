@@ -4,7 +4,7 @@
 \alias{stat_km_ticks_compute}
 \title{Helper for \code{stat_km_ticks}}
 \usage{
-stat_km_ticks_compute(data, scales, trans)
+stat_km_ticks_compute(data)
 }
 \description{
 Helper for \code{stat_km_ticks}
