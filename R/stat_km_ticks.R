@@ -1,23 +1,26 @@
 #' @include stat_km_compute.R
 NULL
 
-#' Adds a Kaplan-Meier Estimate of Survival Statistic
+#' Adds Tick Marks to a Kaplan-Meier Estimate of Survival Statistic
 #'
 #' @description `r lifecycle::badge("experimental")`
-#' This `stat` is for computing the Kaplan-Meier survival estimate for
-#' right-censored data. It requires the aesthetic mapping `time` for the
+#' This `stat` is for computing the location of the tick marks for the
+#' Kaplan-Meier survival estimate for right-censored data.
+#' It requires the aesthetic mapping `time` for the
 #' observation times and `status` which indicates the event status,
 #' either 0 for alive and 1 for dead, or 1 for alive and 2 for dead.
 #'
 #' @note Logical `status` is not supported.
 #'
 #' @inheritParams ggplot2::stat_identity
-#' @param trans (`function`)\cr transformation to apply to the survival
-#'   probabilities, see [`scales`] for more options.
+#' @inheritParams stat_km
 #'
 #' @returns A `data.frame` with columns:
 #'   - `time`: `time` in `data`.
 #'   - `survival`: survival estimate at `time`.
+#'   - `n.risk`: number of patients at risk.
+#'   - `n.censor`: number of patients censored.
+#'   - `n.event`: number of patients with event.
 #'
 #' @author Michael Sachs (in `ggkm`), Samer Mouksassi (in `ggquickeda`).
 #' @export
@@ -30,22 +33,22 @@ NULL
 #'   sex = sex
 #' )
 #' ggplot(df, aes(time = time, status = status, color = factor(sex))) +
-#'  stat_km()
+#'  stat_km() + stat_km_ticks()
 #'
 #' p1 <- ggplot(df, aes(time = time, status = status))
-#' p1 + stat_km()
-#' p1 + stat_km(trans = "cumhaz")
-#' p1 + stat_km(trans = "cloglog") + scale_x_log10()
-stat_km <- function(mapping = NULL,
-                    data = NULL,
-                    geom = "km",
-                    position = "identity",
-                    show.legend = NA,
-                    inherit.aes = TRUE,
-                    trans = scales::identity_trans(),
-                    ...) {
+#' p1 + stat_km() + stat_km_ticks()
+#' p1 + stat_km(trans = "cumhaz") + stat_km_ticks(trans = "cumhaz")
+#' p1 + stat_km(trans = "cloglog") + stat_km_ticks(trans = "cloglog") + scale_x_log10()
+stat_km_ticks <- function(mapping = NULL,
+                          data = NULL,
+                          geom = "km_ticks",
+                          position = "identity",
+                          show.legend = NA,
+                          inherit.aes = TRUE,
+                          trans = scales::identity_trans(),
+                          ...) {
   ggplot2::layer(
-    stat = StatKm,
+    stat = StatKmTicks,
     data = data,
     mapping = mapping,
     geom = geom,
@@ -61,10 +64,10 @@ stat_km <- function(mapping = NULL,
 
 #' @rdname ggproto
 #' @export
-StatKm <- ggplot2::ggproto(
-  "StatKm",
+StatKmTicks <- ggplot2::ggproto(
+  "StatKmTicks",
   ggplot2::Stat,
-  compute_group = stat_km_compute,
+  compute_group = stat_km_ticks_compute,
   default_aes = ggplot2::aes(y = ..survival.., x = ..time..),
   required_aes = c("time", "status")
 )

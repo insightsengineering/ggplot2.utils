@@ -1,6 +1,6 @@
 # ggplot2.utils 0.2.1.9001
 
-* Added `geom_km` and `geom_km_ticks` for Kaplan-Meier lines and ticks additions to plots.
+* Added `geom_km` and `geom_km_ticks` (and corresponding `ggproto` and statistics layer functions) for Kaplan-Meier lines and ticks additions to plots, respectively.
 
 # ggplot2.utils 0.2.1
 

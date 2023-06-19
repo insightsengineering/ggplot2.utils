@@ -38,3 +38,16 @@ Encoding: UTF-8
 LazyData: false
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
+Collate: 
+    'geom_km.R'
+    'geom_km_ticks.R'
+    'geom_table.R'
+    'ggproto.R'
+    'package.R'
+    'stat_km_compute.R'
+    'stat_km.R'
+    'stat_km_ticks.R'
+    'stat_n_text.R'
+    'stat_prop.R'
+    'table_themes.R'
+    'ttheme_set.R'
