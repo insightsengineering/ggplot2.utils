@@ -20,26 +20,26 @@ test_that("table themes can be used and work", {
     geom_table(data = df, aes(x = x, y = y, label = tb))
 
   ttheme_set(ttheme_gtbw)
-  show(p)
+  expect_silent(show(p))
 
   ttheme_set(ttheme_gtdark)
-  show(p)
+  expect_silent(show(p))
 
   ttheme_set(ttheme_gtdefault)
-  show(p)
+  expect_silent(show(p))
 
   ttheme_set(ttheme_gtlight)
-  show(p)
+  expect_silent(show(p))
 
   ttheme_set(ttheme_gtminimal)
-  show(p)
+  expect_silent(show(p))
 
   ttheme_set(ttheme_gtplain)
-  show(p)
+  expect_silent(show(p))
 
   ttheme_set(ttheme_gtsimple)
-  show(p)
+  expect_silent(show(p))
 
   ttheme_set(ttheme_gtstripes)
-  show(p)
+  expect_silent(show(p))
 })
