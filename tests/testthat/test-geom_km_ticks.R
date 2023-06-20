@@ -14,3 +14,13 @@ test_that("geom_km_ticks works as expected", {
       "stroke", "fill")
   )
 })
+
+test_that("geom_km_ticks looks as expected for a single group", {
+  p <- ggplot(surv_df, aes(time = time, status = status)) + geom_km_ticks()
+  vdiffr::expect_doppelganger("geom_km_ticks single group", p)
+})
+
+test_that("geom_km_ticks looks as expected for two groups", {
+  p <- ggplot(surv_df, aes(time = time, status = status, color = factor(group))) + geom_km_ticks()
+  vdiffr::expect_doppelganger("geom_km_ticks two groups", p)
+})

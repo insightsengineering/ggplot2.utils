@@ -33,7 +33,8 @@ Suggests:
     dplyr,
     lifecycle,
     testthat (>= 3.0.0),
-    tibble
+    tibble,
+    vdiffr
 Encoding: UTF-8
 Language: en-US
 LazyData: false
