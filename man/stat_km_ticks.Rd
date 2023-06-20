@@ -90,7 +90,8 @@ df <- data.frame(
   sex = sex
 )
 ggplot(df, aes(time = time, status = status, color = factor(sex))) +
- stat_km() + stat_km_ticks()
+  stat_km() +
+  stat_km_ticks()
 }
 \author{
 Michael Sachs (in \code{ggkm}), Samer Mouksassi (in \code{ggquickeda}).

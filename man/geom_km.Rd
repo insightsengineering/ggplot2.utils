@@ -90,7 +90,8 @@ df <- data.frame(
   status = rbinom(250, 1, .75),
   sex = sex
 )
-ggplot(df, aes(time = time, status = status, color = factor(sex))) + geom_km()
+ggplot(df, aes(time = time, status = status, color = factor(sex))) +
+  geom_km()
 }
 \seealso{
 The default \code{stat} for this \code{geom} is \code{\link[=stat_km]{stat_km()}}.

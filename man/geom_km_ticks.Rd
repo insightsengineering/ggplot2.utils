@@ -94,8 +94,8 @@ df <- data.frame(
   sex = sex
 )
 ggplot(df, aes(time = time, status = status, color = factor(sex), group = factor(sex))) +
- geom_km() +
- geom_km_ticks(col = "black")
+  geom_km() +
+  geom_km_ticks(col = "black")
 }
 \seealso{
 The default \code{stat} for this \code{geom} is \code{\link[=stat_km_ticks]{stat_km_ticks()}}.
