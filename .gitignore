@@ -38,3 +38,7 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 coverage.*
+
+tests/testthat/Rplots.pdf
+
+tests/testthat/testthat-problems.rds
