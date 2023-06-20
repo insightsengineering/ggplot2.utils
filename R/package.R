@@ -12,4 +12,5 @@
 
 #' @import checkmate
 #' @import ggplot2
+#' @importFrom survival aareg
 NULL

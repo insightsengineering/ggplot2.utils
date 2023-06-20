@@ -28,7 +28,8 @@ Imports:
     checkmate,
     EnvStats,
     GGally,
-    ggpp
+    ggpp,
+    survival
 Suggests:
     dplyr,
     lifecycle,

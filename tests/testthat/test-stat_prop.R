@@ -6,5 +6,5 @@ test_that("stat_prop works as expected", {
   result <- expect_silent(
     p + geom_text(stat = "prop", position = position_fill(.5))
   )
-  expect_is(result, "ggplot")
+  expect_s3_class(result, "ggplot")
 })
