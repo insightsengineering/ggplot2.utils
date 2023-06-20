@@ -73,11 +73,11 @@ stat_km_compute <- function(data, scales) {
   x <- c(first[1], surv_fit$time)
   y <- c(first[2], surv_fit$surv)
 
-  step <- h_step(x, y)
+  # step <- h_step(x, y)
 
   data.frame(
-    time = step$x,
-    survival = step$y
+    time = x, # step$x,
+    survival = y # step$y
   )
 }
 
