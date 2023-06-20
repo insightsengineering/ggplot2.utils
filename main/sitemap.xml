@@ -25,13 +25,40 @@
     <loc>https://insightsengineering.github.io/ggplot2.utils/main/pull_request_template.html</loc>
   </url>
   <url>
+    <loc>https://insightsengineering.github.io/ggplot2.utils/main/reference/geom_km.html</loc>
+  </url>
+  <url>
+    <loc>https://insightsengineering.github.io/ggplot2.utils/main/reference/geom_km_ticks.html</loc>
+  </url>
+  <url>
     <loc>https://insightsengineering.github.io/ggplot2.utils/main/reference/geom_table.html</loc>
   </url>
   <url>
     <loc>https://insightsengineering.github.io/ggplot2.utils/main/reference/ggplot2.utils-package.html</loc>
   </url>
   <url>
+    <loc>https://insightsengineering.github.io/ggplot2.utils/main/reference/ggproto.html</loc>
+  </url>
+  <url>
+    <loc>https://insightsengineering.github.io/ggplot2.utils/main/reference/h_step.html</loc>
+  </url>
+  <url>
+    <loc>https://insightsengineering.github.io/ggplot2.utils/main/reference/h_surv_fit.html</loc>
+  </url>
+  <url>
     <loc>https://insightsengineering.github.io/ggplot2.utils/main/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://insightsengineering.github.io/ggplot2.utils/main/reference/stat_km.html</loc>
+  </url>
+  <url>
+    <loc>https://insightsengineering.github.io/ggplot2.utils/main/reference/stat_km_compute.html</loc>
+  </url>
+  <url>
+    <loc>https://insightsengineering.github.io/ggplot2.utils/main/reference/stat_km_ticks.html</loc>
+  </url>
+  <url>
+    <loc>https://insightsengineering.github.io/ggplot2.utils/main/reference/stat_km_ticks_compute.html</loc>
   </url>
   <url>
     <loc>https://insightsengineering.github.io/ggplot2.utils/main/reference/stat_n_text.html</loc>
