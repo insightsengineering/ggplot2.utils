@@ -20,7 +20,7 @@ test_that("geom_table works as expected", {
   result <- expect_silent(
     p + geom_table(data = df, aes(x = x, y = y, label = tb))
   )
-  expect_is(result, "ggplot")
+  expect_s3_class(result, "ggplot")
 })
 
 test_that("geom_table_npc works as expected", {
@@ -31,5 +31,5 @@ test_that("geom_table_npc works as expected", {
   result <- expect_silent(
     p + geom_table_npc(data = dfnpc, aes(npcx = x, npcy = y, label = tb))
   )
-  expect_is(result, "ggplot")
+  expect_s3_class(result, "ggplot")
 })

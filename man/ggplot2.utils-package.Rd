@@ -28,6 +28,12 @@ Useful links:
 \author{
 \strong{Maintainer}: Daniel Sabanés Bové \email{daniel.sabanes_bove@roche.com}
 
+Authors:
+\itemize{
+  \item Samer Mouksassi (wrote original Kaplan-Meier code)
+  \item Michael Sachs (wrote original Kaplan-Meier code)
+}
+
 Other contributors:
 \itemize{
   \item F. Hoffmann-La Roche AG [copyright holder, funder]

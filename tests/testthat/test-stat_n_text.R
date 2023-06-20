@@ -5,5 +5,5 @@ test_that("stat_n_text works as expected", {
   result <- expect_silent(
     p + stat_n_text()
   )
-  expect_is(result, "ggplot")
+  expect_s3_class(result, "ggplot")
 })

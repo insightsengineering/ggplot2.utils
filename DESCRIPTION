@@ -5,16 +5,19 @@ Version: 0.2.1.9001
 Date: 2023-06-04
 Authors@R: c(
     person("Daniel", "Sabanés Bové", , "daniel.sabanes_bove@roche.com", role = c("aut", "cre")),
+    person("Samer", "Mouksassi", role = "aut", comment = "wrote original Kaplan-Meier code"),
+    person("Michael", "Sachs", role = "aut", comment = "wrote original Kaplan-Meier code"),
     person("F. Hoffmann-La Roche AG", role = c("cph", "fnd"))
   )
 Description: Selected utilities, in particular 'geoms' and 'stats'
-    functions, extending the 'ggplot2' package. Note that this package
-    does not define the functions itself, but instead imports them from a
-    collection of other packages and then exports them. These functions
-    are tested as well to make sure that they work reliably. Currently,
-    the selected functions are from 'EnvStats'
-    <doi:10.1007/978-1-4614-8456-1>, 'GGally' <doi:10.5281/zenodo.5009047>
-    and 'ggpp' <https://CRAN.R-project.org/package=ggpp>.
+    functions, extending the 'ggplot2' package. This package
+    imports functions from 'EnvStats' <doi:10.1007/978-1-4614-8456-1>, 
+    'GGally' <doi:10.5281/zenodo.5009047> and 
+    'ggpp' <https://CRAN.R-project.org/package=ggpp> and then exports them. 
+    This package also contains modified code from 
+    'ggquickeda' <https://CRAN.R-project.org/package=ggquickeda> for Kaplan-Meier
+    lines and ticks additions to plots.
+    All functions are tested to make sure that they work reliably.
 License: Apache License 2.0
 URL: https://insightsengineering.github.io/ggplot2.utils/
 BugReports: https://github.com/insightsengineering/ggplot2.utils/issues
@@ -22,15 +25,33 @@ Depends:
     ggplot2 (>= 3.3.0),
     R (>= 3.6)
 Imports:
+    checkmate,
     EnvStats,
     GGally,
-    ggpp
+    ggpp,
+    survival
 Suggests:
     dplyr,
     lifecycle,
-    testthat (>= 2.0),
-    tibble
+    testthat (>= 3.0.0),
+    tibble,
+    vdiffr
 Encoding: UTF-8
+Language: en-US
 LazyData: false
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
+Collate: 
+    'geom_km.R'
+    'geom_km_ticks.R'
+    'geom_table.R'
+    'ggproto.R'
+    'package.R'
+    'stat_km_compute.R'
+    'stat_km.R'
+    'stat_km_ticks.R'
+    'stat_n_text.R'
+    'stat_prop.R'
+    'table_themes.R'
+    'ttheme_set.R'
+Config/testthat/edition: 3
