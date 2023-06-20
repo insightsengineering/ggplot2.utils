@@ -1,23 +1,25 @@
 Type: Package
 Package: ggplot2.utils
 Title: Selected Utilities Extending 'ggplot2'
-Version: 0.2.1.9001
-Date: 2023-06-04
+Version: 0.2.1.9002
+Date: 2023-06-20
 Authors@R: c(
     person("Daniel", "Sabanés Bové", , "daniel.sabanes_bove@roche.com", role = c("aut", "cre")),
-    person("Samer", "Mouksassi", role = "aut", comment = "wrote original Kaplan-Meier code"),
-    person("Michael", "Sachs", role = "aut", comment = "wrote original Kaplan-Meier code"),
+    person("Samer", "Mouksassi", role = "aut",
+           comment = "wrote original Kaplan-Meier code"),
+    person("Michael", "Sachs", role = "aut",
+           comment = "wrote original Kaplan-Meier code"),
     person("F. Hoffmann-La Roche AG", role = c("cph", "fnd"))
   )
 Description: Selected utilities, in particular 'geoms' and 'stats'
-    functions, extending the 'ggplot2' package. This package
-    imports functions from 'EnvStats' <doi:10.1007/978-1-4614-8456-1>, 
-    'GGally' <doi:10.5281/zenodo.5009047> and 
-    'ggpp' <https://CRAN.R-project.org/package=ggpp> and then exports them. 
-    This package also contains modified code from 
-    'ggquickeda' <https://CRAN.R-project.org/package=ggquickeda> for Kaplan-Meier
-    lines and ticks additions to plots.
-    All functions are tested to make sure that they work reliably.
+    functions, extending the 'ggplot2' package. This package imports
+    functions from 'EnvStats' <doi:10.1007/978-1-4614-8456-1>, 'GGally'
+    <doi:10.5281/zenodo.5009047> and 'ggpp'
+    <https://CRAN.R-project.org/package=ggpp> and then exports them.  This
+    package also contains modified code from 'ggquickeda'
+    <https://CRAN.R-project.org/package=ggquickeda> for Kaplan-Meier lines
+    and ticks additions to plots.  All functions are tested to make sure
+    that they work reliably.
 License: Apache License 2.0
 URL: https://insightsengineering.github.io/ggplot2.utils/
 BugReports: https://github.com/insightsengineering/ggplot2.utils/issues
@@ -36,6 +38,7 @@ Suggests:
     testthat (>= 3.0.0),
     tibble,
     vdiffr
+Config/testthat/edition: 3
 Encoding: UTF-8
 Language: en-US
 LazyData: false
@@ -54,4 +57,3 @@ Collate:
     'stat_prop.R'
     'table_themes.R'
     'ttheme_set.R'
-Config/testthat/edition: 3
