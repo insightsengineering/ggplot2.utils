@@ -31,8 +31,8 @@
 #'   sex = sex
 #' )
 #' ggplot(df, aes(time = time, status = status, color = factor(sex), group = factor(sex))) +
-#'  geom_km() +
-#'  geom_km_ticks(col = "black")
+#'   geom_km() +
+#'   geom_km_ticks(col = "black")
 geom_km_ticks <- function(mapping = NULL,
                           data = NULL,
                           stat = "km_ticks",

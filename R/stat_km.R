@@ -28,7 +28,7 @@ NULL
 #'   sex = sex
 #' )
 #' ggplot(df, aes(time = time, status = status, color = factor(sex))) +
-#'  stat_km()
+#'   stat_km()
 stat_km <- function(mapping = NULL,
                     data = NULL,
                     geom = "km",

@@ -33,7 +33,8 @@ NULL
 #'   sex = sex
 #' )
 #' ggplot(df, aes(time = time, status = status, color = factor(sex))) +
-#'  stat_km() + stat_km_ticks()
+#'   stat_km() +
+#'   stat_km_ticks()
 stat_km_ticks <- function(mapping = NULL,
                           data = NULL,
                           geom = "km_ticks",

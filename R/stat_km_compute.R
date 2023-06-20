@@ -33,8 +33,9 @@ h_step <- function(x, y) {
   assert_numeric(y, len = length(x))
 
   keep <- is.finite(x) & is.finite(y)
-  if (!any(keep))
+  if (!any(keep)) {
     return()
+  }
   if (!all(keep)) {
     x <- x[keep]
     y <- y[keep]

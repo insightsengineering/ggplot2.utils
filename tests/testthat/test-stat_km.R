@@ -9,7 +9,9 @@ test_that("stat_km works as expected", {
   expect_data_frame(first_layer)
   expect_named(
     first_layer,
-    c("x", "y", "time", "survival", "PANEL", "group", "colour", "fill",
-      "linewidth", "linetype", "weight", "alpha")
+    c(
+      "x", "y", "time", "survival", "PANEL", "group", "colour", "fill",
+      "linewidth", "linetype", "weight", "alpha"
+    )
   )
 })

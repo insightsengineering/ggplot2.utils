@@ -27,7 +27,8 @@
 #'   status = rbinom(250, 1, .75),
 #'   sex = sex
 #' )
-#' ggplot(df, aes(time = time, status = status, color = factor(sex))) + geom_km()
+#' ggplot(df, aes(time = time, status = status, color = factor(sex))) +
+#'   geom_km()
 geom_km <- function(mapping = NULL,
                     data = NULL,
                     stat = "km",

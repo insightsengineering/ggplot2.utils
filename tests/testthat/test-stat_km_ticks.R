@@ -9,8 +9,10 @@ test_that("stat_km_ticks works as expected", {
   expect_data_frame(first_layer)
   expect_named(
     first_layer,
-    c("x", "y", "time", "survival", "n.risk", "n.censor", "n.event",
+    c(
+      "x", "y", "time", "survival", "n.risk", "n.censor", "n.event",
       "PANEL", "group", "shape", "colour", "size", "alpha",
-      "stroke", "fill")
+      "stroke", "fill"
+    )
   )
 })
