@@ -66,6 +66,15 @@ test_that("h_step works discards NA and Inf as expected", {
   expect_identical(result, expected)
 })
 
+# stat_km_compute ----
+
+test_that("stat_km_compute works as expected", {
+  result <- expect_silent(stat_km_compute(surv_df))
+  expect_data_frame(result)
+  expect_named(result, c("time", "survival"))
+  expect_snapshot_value(result)
+})
+
 # stat_km_ticks_compute ----
 
 test_that("stat_km_ticks_compute works as expected", {
