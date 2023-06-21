@@ -10,7 +10,7 @@
 \alias{StatKmTicks}
 \title{New \code{ggproto} Objects}
 \format{
-An object of class \code{GeomKm} (inherits from \code{Geom}, \code{ggproto}, \code{gg}) of length 5.
+An object of class \code{GeomKm} (inherits from \code{GeomStep}, \code{GeomPath}, \code{Geom}, \code{ggproto}, \code{gg}) of length 4.
 
 An object of class \code{GeomKmTicks} (inherits from \code{Geom}, \code{ggproto}, \code{gg}) of length 6.
 
