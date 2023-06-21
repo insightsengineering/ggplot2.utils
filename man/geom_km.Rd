@@ -97,5 +97,7 @@ ggplot(df, aes(time = time, status = status, color = factor(sex))) +
 The default \code{stat} for this \code{geom} is \code{\link[=stat_km]{stat_km()}}.
 }
 \author{
-Michael Sachs (in \code{ggkm}), Samer Mouksassi (in \code{ggquickeda}).
+Inspired by \code{geom_km} written by Michael Sachs (in \code{ggkm}) and
+Samer Mouksassi (in \code{ggquickeda}). Here we directly use \code{\link[ggplot2:geom_path]{ggplot2::geom_step()}}
+instead of the more general \code{\link[ggplot2:geom_path]{ggplot2::geom_path()}}.
 }

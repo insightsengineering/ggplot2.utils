@@ -3,7 +3,7 @@
 #' @description `r lifecycle::badge("experimental")`
 #' Adds the Kaplan-Meier survival curve.
 #'
-#' @inheritParams ggplot2::geom_point
+#' @inheritParams ggplot2::geom_step
 #'
 #' @section Aesthetics:
 #' `geom_km()` understands the following aesthetics (required aesthetics in bold):
@@ -17,7 +17,9 @@
 #'
 #' @seealso The default `stat` for this `geom` is [stat_km()].
 #'
-#' @author Michael Sachs (in `ggkm`), Samer Mouksassi (in `ggquickeda`).
+#' @author Inspired by `geom_km` written by Michael Sachs (in `ggkm`) and
+#'   Samer Mouksassi (in `ggquickeda`). Here we directly use [ggplot2::geom_step()]
+#'   instead of the more general [ggplot2::geom_path()].
 #' @export
 #' @examples
 #' library(ggplot2)
@@ -55,10 +57,10 @@ geom_km <- function(mapping = NULL,
 #' @export
 GeomKm <- ggplot2::ggproto(
   "GeomKm",
-  ggplot2::Geom,
+  ggplot2::GeomStep,
   draw_group = function(data, scales, coordinates, ...) {
     path <- transform(data, alpha = NA)
-    ggplot2::GeomPath$draw_panel(path, scales, coordinates)
+    ggplot2::GeomStep$draw_panel(path, scales, coordinates, direction = "hv")
   },
   required_aes = c("x", "y"),
   default_aes = ggplot2::aes(
@@ -68,6 +70,5 @@ GeomKm <- ggplot2::ggproto(
     linetype = 1,
     weight = 1,
     alpha = 1
-  ),
-  draw_key = ggplot2::draw_key_path
+  )
 )
