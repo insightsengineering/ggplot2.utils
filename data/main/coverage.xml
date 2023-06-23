@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "https://raw.githubusercontent.com/cobertura/cobertura/master/cobertura/src/site/htdocs/xml/coverage-04.dtd">
-<coverage line-rate="1" branch-rate="0" lines-covered="66" lines-valid="66" branches-covered="0" branches-valid="0" complexity="0" version="3.6.2" timestamp="2023-06-23 14:06:53.819767">
+<coverage line-rate="1" branch-rate="0" lines-covered="66" lines-valid="66" branches-covered="0" branches-valid="0" complexity="0" version="3.6.2" timestamp="2023-06-23 14:26:39.440954">
   <sources>
     <source>/__w/ggplot2.utils/ggplot2.utils/ggplot2.utils</source>
   </sources>
