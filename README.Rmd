@@ -43,7 +43,7 @@ You can install the current development version from *R-Universe* with:
 
 ```{r runiverse-installation, eval = FALSE}
 install.packages(
-  "ggplot2.utils", 
+  "ggplot2.utils",
   repos = c("https://insightsengineering.r-universe.dev", "https://cloud.r-project.org")
 )
 ```
