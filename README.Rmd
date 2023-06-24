@@ -29,15 +29,18 @@ All functions are tested to make sure that they work reliably.
 
 ## Installation
 
-**Stable**
+Typically you want to install the release version. Developers and beta-testers
+might want to install the development version.
 
-You can install the current stable version from *CRAN* with:
+### Release
+
+You can install the current release version from *CRAN* with:
 
 ```{r cran-installation, eval = FALSE}
 install.packages("ggplot2.utils")
 ```
 
-**Development**
+### Development
 
 You can install the current development version from *R-Universe* with:
 
