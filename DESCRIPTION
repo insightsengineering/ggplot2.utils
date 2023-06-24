@@ -1,7 +1,7 @@
 Type: Package
 Package: ggplot2.utils
 Title: Selected Utilities Extending 'ggplot2'
-Version: 0.2.1.9004
+Version: 0.3.0
 Date: 2023-06-24
 Authors@R: c(
     person("Daniel", "Sabanés Bové", , "daniel.sabanes_bove@roche.com", role = c("aut", "cre")),
