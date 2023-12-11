@@ -20,3 +20,4 @@ TODO\.md
 ^\.gitlab-ci\.yml$
 ^\.pre-commit-config\.yaml$
 coverage.*
+^pkgdown$
