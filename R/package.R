@@ -6,7 +6,7 @@
 #' Currently all of the functions are imported from other extension packages:
 #' - `ggpp`: [geom_table()] and associated functions.
 #' - `EnvStats`: [stat_n_text()] and associated functions.
-#' - `ggally`: [stat_prop()] and associated functions.
+#' - `ggstats`: [stat_prop()] and associated functions.
 #'
 "_PACKAGE"
 

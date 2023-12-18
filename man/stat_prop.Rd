@@ -10,5 +10,5 @@ A plot layer containing the custom proportions.
 \description{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
 
-See \code{\link[GGally:stat_prop]{GGally::stat_prop()}} for details.
+See \code{\link[ggstats:stat_prop]{ggstats::stat_prop()}} for details.
 }

@@ -2,7 +2,7 @@
 #'
 #' @description `r lifecycle::badge("experimental")`
 #'
-#' See [GGally::stat_prop()] for details.
+#' See [ggstats::stat_prop()] for details.
 #'
 #' @returns A plot layer containing the custom proportions.
 #'
@@ -10,6 +10,6 @@
 #' @rdname stat_prop
 #' @aliases stat_prop StatProp
 #'
-#' @importFrom GGally stat_prop StatProp
+#' @importFrom ggstats stat_prop StatProp
 #' @export stat_prop StatProp
 NULL
