@@ -14,7 +14,7 @@ Currently all of the functions are imported from other extension packages:
 \itemize{
 \item \code{ggpp}: \code{\link[=geom_table]{geom_table()}} and associated functions.
 \item \code{EnvStats}: \code{\link[=stat_n_text]{stat_n_text()}} and associated functions.
-\item \code{ggally}: \code{\link[=stat_prop]{stat_prop()}} and associated functions.
+\item \code{ggstats}: \code{\link[=stat_prop]{stat_prop()}} and associated functions.
 }
 }
 \seealso{
