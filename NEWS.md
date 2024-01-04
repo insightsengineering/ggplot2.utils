@@ -1,7 +1,10 @@
 # ggplot2.utils 0.3.1
 
-* Added `geom_km` and `geom_km_ticks` (and corresponding `ggproto` and statistics layer functions) for Kaplan-Meier lines and ticks additions to plots, respectively.
 * Replaced dependency on `GGally` with `ggstats` where the original functions are actually from. This also avoids the corresponding overwrite messages coming from `GGally` when loading this package.
+
+# ggplot2.utils 0.3.0
+
+* Added `geom_km` and `geom_km_ticks` (and corresponding `ggproto` and statistics layer functions) for Kaplan-Meier lines and ticks additions to plots, respectively.
 
 # ggplot2.utils 0.2.1
 
