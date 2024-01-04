@@ -30,17 +30,6 @@
 <li class="active nav-item">
   <a class="nav-link" href="../news/index.html">Changelog</a>
 </li>
-<!-- start dropdown for versions --> <li class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle"
-          data-bs-toggle="dropdown" role="button"
-          aria-expanded="false" aria-haspopup="true"
-          id="dropdown-versions">Versions</a> <div class="dropdown-menu" aria-labelledby="dropdown-versions"> <a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/ggplot2.utils/main">main</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/ggplot2.utils/latest-tag">latest-tag</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/ggplot2.utils/v0.3.0">v0.3.0</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/ggplot2.utils/v0.2.1">v0.2.1</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/ggplot2.utils/v0.2.0">v0.2.0</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/ggplot2.utils/v0.1.5">v0.1.5</a> </div></li>
-<!-- end dropdown for versions -->
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-reports">Reports</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-reports">
@@ -70,8 +59,11 @@
 
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.3.1" id="ggplot2utils-031">ggplot2.utils 0.3.1<a class="anchor" aria-label="anchor" href="#ggplot2utils-031"></a></h2>
+<ul><li>Replaced dependency on <code>GGally</code> with <code>ggstats</code> where the original functions are actually from. This also avoids the corresponding overwrite messages coming from <code>GGally</code> when loading this package.</li>
+</ul></div>
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="0.3.0" id="ggplot2utils-030">ggplot2.utils 0.3.0<a class="anchor" aria-label="anchor" href="#ggplot2utils-030"></a></h2><p class="text-muted">CRAN release: 2023-06-24</p>
 <ul><li>Added <code>geom_km</code> and <code>geom_km_ticks</code> (and corresponding <code>ggproto</code> and statistics layer functions) for Kaplan-Meier lines and ticks additions to plots, respectively.</li>
-<li>Replaced dependency on <code>GGally</code> with <code>ggstats</code> where the original functions are actually from. This also avoids the corresponding overwrite messages coming from <code>GGally</code> when loading this package.</li>
 </ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.2.1" id="ggplot2utils-021">ggplot2.utils 0.2.1<a class="anchor" aria-label="anchor" href="#ggplot2utils-021"></a></h2><p class="text-muted">CRAN release: 2023-05-09</p>
