@@ -21,3 +21,5 @@ TODO\.md
 ^\.pre-commit-config\.yaml$
 coverage.*
 ^pkgdown$
+^revdeprefs\.yaml$
+^revdep$
