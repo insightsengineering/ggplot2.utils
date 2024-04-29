@@ -42,3 +42,5 @@ coverage.*
 tests/testthat/Rplots.pdf
 
 tests/testthat/testthat-problems.rds
+tests/testthat/_snaps/**/*.new.md
+tests/testthat/_snaps/**/*.new.svg
