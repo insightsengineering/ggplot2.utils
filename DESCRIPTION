@@ -1,8 +1,8 @@
 Type: Package
 Package: ggplot2.utils
 Title: Selected Utilities Extending 'ggplot2'
-Version: 0.3.1
-Date: 2023-12-12
+Version: 0.3.1.9000
+Date: 2024-04-29
 Authors@R: c(
     person("Daniel", "Sabanés Bové", , "daniel.sabanes_bove@roche.com", role = c("aut", "cre")),
     person("Samer", "Mouksassi", role = "aut",
@@ -13,13 +13,14 @@ Authors@R: c(
   )
 Description: Selected utilities, in particular 'geoms' and 'stats'
     functions, extending the 'ggplot2' package. This package imports
-    functions from 'EnvStats' <doi:10.1007/978-1-4614-8456-1> by Millard (2013), 
-    'ggpp' <https://CRAN.R-project.org/package=ggpp> by Aphalo et al. (2023) 
-    and 'ggstats' <doi:10.5281/zenodo.10183964> by Larmarange (2023), 
-    and then exports them. This package also contains modified code from 
-    'ggquickeda' <https://CRAN.R-project.org/package=ggquickeda> by 
-    Mouksassi et al. (2023) for Kaplan-Meier lines and ticks additions to plots.  
-    All functions are tested to make sure that they work reliably.
+    functions from 'EnvStats' <doi:10.1007/978-1-4614-8456-1> by Millard
+    (2013), 'ggpp' <https://CRAN.R-project.org/package=ggpp> by Aphalo et
+    al. (2023) and 'ggstats' <doi:10.5281/zenodo.10183964> by Larmarange
+    (2023), and then exports them. This package also contains modified
+    code from 'ggquickeda' <https://CRAN.R-project.org/package=ggquickeda>
+    by Mouksassi et al. (2023) for Kaplan-Meier lines and ticks additions
+    to plots.  All functions are tested to make sure that they work
+    reliably.
 License: Apache License 2.0
 URL: https://insightsengineering.github.io/ggplot2.utils/
 BugReports: https://github.com/insightsengineering/ggplot2.utils/issues
