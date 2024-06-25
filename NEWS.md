@@ -1,4 +1,4 @@
-# ggplot2.utils 0.3.1.9000
+# ggplot2.utils 0.3.2
 
 * Replaced dependency on `GGally` with `ggstats` where the original functions are actually from. This also avoids the corresponding overwrite messages coming from `GGally` when loading this package.
 
