@@ -2,7 +2,7 @@
 <!-- markdownlint-disable-file -->
 <!-- README.md needs to be generated from README.Rmd. Please edit that file -->
 
-# ggplot2.utils <a href="https://insightsengineering.github.io/ggplot2.utils"><img src="man/figures/logo.png" align="right" height="139" /></a>
+# ggplot2.utils <a href="https://insightsengineering.github.io/ggplot2.utils/"><img src="man/figures/logo.png" align="right" height="139" /></a>
 
 <!-- badges: start -->
 

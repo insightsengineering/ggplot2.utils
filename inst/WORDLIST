@@ -10,10 +10,13 @@ behaviour
 doi
 et
 funder
+geom's
 geoms
 ggplot
 ggpp
+ggproto
 ggquickeda
 ggstats
 gridExtra
+unmapped
 zenodo
