@@ -1,69 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://insightsengineering.github.io/ggplot2.utils/404.html</loc>
-  </url>
-  <url>
-    <loc>https://insightsengineering.github.io/ggplot2.utils/CODE_OF_CONDUCT.html</loc>
-  </url>
-  <url>
-    <loc>https://insightsengineering.github.io/ggplot2.utils/CONTRIBUTING.html</loc>
-  </url>
-  <url>
-    <loc>https://insightsengineering.github.io/ggplot2.utils/SECURITY.html</loc>
-  </url>
-  <url>
-    <loc>https://insightsengineering.github.io/ggplot2.utils/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://insightsengineering.github.io/ggplot2.utils/index.html</loc>
-  </url>
-  <url>
-    <loc>https://insightsengineering.github.io/ggplot2.utils/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://insightsengineering.github.io/ggplot2.utils/reference/geom_km.html</loc>
-  </url>
-  <url>
-    <loc>https://insightsengineering.github.io/ggplot2.utils/reference/geom_km_ticks.html</loc>
-  </url>
-  <url>
-    <loc>https://insightsengineering.github.io/ggplot2.utils/reference/geom_table.html</loc>
-  </url>
-  <url>
-    <loc>https://insightsengineering.github.io/ggplot2.utils/reference/ggplot2.utils-package.html</loc>
-  </url>
-  <url>
-    <loc>https://insightsengineering.github.io/ggplot2.utils/reference/ggproto.html</loc>
-  </url>
-  <url>
-    <loc>https://insightsengineering.github.io/ggplot2.utils/reference/h_surv_fit.html</loc>
-  </url>
-  <url>
-    <loc>https://insightsengineering.github.io/ggplot2.utils/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://insightsengineering.github.io/ggplot2.utils/reference/stat_km.html</loc>
-  </url>
-  <url>
-    <loc>https://insightsengineering.github.io/ggplot2.utils/reference/stat_km_compute.html</loc>
-  </url>
-  <url>
-    <loc>https://insightsengineering.github.io/ggplot2.utils/reference/stat_km_ticks.html</loc>
-  </url>
-  <url>
-    <loc>https://insightsengineering.github.io/ggplot2.utils/reference/stat_km_ticks_compute.html</loc>
-  </url>
-  <url>
-    <loc>https://insightsengineering.github.io/ggplot2.utils/reference/stat_n_text.html</loc>
-  </url>
-  <url>
-    <loc>https://insightsengineering.github.io/ggplot2.utils/reference/stat_prop.html</loc>
-  </url>
-  <url>
-    <loc>https://insightsengineering.github.io/ggplot2.utils/reference/ttheme_gtdefault.html</loc>
-  </url>
-  <url>
-    <loc>https://insightsengineering.github.io/ggplot2.utils/reference/ttheme_set.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://insightsengineering.github.io/ggplot2.utils/404.html</loc></url>
+<url><loc>https://insightsengineering.github.io/ggplot2.utils/CODE_OF_CONDUCT.html</loc></url>
+<url><loc>https://insightsengineering.github.io/ggplot2.utils/CONTRIBUTING.html</loc></url>
+<url><loc>https://insightsengineering.github.io/ggplot2.utils/SECURITY.html</loc></url>
+<url><loc>https://insightsengineering.github.io/ggplot2.utils/authors.html</loc></url>
+<url><loc>https://insightsengineering.github.io/ggplot2.utils/index.html</loc></url>
+<url><loc>https://insightsengineering.github.io/ggplot2.utils/news/index.html</loc></url>
+<url><loc>https://insightsengineering.github.io/ggplot2.utils/reference/geom_km.html</loc></url>
+<url><loc>https://insightsengineering.github.io/ggplot2.utils/reference/geom_km_ticks.html</loc></url>
+<url><loc>https://insightsengineering.github.io/ggplot2.utils/reference/geom_table.html</loc></url>
+<url><loc>https://insightsengineering.github.io/ggplot2.utils/reference/ggplot2.utils-package.html</loc></url>
+<url><loc>https://insightsengineering.github.io/ggplot2.utils/reference/ggproto.html</loc></url>
+<url><loc>https://insightsengineering.github.io/ggplot2.utils/reference/h_surv_fit.html</loc></url>
+<url><loc>https://insightsengineering.github.io/ggplot2.utils/reference/index.html</loc></url>
+<url><loc>https://insightsengineering.github.io/ggplot2.utils/reference/stat_km.html</loc></url>
+<url><loc>https://insightsengineering.github.io/ggplot2.utils/reference/stat_km_compute.html</loc></url>
+<url><loc>https://insightsengineering.github.io/ggplot2.utils/reference/stat_km_ticks.html</loc></url>
+<url><loc>https://insightsengineering.github.io/ggplot2.utils/reference/stat_km_ticks_compute.html</loc></url>
+<url><loc>https://insightsengineering.github.io/ggplot2.utils/reference/stat_n_text.html</loc></url>
+<url><loc>https://insightsengineering.github.io/ggplot2.utils/reference/stat_prop.html</loc></url>
+<url><loc>https://insightsengineering.github.io/ggplot2.utils/reference/ttheme_gtdefault.html</loc></url>
+<url><loc>https://insightsengineering.github.io/ggplot2.utils/reference/ttheme_set.html</loc></url>
 </urlset>
+
