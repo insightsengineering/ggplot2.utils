@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="geom_km" timestamp="2024-06-26T13:32:18Z" hostname="831ff5391a49" tests="6" skipped="2" failures="0" errors="0" time="0.529">
-    <testcase time="0.0190000000000001" classname="geom_km" name="geom_km_works_as_expected"/>
+  <testsuite name="geom_km" timestamp="2024-08-05T14:33:06Z" hostname="ea482ee6ebea" tests="6" skipped="2" failures="0" errors="0" time="0.51">
+    <testcase time="0.018" classname="geom_km" name="geom_km_works_as_expected"/>
     <testcase time="0.022" classname="geom_km" name="geom_km_works_as_expected"/>
-    <testcase time="0.0439999999999998" classname="geom_km" name="geom_km_works_as_expected"/>
-    <testcase time="0.00100000000000011" classname="geom_km" name="geom_km_works_as_expected"/>
-    <testcase time="0.264" classname="geom_km" name="geom_km_looks_as_expected_for_a_single_group">
+    <testcase time="0.0429999999999999" classname="geom_km" name="geom_km_works_as_expected"/>
+    <testcase time="0.00099999999999989" classname="geom_km" name="geom_km_works_as_expected"/>
+    <testcase time="0.249" classname="geom_km" name="geom_km_looks_as_expected_for_a_single_group">
       <skipped message="Reason: On CRAN ('test-geom_km.R:22:3')"/>
     </testcase>
-    <testcase time="0.179" classname="geom_km" name="geom_km_looks_as_expected_for_two_groups">
+    <testcase time="0.177" classname="geom_km" name="geom_km_looks_as_expected_for_two_groups">
       <skipped message="Reason: On CRAN ('test-geom_km.R:28:3')"/>
     </testcase>
   </testsuite>
-  <testsuite name="geom_km_ticks" timestamp="2024-06-26T13:32:18Z" hostname="831ff5391a49" tests="6" skipped="2" failures="0" errors="0" time="0.336">
-    <testcase time="0.0459999999999998" classname="geom_km_ticks" name="geom_km_ticks_works_as_expected"/>
-    <testcase time="0.00100000000000011" classname="geom_km_ticks" name="geom_km_ticks_works_as_expected"/>
+  <testsuite name="geom_km_ticks" timestamp="2024-08-05T14:33:06Z" hostname="ea482ee6ebea" tests="6" skipped="2" failures="0" errors="0" time="0.336">
+    <testcase time="0.0450000000000002" classname="geom_km_ticks" name="geom_km_ticks_works_as_expected"/>
+    <testcase time="0.002" classname="geom_km_ticks" name="geom_km_ticks_works_as_expected"/>
     <testcase time="0.0269999999999999" classname="geom_km_ticks" name="geom_km_ticks_works_as_expected"/>
     <testcase time="0.00099999999999989" classname="geom_km_ticks" name="geom_km_ticks_works_as_expected"/>
     <testcase time="0.0630000000000002" classname="geom_km_ticks" name="geom_km_ticks_looks_as_expected_for_a_single_group">
@@ -24,69 +24,69 @@
       <skipped message="Reason: On CRAN ('test-geom_km_ticks.R:29:3')"/>
     </testcase>
   </testsuite>
-  <testsuite name="geom_table" timestamp="2024-06-26T13:32:19Z" hostname="831ff5391a49" tests="4" skipped="0" failures="0" errors="0" time="0.068">
-    <testcase time="0.0529999999999999" classname="geom_table" name="geom_table_works_as_expected"/>
+  <testsuite name="geom_table" timestamp="2024-08-05T14:33:07Z" hostname="ea482ee6ebea" tests="4" skipped="0" failures="0" errors="0" time="0.068">
+    <testcase time="0.0540000000000003" classname="geom_table" name="geom_table_works_as_expected"/>
     <testcase time="0.00099999999999989" classname="geom_table" name="geom_table_works_as_expected"/>
-    <testcase time="0.0130000000000003" classname="geom_table" name="geom_table_npc_works_as_expected"/>
+    <testcase time="0.012" classname="geom_table" name="geom_table_npc_works_as_expected"/>
     <testcase time="0.00099999999999989" classname="geom_table" name="geom_table_npc_works_as_expected"/>
   </testsuite>
-  <testsuite name="stat_km" timestamp="2024-06-26T13:32:19Z" hostname="831ff5391a49" tests="4" skipped="0" failures="0" errors="0" time="0.03">
-    <testcase time="0.00800000000000001" classname="stat_km" name="stat_km_works_as_expected"/>
+  <testsuite name="stat_km" timestamp="2024-08-05T14:33:07Z" hostname="ea482ee6ebea" tests="4" skipped="0" failures="0" errors="0" time="0.031">
+    <testcase time="0.00900000000000034" classname="stat_km" name="stat_km_works_as_expected"/>
     <testcase time="0.00099999999999989" classname="stat_km" name="stat_km_works_as_expected"/>
     <testcase time="0.02" classname="stat_km" name="stat_km_works_as_expected"/>
     <testcase time="0.00099999999999989" classname="stat_km" name="stat_km_works_as_expected"/>
   </testsuite>
-  <testsuite name="stat_km_compute" timestamp="2024-06-26T13:32:19Z" hostname="831ff5391a49" tests="18" skipped="3" failures="0" errors="0" time="0.073">
+  <testsuite name="stat_km_compute" timestamp="2024-08-05T14:33:07Z" hostname="ea482ee6ebea" tests="18" skipped="3" failures="0" errors="0" time="0.072">
     <testcase time="0.00800000000000001" classname="stat_km_compute" name="h_surv_fit_works_as_expected"/>
     <testcase time="0.00099999999999989" classname="stat_km_compute" name="h_surv_fit_works_as_expected"/>
     <testcase time="0.00100000000000033" classname="stat_km_compute" name="h_surv_fit_works_as_expected"/>
     <testcase time="0.00099999999999989" classname="stat_km_compute" name="h_surv_fit_works_as_expected"/>
     <testcase time="0.00099999999999989" classname="stat_km_compute" name="h_surv_fit_works_as_expected"/>
     <testcase time="0.00300000000000011" classname="stat_km_compute" name="h_surv_fit_works_as_expected"/>
-    <testcase time="0.00499999999999989" classname="stat_km_compute" name="h_surv_fit_works_as_expected">
+    <testcase time="0.004" classname="stat_km_compute" name="h_surv_fit_works_as_expected">
       <skipped message="Reason: On CRAN ('test-stat_km_compute.R:10:3')"/>
     </testcase>
     <testcase time="0.0129999999999999" classname="stat_km_compute" name="h_surv_fit_also_works_when_there_is_only_a_single_observation"/>
     <testcase time="0.00300000000000011" classname="stat_km_compute" name="h_surv_fit_also_works_when_there_is_only_a_single_observation"/>
-    <testcase time="0.00200000000000022" classname="stat_km_compute" name="h_surv_fit_also_works_when_there_is_only_a_single_observation"/>
-    <testcase time="0.00599999999999978" classname="stat_km_compute" name="stat_km_compute_works_as_expected"/>
+    <testcase time="0.00199999999999978" classname="stat_km_compute" name="h_surv_fit_also_works_when_there_is_only_a_single_observation"/>
+    <testcase time="0.00600000000000023" classname="stat_km_compute" name="stat_km_compute_works_as_expected"/>
     <testcase time="0.00099999999999989" classname="stat_km_compute" name="stat_km_compute_works_as_expected"/>
-    <testcase time="0.00100000000000033" classname="stat_km_compute" name="stat_km_compute_works_as_expected"/>
-    <testcase time="0.00599999999999978" classname="stat_km_compute" name="stat_km_compute_works_as_expected">
+    <testcase time="0.00099999999999989" classname="stat_km_compute" name="stat_km_compute_works_as_expected"/>
+    <testcase time="0.00600000000000023" classname="stat_km_compute" name="stat_km_compute_works_as_expected">
       <skipped message="Reason: On CRAN ('test-stat_km_compute.R:29:3')"/>
     </testcase>
     <testcase time="0.0129999999999999" classname="stat_km_compute" name="stat_km_ticks_compute_works_as_expected"/>
-    <testcase time="0.00100000000000033" classname="stat_km_compute" name="stat_km_ticks_compute_works_as_expected"/>
     <testcase time="0.00099999999999989" classname="stat_km_compute" name="stat_km_ticks_compute_works_as_expected"/>
-    <testcase time="0.00599999999999978" classname="stat_km_compute" name="stat_km_ticks_compute_works_as_expected">
+    <testcase time="0.00099999999999989" classname="stat_km_compute" name="stat_km_ticks_compute_works_as_expected"/>
+    <testcase time="0.00600000000000023" classname="stat_km_compute" name="stat_km_ticks_compute_works_as_expected">
       <skipped message="Reason: On CRAN ('test-stat_km_compute.R:38:3')"/>
     </testcase>
   </testsuite>
-  <testsuite name="stat_km_ticks" timestamp="2024-06-26T13:32:19Z" hostname="831ff5391a49" tests="4" skipped="0" failures="0" errors="0" time="0.046">
-    <testcase time="0.0210000000000004" classname="stat_km_ticks" name="stat_km_ticks_works_as_expected"/>
-    <testcase time="0.00099999999999989" classname="stat_km_ticks" name="stat_km_ticks_works_as_expected"/>
-    <testcase time="0.0229999999999997" classname="stat_km_ticks" name="stat_km_ticks_works_as_expected"/>
+  <testsuite name="stat_km_ticks" timestamp="2024-08-05T14:33:07Z" hostname="ea482ee6ebea" tests="4" skipped="0" failures="0" errors="0" time="0.044">
+    <testcase time="0.0219999999999998" classname="stat_km_ticks" name="stat_km_ticks_works_as_expected"/>
     <testcase time="0.00100000000000033" classname="stat_km_ticks" name="stat_km_ticks_works_as_expected"/>
+    <testcase time="0.02" classname="stat_km_ticks" name="stat_km_ticks_works_as_expected"/>
+    <testcase time="0.00099999999999989" classname="stat_km_ticks" name="stat_km_ticks_works_as_expected"/>
   </testsuite>
-  <testsuite name="stat_n_text" timestamp="2024-06-26T13:32:19Z" hostname="831ff5391a49" tests="2" skipped="0" failures="0" errors="0" time="0.011">
+  <testsuite name="stat_n_text" timestamp="2024-08-05T14:33:07Z" hostname="ea482ee6ebea" tests="2" skipped="0" failures="0" errors="0" time="0.011">
     <testcase time="0.00999999999999979" classname="stat_n_text" name="stat_n_text_works_as_expected"/>
-    <testcase time="0.00099999999999989" classname="stat_n_text" name="stat_n_text_works_as_expected"/>
+    <testcase time="0.00100000000000033" classname="stat_n_text" name="stat_n_text_works_as_expected"/>
   </testsuite>
-  <testsuite name="stat_prop" timestamp="2024-06-26T13:32:19Z" hostname="831ff5391a49" tests="2" skipped="0" failures="0" errors="0" time="0.014">
-    <testcase time="0.0130000000000003" classname="stat_prop" name="stat_prop_works_as_expected"/>
+  <testsuite name="stat_prop" timestamp="2024-08-05T14:33:07Z" hostname="ea482ee6ebea" tests="2" skipped="0" failures="0" errors="0" time="0.014">
+    <testcase time="0.0129999999999999" classname="stat_prop" name="stat_prop_works_as_expected"/>
     <testcase time="0.00099999999999989" classname="stat_prop" name="stat_prop_works_as_expected"/>
   </testsuite>
-  <testsuite name="table_themes" timestamp="2024-06-26T13:32:19Z" hostname="831ff5391a49" tests="1" skipped="0" failures="0" errors="0" time="0.124">
-    <testcase time="0.124" classname="table_themes" name="ttheme_set_works_as_expected_but_is_not_baked_into_objects"/>
+  <testsuite name="table_themes" timestamp="2024-08-05T14:33:07Z" hostname="ea482ee6ebea" tests="1" skipped="0" failures="0" errors="0" time="0.126">
+    <testcase time="0.126" classname="table_themes" name="ttheme_set_works_as_expected_but_is_not_baked_into_objects"/>
   </testsuite>
-  <testsuite name="ttheme_set" timestamp="2024-06-26T13:32:19Z" hostname="831ff5391a49" tests="8" skipped="0" failures="0" errors="0" time="0.998">
-    <testcase time="0.162" classname="ttheme_set" name="table_themes_can_be_used_and_work"/>
-    <testcase time="0.118" classname="ttheme_set" name="table_themes_can_be_used_and_work"/>
-    <testcase time="0.114" classname="ttheme_set" name="table_themes_can_be_used_and_work"/>
-    <testcase time="0.133" classname="ttheme_set" name="table_themes_can_be_used_and_work"/>
+  <testsuite name="ttheme_set" timestamp="2024-08-05T14:33:07Z" hostname="ea482ee6ebea" tests="8" skipped="0" failures="0" errors="0" time="0.974">
+    <testcase time="0.161" classname="ttheme_set" name="table_themes_can_be_used_and_work"/>
+    <testcase time="0.116" classname="ttheme_set" name="table_themes_can_be_used_and_work"/>
+    <testcase time="0.11" classname="ttheme_set" name="table_themes_can_be_used_and_work"/>
+    <testcase time="0.13" classname="ttheme_set" name="table_themes_can_be_used_and_work"/>
+    <testcase time="0.113" classname="ttheme_set" name="table_themes_can_be_used_and_work"/>
     <testcase time="0.117" classname="ttheme_set" name="table_themes_can_be_used_and_work"/>
-    <testcase time="0.12" classname="ttheme_set" name="table_themes_can_be_used_and_work"/>
-    <testcase time="0.115" classname="ttheme_set" name="table_themes_can_be_used_and_work"/>
-    <testcase time="0.119" classname="ttheme_set" name="table_themes_can_be_used_and_work"/>
+    <testcase time="0.111" classname="ttheme_set" name="table_themes_can_be_used_and_work"/>
+    <testcase time="0.116" classname="ttheme_set" name="table_themes_can_be_used_and_work"/>
   </testsuite>
 </testsuites>
