@@ -7,12 +7,24 @@ test_that("stat_km_ticks works as expected", {
 
   first_layer <- layer_data(result, 1)
   expect_data_frame(first_layer)
-  expect_named(
-    first_layer,
-    c(
-      "x", "y", "time", "survival", "n.risk", "n.censor", "n.event",
-      "PANEL", "group", "shape", "colour", "size", "alpha",
-      "stroke", "fill"
+  expect_names(
+    names(first_layer),
+    must.include = c(
+      "x",
+      "y",
+      "time",
+      "survival",
+      "n.risk",
+      "n.censor",
+      "n.event",
+      "PANEL",
+      "group",
+      "shape",
+      "colour",
+      "size",
+      "alpha",
+      "stroke",
+      "fill"
     )
   )
 })

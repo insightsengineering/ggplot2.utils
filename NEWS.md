@@ -1,4 +1,8 @@
-# ggplot2.utils 0.3.2.9003
+# ggplot2.utils 0.3.3
+
+* Generalized one test to comply with the new `ggplot2` version.
+
+# ggplot2.utils 0.3.2
 
 * Replaced dependency on `GGally` with `ggstats` where the original functions are actually from. This also avoids the corresponding overwrite messages coming from `GGally` when loading this package.
 
