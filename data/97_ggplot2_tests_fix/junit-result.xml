@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="geom_km" timestamp="2025-06-27T10:37:25Z" hostname="3e37bd8f8870" tests="6" skipped="0" failures="0" errors="0" time="0.542">
+    <testcase time="0.0190000000000001" classname="geom_km" name="geom_km_works_as_expected"/>
+    <testcase time="0.0149999999999999" classname="geom_km" name="geom_km_works_as_expected"/>
+    <testcase time="0.0880000000000001" classname="geom_km" name="geom_km_works_as_expected"/>
+    <testcase time="0.00100000000000011" classname="geom_km" name="geom_km_works_as_expected"/>
+    <testcase time="0.233" classname="geom_km" name="geom_km_looks_as_expected_for_a_single_group"/>
+    <testcase time="0.186" classname="geom_km" name="geom_km_looks_as_expected_for_two_groups"/>
+  </testsuite>
+  <testsuite name="geom_km_ticks" timestamp="2025-06-27T10:37:25Z" hostname="3e37bd8f8870" tests="6" skipped="0" failures="0" errors="0" time="0.316">
+    <testcase time="0.0150000000000001" classname="geom_km_ticks" name="geom_km_ticks_works_as_expected"/>
+    <testcase time="0.00099999999999989" classname="geom_km_ticks" name="geom_km_ticks_works_as_expected"/>
+    <testcase time="0.022" classname="geom_km_ticks" name="geom_km_ticks_works_as_expected"/>
+    <testcase time="0.00100000000000011" classname="geom_km_ticks" name="geom_km_ticks_works_as_expected"/>
+    <testcase time="0.0739999999999998" classname="geom_km_ticks" name="geom_km_ticks_looks_as_expected_for_a_single_group"/>
+    <testcase time="0.203" classname="geom_km_ticks" name="geom_km_ticks_looks_as_expected_for_two_groups"/>
+  </testsuite>
+  <testsuite name="geom_table" timestamp="2025-06-27T10:37:26Z" hostname="3e37bd8f8870" tests="4" skipped="0" failures="0" errors="0" time="0.06">
+    <testcase time="0.0449999999999999" classname="geom_table" name="geom_table_works_as_expected"/>
+    <testcase time="0.00099999999999989" classname="geom_table" name="geom_table_works_as_expected"/>
+    <testcase time="0.0130000000000003" classname="geom_table" name="geom_table_npc_works_as_expected"/>
+    <testcase time="0.00099999999999989" classname="geom_table" name="geom_table_npc_works_as_expected"/>
+  </testsuite>
+  <testsuite name="stat_km" timestamp="2025-06-27T10:37:26Z" hostname="3e37bd8f8870" tests="4" skipped="0" failures="0" errors="0" time="0.033">
+    <testcase time="0.0089999999999999" classname="stat_km" name="stat_km_works_as_expected"/>
+    <testcase time="0.00099999999999989" classname="stat_km" name="stat_km_works_as_expected"/>
+    <testcase time="0.0210000000000004" classname="stat_km" name="stat_km_works_as_expected"/>
+    <testcase time="0.00199999999999978" classname="stat_km" name="stat_km_works_as_expected"/>
+  </testsuite>
+  <testsuite name="stat_km_compute" timestamp="2025-06-27T10:37:26Z" hostname="3e37bd8f8870" tests="18" skipped="0" failures="0" errors="0" time="0.129">
+    <testcase time="0.00800000000000001" classname="stat_km_compute" name="h_surv_fit_works_as_expected"/>
+    <testcase time="0.00099999999999989" classname="stat_km_compute" name="h_surv_fit_works_as_expected"/>
+    <testcase time="0.00100000000000033" classname="stat_km_compute" name="h_surv_fit_works_as_expected"/>
+    <testcase time="0.00199999999999978" classname="stat_km_compute" name="h_surv_fit_works_as_expected"/>
+    <testcase time="0.00099999999999989" classname="stat_km_compute" name="h_surv_fit_works_as_expected"/>
+    <testcase time="0.00700000000000012" classname="stat_km_compute" name="h_surv_fit_works_as_expected"/>
+    <testcase time="0.0209999999999999" classname="stat_km_compute" name="h_surv_fit_works_as_expected"/>
+    <testcase time="0.00600000000000023" classname="stat_km_compute" name="h_surv_fit_also_works_when_there_is_only_a_single_observation"/>
+    <testcase time="0.00300000000000011" classname="stat_km_compute" name="h_surv_fit_also_works_when_there_is_only_a_single_observation"/>
+    <testcase time="0.00199999999999978" classname="stat_km_compute" name="h_surv_fit_also_works_when_there_is_only_a_single_observation"/>
+    <testcase time="0.00600000000000023" classname="stat_km_compute" name="stat_km_compute_works_as_expected"/>
+    <testcase time="0.00099999999999989" classname="stat_km_compute" name="stat_km_compute_works_as_expected"/>
+    <testcase time="0.00199999999999978" classname="stat_km_compute" name="stat_km_compute_works_as_expected"/>
+    <testcase time="0.036" classname="stat_km_compute" name="stat_km_compute_works_as_expected"/>
+    <testcase time="0.00600000000000023" classname="stat_km_compute" name="stat_km_ticks_compute_works_as_expected"/>
+    <testcase time="0.00099999999999989" classname="stat_km_compute" name="stat_km_ticks_compute_works_as_expected"/>
+    <testcase time="0.00099999999999989" classname="stat_km_compute" name="stat_km_ticks_compute_works_as_expected"/>
+    <testcase time="0.024" classname="stat_km_compute" name="stat_km_ticks_compute_works_as_expected"/>
+  </testsuite>
+  <testsuite name="stat_km_ticks" timestamp="2025-06-27T10:37:26Z" hostname="3e37bd8f8870" tests="4" skipped="0" failures="0" errors="0" time="0.034">
+    <testcase time="0.0100000000000002" classname="stat_km_ticks" name="stat_km_ticks_works_as_expected"/>
+    <testcase time="0.00099999999999989" classname="stat_km_ticks" name="stat_km_ticks_works_as_expected"/>
+    <testcase time="0.0219999999999998" classname="stat_km_ticks" name="stat_km_ticks_works_as_expected"/>
+    <testcase time="0.00100000000000033" classname="stat_km_ticks" name="stat_km_ticks_works_as_expected"/>
+  </testsuite>
+  <testsuite name="stat_n_text" timestamp="2025-06-27T10:37:26Z" hostname="3e37bd8f8870" tests="2" skipped="0" failures="0" errors="0" time="0.012">
+    <testcase time="0.0109999999999997" classname="stat_n_text" name="stat_n_text_works_as_expected"/>
+    <testcase time="0.00100000000000033" classname="stat_n_text" name="stat_n_text_works_as_expected"/>
+  </testsuite>
+  <testsuite name="stat_prop" timestamp="2025-06-27T10:37:26Z" hostname="3e37bd8f8870" tests="2" skipped="0" failures="0" errors="0" time="0.015">
+    <testcase time="0.0139999999999998" classname="stat_prop" name="stat_prop_works_as_expected"/>
+    <testcase time="0.00099999999999989" classname="stat_prop" name="stat_prop_works_as_expected"/>
+  </testsuite>
+  <testsuite name="table_themes" timestamp="2025-06-27T10:37:26Z" hostname="3e37bd8f8870" tests="1" skipped="0" failures="0" errors="0" time="0.142">
+    <testcase time="0.142" classname="table_themes" name="ttheme_set_works_as_expected_but_is_not_baked_into_objects"/>
+  </testsuite>
+  <testsuite name="ttheme_set" timestamp="2025-06-27T10:37:26Z" hostname="3e37bd8f8870" tests="8" skipped="0" failures="0" errors="0" time="1.001">
+    <testcase time="0.165" classname="ttheme_set" name="table_themes_can_be_used_and_work"/>
+    <testcase time="0.117" classname="ttheme_set" name="table_themes_can_be_used_and_work"/>
+    <testcase time="0.12" classname="ttheme_set" name="table_themes_can_be_used_and_work"/>
+    <testcase time="0.121" classname="ttheme_set" name="table_themes_can_be_used_and_work"/>
+    <testcase time="0.117" classname="ttheme_set" name="table_themes_can_be_used_and_work"/>
+    <testcase time="0.12" classname="ttheme_set" name="table_themes_can_be_used_and_work"/>
+    <testcase time="0.121" classname="ttheme_set" name="table_themes_can_be_used_and_work"/>
+    <testcase time="0.12" classname="ttheme_set" name="table_themes_can_be_used_and_work"/>
+  </testsuite>
+</testsuites>
