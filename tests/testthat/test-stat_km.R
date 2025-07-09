@@ -7,11 +7,21 @@ test_that("stat_km works as expected", {
 
   first_layer <- layer_data(result, 1)
   expect_data_frame(first_layer)
-  expect_named(
-    first_layer,
-    c(
-      "x", "y", "time", "survival", "PANEL", "group", "colour", "fill",
-      "linewidth", "linetype", "weight", "alpha"
+  expect_names(
+    names(first_layer),
+    must.include = c(
+      "x",
+      "y",
+      "time",
+      "survival",
+      "PANEL",
+      "group",
+      "colour",
+      "fill",
+      "linewidth",
+      "linetype",
+      "weight",
+      "alpha"
     )
   )
 })

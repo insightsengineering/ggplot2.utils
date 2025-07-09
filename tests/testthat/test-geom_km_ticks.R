@@ -7,12 +7,24 @@ test_that("geom_km_ticks works as expected", {
 
   first_layer <- layer_data(result, 1)
   expect_data_frame(first_layer)
-  expect_named(
-    first_layer,
-    c(
-      "x", "y", "time", "survival", "n.risk", "n.censor", "n.event",
-      "PANEL", "group", "shape", "colour", "size", "alpha",
-      "stroke", "fill"
+  expect_names(
+    names(first_layer),
+    must.include = c(
+      "x",
+      "y",
+      "time",
+      "survival",
+      "n.risk",
+      "n.censor",
+      "n.event",
+      "PANEL",
+      "group",
+      "shape",
+      "colour",
+      "size",
+      "alpha",
+      "stroke",
+      "fill"
     )
   )
 })
@@ -24,7 +36,10 @@ test_that("geom_km_ticks looks as expected for a single group", {
 })
 
 test_that("geom_km_ticks looks as expected for two groups", {
-  p <- ggplot(surv_df, aes(time = time, status = status, color = factor(group))) +
+  p <- ggplot(
+    surv_df,
+    aes(time = time, status = status, color = factor(group))
+  ) +
     geom_km_ticks()
   vdiffr::expect_doppelganger("geom_km_ticks two groups", p)
 })

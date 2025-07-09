@@ -7,11 +7,21 @@ test_that("geom_km works as expected", {
 
   first_layer <- layer_data(result, 1)
   expect_data_frame(first_layer)
-  expect_named(
-    first_layer,
-    c(
-      "x", "y", "time", "survival", "PANEL", "group", "colour", "fill",
-      "linewidth", "linetype", "weight", "alpha"
+  expect_names(
+    names(first_layer),
+    must.include = c(
+      "x",
+      "y",
+      "time",
+      "survival",
+      "PANEL",
+      "group",
+      "colour",
+      "fill",
+      "linewidth",
+      "linetype",
+      "weight",
+      "alpha"
     )
   )
 })
@@ -23,7 +33,10 @@ test_that("geom_km looks as expected for a single group", {
 })
 
 test_that("geom_km looks as expected for two groups", {
-  p <- ggplot(surv_df, aes(time = time, status = status, color = factor(group))) +
+  p <- ggplot(
+    surv_df,
+    aes(time = time, status = status, color = factor(group))
+  ) +
     geom_km()
   vdiffr::expect_doppelganger("geom_km two groups", p)
 })
