@@ -1,4 +1,8 @@
-# ggplot2.utils 0.3.3.9000
+# ggplot2.utils 0.3.4.9000
+
+* Fixes for documentation.
+
+# ggplot2.utils 0.3.3
 
 * Generalized one test to comply with the new `ggplot2` version.
 

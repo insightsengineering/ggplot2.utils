@@ -30,6 +30,7 @@ Useful links:
 
 Authors:
 \itemize{
+  \item Daniel Sabanés Bové \email{daniel.sabanes_bove@rconis.com}
   \item Samer Mouksassi (wrote original Kaplan-Meier code)
   \item Michael Sachs (wrote original Kaplan-Meier code)
 }
